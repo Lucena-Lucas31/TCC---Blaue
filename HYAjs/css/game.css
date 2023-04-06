@@ -1,0 +1,75 @@
+body{
+    background-image: linear-gradient(rgba(0, 0,0, 0.4), rgba(0, 0,0, 0.4)), url('../images/bgGatinhos.jpg');
+    background-size: cover;      
+    background-position: center;  
+    
+    
+}
+
+/* PAINEL(GRADE) */
+.grid{
+    display: grid;
+    width: 100%;
+    max-width: 800px;
+    grid-template-columns: repeat(4, 1fr);  /*CÓDIGO PARA DIVIDIR EM COLUNAS */
+    gap: 25px; /* TIPO UM PADDING */
+    margin: 70px auto;
+}
+
+/*CARTAS*/
+.card{
+    aspect-ratio: 1/1; /*FICA DO MESMO TAMANHO INDEPENDENTE DA TELA*/
+    width: 100%;
+    background-color: rgb(75, 78, 78);
+    border-radius: 5px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+/*FACE GERAL DAS CARTAS*/
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;          /*COLOCAR UMA CARTA EM CIMA DA OUTRA*/
+    background-size: cover;      /* AJUSTA A IMAGEM NO CARD*/
+    background-position: center;   /* CENTRALIZA A IMAGEM NO CARD*/
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 800ms ease;
+
+}
+
+/*PARTE DA FRENTE DAS CARTAS*/
+.front{
+    transform: rotateY(180deg);   /* GIRA A CARTA 180 GRAUS*/
+    
+}
+
+/*PARTE DAS COSTAS DAS CARTAS*/
+.back{
+    background-image: url('../images/backcard.jpg');
+    backface-visibility: hidden;
+}
+
+/*ANIMAÇÃO DAS CARTAS*/
+.reveal-card{
+    transform: rotateY(180deg);
+}
+
+/*PARA DEIXAR A CARTA COM APARÊNCIA DESABILITADA QUANDO ACERTA*/
+.disable-card{
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+.back:hover{
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear;
+}
+
+
+
+
