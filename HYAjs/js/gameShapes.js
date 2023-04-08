@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid'); /*SELECIONA TODOS SEUS FILHOS*/ 
 
 /*ARRAY PARA ARMAZENAR AS IMAGENS*/ 
-const animals = [
+const shapes = [
     'gato1',
     'gato2',
     'gato3',
@@ -31,10 +31,10 @@ const checkEndGame = () => {
 
 /*VERIFICAÇÃO DE PARES */
 const checkCards = () => {
-    const firstAnimal = firstCard.getAttribute('data-animal'); /*FUNÇÃO PARA PEGAR O ATRIBUTO DA PRIMEIRA CARTA*/ 
-    const secondAnimal = secondCard.getAttribute('data-animal');
+    const firstShape = firstCard.getAttribute('data-shape'); /*FUNÇÃO PARA PEGAR O ATRIBUTO DA PRIMEIRA CARTA*/ 
+    const secondShape = secondCard.getAttribute('data-shape');
 
-    if(firstAnimal == secondAnimal){
+    if(firstShape == secondShape){
 
         firstCard.firstChild.classList.add('disable-card');   /*DEIXA A CARTA DESABILITADA (escura)*/ 
         secondCard.firstChild.classList.add('disable-card');
@@ -80,18 +80,18 @@ const revealCard = ({target}) => { /*target: diz o alvo em que você clicou*/
 
 
 /*FUNÇÃO PARA CRIAR AS CARTAS AUTOMATICAMENTE*/ 
-const createCard = (animal) =>{
+const createCard = (shape) =>{
     const card = createElement('div', 'card');     /*RECEBE 2 PARÂMETROS*/     
     const front = createElement('div', 'face front'); 
     const back = createElement('div', 'face back'); 
 
-    front.style.backgroundImage = `url('../images/${animal}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
+    front.style.backgroundImage = `url('../images/${shape}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
 
     card.appendChild(front);  /* DAR UM FILHO PARA A DIV (colocar uma div dentro da outra / no caso front está dentro do card)*/
     card.appendChild(back);
 
     card.addEventListener('click', revealCard);  /*EVENTO DO CARD, parâmetro de click e o que vai acontecer*/
-    card.setAttribute('data-animal', animal) /*CONFIGURA UM ATRIBUTO DE ACORDO COM CADA CARTA (no caso é o nome dela que nós demos no array)*/ 
+    card.setAttribute('data-shape', shape) /*CONFIGURA UM ATRIBUTO DE ACORDO COM CADA CARTA (no caso é o nome dela que nós demos no array)*/ 
 
     return card;
 }
@@ -99,13 +99,13 @@ const createCard = (animal) =>{
 /*FUNÇÃO PARA CARREGAR O JOGO*/ 
 const loadGame = () => {
 
-    const duplicateAnimals = [...animals, ...animals];  /*COLOCAR UMA LISTA DENTRO DA OUTRA E DUPLICAR*/ 
+    const duplicateShapes = [...shapes, ...shapes];  /*COLOCAR UMA LISTA DENTRO DA OUTRA E DUPLICAR*/ 
 
-    const shuffledArray = duplicateAnimals.sort(() => Math.random() - 0.5); /*RANDOMIZAR AS CARTAS, sort: precisa de números positivos ou negativos para randomizar, Math.random(): gera somente números entre 0 e 1 (mas não chega a ser 1), -0.5: para conseguir gerar números negativos */
+    const shuffledArray = duplicateShapes.sort(() => Math.random() - 0.5); /*RANDOMIZAR AS CARTAS, sort: precisa de números positivos ou negativos para randomizar, Math.random(): gera somente números entre 0 e 1 (mas não chega a ser 1), -0.5: para conseguir gerar números negativos */
 
-    shuffledArray.forEach((animal) => {    /*forEach: PARA PERCORRER TODOS OS ELEMENTOS DO ARRAY*/
+    shuffledArray.forEach((shape) => {    /*forEach: PARA PERCORRER TODOS OS ELEMENTOS DO ARRAY*/
 
-        const card = createCard(animal);
+        const card = createCard(shape);
         grid.appendChild(card);
 
     });  
