@@ -56,22 +56,22 @@ body{
 
 #shapes{
 
-    top: 5%;
+    top: 6%;
     left: 26%;
 }
 
 #numbers{
-    top: 5%;
+    top: 6%;
     left: 59%;
 }
 
 #colors{
-    top: 52%;
+    top: 53%;
     left: 26%;
 }
 
 #animals{
-    top: 52%;
+    top: 53%;
     left: 59%;
 }
 
@@ -83,22 +83,22 @@ h2{
 }
 
 #h2S{
-    top: 38%;
+    top: 42%;
     left: 31.6%;
 }
 
 #h2N{
-    top: 38%;
+    top: 42%;
     left: 64.4%;
 }
 
 #h2C{
-    left: 32%;
-    top: 85%;
+    left: 32.5%;
+    top: 89%;
 }
 
 #h2A{
     left: 64.7%;
-    top: 85%;
+    top: 89%;
 }
 

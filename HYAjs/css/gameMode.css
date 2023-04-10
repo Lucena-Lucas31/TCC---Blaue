@@ -56,13 +56,13 @@ h1{
     font-family: 'BestSchool';
     font-size: 4vw;
     text-align: center;
-    
+    margin-top: 2%;
 
 }
 
 #h2Classic{
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 27.5%;
     font-size: 3vw;
     font-family: 'BestSchool';
@@ -70,7 +70,7 @@ h1{
 
 #h2Custom{
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 58%;
     font-size: 3vw;
     font-family: 'BestSchool';

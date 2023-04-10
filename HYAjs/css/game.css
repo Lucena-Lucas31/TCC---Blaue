@@ -14,11 +14,26 @@ body{
     
 }
 
+#back{
+    position: absolute;
+    width: 7%;
+    left: 2%;
+    top: 2%;
+}
+
+
+#back:hover{
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear;
+}
+
 /* PAINEL(GRADE) */
 .grid{
     display: grid;
-    width: 100%;
-    max-width: 800px;
+    width: 50%;
+    max-width: 100%;
     grid-template-columns: repeat(4, 1fr);  /*CÓDIGO PARA DIVIDIR EM COLUNAS */
     gap: 20px; /* TIPO UM PADDING */
     margin: 70px auto;
