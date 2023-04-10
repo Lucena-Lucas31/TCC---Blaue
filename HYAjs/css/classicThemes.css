@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'BestSchool';
+    src: url(../fonts/BestSchool.otf) format('truetype');;
+
+ }
+
+html{
+    /*Responsividade*/
+   height: 100%;
+}
+
+body{
+    /*Responsividade
+    width: 100%;
+    height: 100%;*/
+    background-image: linear-gradient(rgb(255, 105, 105),rgb(255, 203, 107),rgb(255, 255, 159),rgb(134, 255, 134),rgb(135, 135, 255),rgb(196, 113, 255),rgb(255, 200, 255)); 
+   /*background-image: ;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-size:100%;*/
+   
+}
+
+#back{
+    position: absolute;
+    width: 7%;
+    left: 2%;
+    top: 2%;
+}
+
+
+#back:hover{
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear;
+}
+
+#imgThemes img{
+    position: absolute;
+    width: 18%;
+    
+    border-radius: 10px;
+    -webkit-box-shadow: -4px 4px 28px 5px rgba(0,0,0,0.34);
+    -moz-box-shadow: -4px 4px 28px 5px rgba(0,0,0,0.34);
+    box-shadow: -4px 4px 28px 5px rgba(0,0,0,0.34);
+
+}
+
+#imgThemes img:hover{
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear;
+}
+
+#shapes{
+
+    top: 5%;
+    left: 26%;
+}
+
+#numbers{
+    top: 5%;
+    left: 59%;
+}
+
+#colors{
+    top: 52%;
+    left: 26%;
+}
+
+#animals{
+    top: 52%;
+    left: 59%;
+}
+
+h2{
+    position: absolute;
+    font-family: 'BestSchool';
+    font-size: 2vw;
+    text-align: center;
+}
+
+#h2S{
+    top: 38%;
+    left: 31.6%;
+}
+
+#h2N{
+    top: 38%;
+    left: 64.4%;
+}
+
+#h2C{
+    left: 32%;
+    top: 85%;
+}
+
+#h2A{
+    left: 64.7%;
+    top: 85%;
+}
+

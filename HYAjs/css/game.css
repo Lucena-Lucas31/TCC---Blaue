@@ -1,8 +1,16 @@
+html{
+    /*Responsividade*/
+   height: 100%;
+}
+
 body{
+    /*width: 100%;
+    height: 100%;*/
     background-image: linear-gradient(rgba(0, 0,0, 0.4), rgba(0, 0,0, 0.4)), url('../images/gameAnimals/bgGatinhos.jpg');
     background-size: cover;      
     background-position: center;  
-    
+    background-repeat: no-repeat;
+    background-size:100%;
     
 }
 
@@ -12,7 +20,7 @@ body{
     width: 100%;
     max-width: 800px;
     grid-template-columns: repeat(4, 1fr);  /*CÓDIGO PARA DIVIDIR EM COLUNAS */
-    gap: 25px; /* TIPO UM PADDING */
+    gap: 20px; /* TIPO UM PADDING */
     margin: 70px auto;
 }
 
