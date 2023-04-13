@@ -75,20 +75,24 @@ main{
     left: 28%;
 }
 
-#figBC{
+#title{
     position: absolute;
-    top: 12%;
-    left: 39%;
-    font-size: 2.5vw;
-    text-align: center;
-    font-family: 'OrganicRelief';
+    top: 14%;
+    left: 41%;
+    width: 20%;
+}
 
+#title2{
+    position: absolute;
+    top: 26%;
+    left: 44%;
+    width: 14%;
 }
 
 
 #square{
     position: absolute;
-    top: 43%;
+    top: 45%;
     left: 36%;
     background-color: #abd1ff85;
     width: 30%;
@@ -119,6 +123,7 @@ main{
     transition: 250ms linear; 
     background-color: #c4d0ff;
     box-shadow: inset 0 0 15px #0000007e;
+    cursor: pointer;
 }
 
 #btJogar{
@@ -134,11 +139,10 @@ main{
 
 #smallCloud{
     position: absolute;
-    top: 69%;
+    top: 67%;
     left: 0.5%;
     width: 13%;
     object-fit: cover;
-
 }
 
 #smallCloud:hover{
@@ -146,16 +150,16 @@ main{
     -ms-transform: scale(1.1);
     transform: scale(1.1);
     transition: 250ms linear; 
-}
+} 
 
 
 #smallCloud2{
     position: absolute;
-    top: 82%;
+    top: 80%;
     left: 0.5%;
     width: 13%;
     object-fit: cover;
-
+    cursor: pointer;
 }
 
 #smallCloud2:hover{
@@ -167,24 +171,26 @@ main{
 
 #cloud1{
     position: absolute;
-    top: 75%;
+    top: 73.5%;
     left: 4.6%;
     width: 0;
     font-size: 2vw;
     font-family: 'BestSchool';
-    
+    cursor: pointer;
 }
 
 
 #cloud2{
     position: absolute;
-    top: 88%;
+    top: 86.5%;
     left: 3.5%;
     width: 0;
     font-size: 2vw;
     font-family: 'BestSchool';
-    
+    cursor: pointer;
 }
+
+
 
 
 

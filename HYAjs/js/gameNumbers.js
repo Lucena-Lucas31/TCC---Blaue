@@ -85,7 +85,7 @@ const createCard = (number) =>{
     const front = createElement('div', 'face front'); 
     const back = createElement('div', 'face back'); 
 
-    front.style.backgroundImage = `url('../images/${number}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
+    front.style.backgroundImage = `url('../images/gameNumbers${number}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
 
     card.appendChild(front);  /* DAR UM FILHO PARA A DIV (colocar uma div dentro da outra / no caso front está dentro do card)*/
     card.appendChild(back);
