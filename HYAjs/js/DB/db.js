@@ -9,6 +9,13 @@ async function connect(){
     return connection;
 }
 
-connect();
+async function insertGame(game){
+    const conn = await connect();
+    const sql = 'INSERT INTO tb_game(Start_Time,Fk_Id,Game_Time,Game_Errors) VALUES (?,?,?,?);';
+    const values = [game.Start_Time, game.Fk_Id, game.Game_Time, game.Game_Errors];
+    await conn.query(sql, values);
+}
 
-module.exports = {}
+
+
+module.exports = {insertGame}
