@@ -1,5 +1,7 @@
 const grid = document.querySelector('.grid'); /*SELECIONA TODOS SEUS FILHOS*/ 
 
+const timer = document.querySelector('.timer');  // TIMER 
+
 /*ARRAY PARA ARMAZENAR AS IMAGENS*/ 
 const animals = [
     'gato1',
@@ -25,7 +27,10 @@ const checkEndGame = () => {
     const disableCards = document.querySelectorAll('.disable-card'); /*PROCURA TODAS AS CARTAS QUE TEM '.disable-card' ATIVADO, SALVA TODOS OS ELEMENTOS QUE TEM 'disable-card' NO ARRAY 'disableCards'*/
 
     if(disableCards.length == 12){
-        alert('PARABÉNS MEU REI, VOCÊ É MUITO ESPERTO!!!'+ '\n' + 'VOCÊ ESTÁ DANDO UMA SURRA NO ALZHEIMER' + '\n' + 'おめでとうございます')
+        clearInterval(this.loop);
+        alert(`Seu tempo foi: ${timer.innerHTML}`);
+
+        // PARABÉNS MEU REI, VOCÊ É MUITO ESPERTO!!!'+ '\n' + 'VOCÊ ESTÁ DANDO UMA SURRA NO ALZHEIMER' + '\n' + 'おめでとうございます' + '\n' +
     }
 }
 
@@ -59,24 +64,42 @@ const checkCards = () => {
 }
 
 /*FUNÇÃO PARA REVELAR A CARTA QUANDO CLICA (é o que vai acontecer) */
-const revealCard = ({target}) => { /*target: diz o alvo em que você clicou*/
 
-    if(target.parentNode.className.includes('reveal-card')){ /*Se o card que você clicou já foi atribuido o reavel-card (se vc clicou em uma carta não pode clicar de novo)*/
+const revealCard = ({target}) =>{
+    if(target.parentNode.className.includes("reveal-card")){
         return;
-    }  
-
-    /*RESTRIÇÃO DE QUANTAS CARTAS POSSO CLICAR E SALVAMENTO DAS CARTAS NAS VARIÁVEIS */
-    if(firstCard == ''){
-        target.parentNode.classList.add('reveal-card'); /*parentNode: chamar o pai da tag, adiciona uma classList(acessa a lista de classes do css), 'reavel-card': nome da classe*/ 
+    }
+    if(firstCard == "" && !target.parentNode.className.includes("grid")){
+        target.parentNode.classList.add("reveal-card");
         firstCard = target.parentNode;
-    } 
-    else if(secondCard == '') {
-        target.parentNode.classList.add('reveal-card');
+        console.log(target.parentNode)
+    }else if(secondCard === "" && !target.parentNode.className.includes("grid")){
+        target.parentNode.classList.add("reveal-card");
         secondCard = target.parentNode;
+        console.log(target.parentNode)
 
         checkCards();
     }
 }
+
+// const revealCard = ({target}) => { /*target: diz o alvo em que você clicou*/
+
+//     if(target.parentNode.className.includes('reveal-card')){ /*Se o card que você clicou já foi atribuido o reavel-card (se vc clicou em uma carta não pode clicar de novo)*/
+//         return;
+//     }  
+
+//     /*RESTRIÇÃO DE QUANTAS CARTAS POSSO CLICAR E SALVAMENTO DAS CARTAS NAS VARIÁVEIS */
+//     if(firstCard == ''){
+//         target.parentNode.classList.add('reveal-card'); /*parentNode: chamar o pai da tag, adiciona uma classList(acessa a lista de classes do css), 'reavel-card': nome da classe*/ 
+//         firstCard = target.parentNode;
+//     } 
+//     else if(secondCard == '') {
+//         target.parentNode.classList.add('reveal-card');
+//         secondCard = target.parentNode;
+
+//         checkCards();
+//     }
+// }
 
 
 /*FUNÇÃO PARA CRIAR AS CARTAS AUTOMATICAMENTE*/ 
@@ -111,4 +134,24 @@ const loadGame = () => {
     });  
 }
 
-loadGame();
+// TIMER
+const startTimer = () => {
+    
+    // LOOPING
+    this.loop = setInterval(() => {
+        // innerHTML: retorna o conteúdo de um elemento HTML
+        const currentTime = +timer.innerHTML; // +: converte a string em int para poder fazer cálculos
+        timer.innerHTML = currentTime + 1;
+
+    }, 1000); // 1000 = 1 seg
+}
+
+// Quando carregar todos os elementos, inicia o jogo
+window.onload = () => {
+    startTimer();
+    loadGame();
+}
+
+
+
+
