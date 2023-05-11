@@ -7,12 +7,12 @@ let pont = 0;
 
 /*ARRAY PARA ARMAZENAR AS IMAGENS*/ 
 const numbers = [
-    'gato1',
-    'gato2',
-    'gato3',
-    'gato4',
-    'gato5',
-    'gato6',
+    'urso1',
+    'urso2',
+    'urso3',
+    'urso4',
+    'urso5',
+    'urso6',
 ];
 
 /*FUNÇÃO PARA CRIAR OS ELEMENTOS AUTOMATICAMENTE*/
@@ -37,8 +37,11 @@ const checkEndGame = () => {
         alert(`Seu tempo foi: ${timer.innerHTML}`);
 
         }, 200);
+       
+        // PARABÉNS MEU REI, VOCÊ É MUITO ESPERTO!!!'+ '\n' + 'VOCÊ ESTÁ DANDO UMA SURRA NO ALZHEIMER' + '\n' + 'おめでとうございます' + '\n' +
     }
 }
+
 
 /*VERIFICAÇÃO DE PARES */
 const checkCards = () => {
@@ -55,7 +58,7 @@ const checkCards = () => {
 
         pont = +pontuacao.innerHTML;
         pontuacao.innerHTML = pont += 5;
-        
+
         checkEndGame();
 
     }
@@ -73,6 +76,7 @@ const checkCards = () => {
 }
 
 /*FUNÇÃO PARA REVELAR A CARTA QUANDO CLICA (é o que vai acontecer) */
+
 const revealCard = ({target}) =>{
     if(target.parentNode.className.includes("reveal-card")){
         return;
@@ -90,6 +94,25 @@ const revealCard = ({target}) =>{
     }
 }
 
+// const revealCard = ({target}) => { /*target: diz o alvo em que você clicou*/
+
+//     if(target.parentNode.className.includes('reveal-card')){ /*Se o card que você clicou já foi atribuido o reavel-card (se vc clicou em uma carta não pode clicar de novo)*/
+//         return;
+//     }  
+
+//     /*RESTRIÇÃO DE QUANTAS CARTAS POSSO CLICAR E SALVAMENTO DAS CARTAS NAS VARIÁVEIS */
+//     if(firstCard == ''){
+//         target.parentNode.classList.add('reveal-card'); /*parentNode: chamar o pai da tag, adiciona uma classList(acessa a lista de classes do css), 'reavel-card': nome da classe*/ 
+//         firstCard = target.parentNode;
+//     } 
+//     else if(secondCard == '') {
+//         target.parentNode.classList.add('reveal-card');
+//         secondCard = target.parentNode;
+
+//         checkCards();
+//     }
+// }
+
 
 /*FUNÇÃO PARA CRIAR AS CARTAS AUTOMATICAMENTE*/ 
 const createCard = (number) =>{
@@ -97,7 +120,7 @@ const createCard = (number) =>{
     const front = createElement('div', 'face front'); 
     const back = createElement('div', 'face back'); 
 
-    front.style.backgroundImage = `url('../images/gameNumbers${number}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
+    front.style.backgroundImage = `url('../images/gameNumbers/${number}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
 
     card.appendChild(front);  /* DAR UM FILHO PARA A DIV (colocar uma div dentro da outra / no caso front está dentro do card)*/
     card.appendChild(back);
