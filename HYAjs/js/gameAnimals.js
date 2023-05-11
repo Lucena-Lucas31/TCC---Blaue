@@ -56,11 +56,9 @@ const checkCards = () => {
         firstCard = '';
         secondCard = '';
 
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
 
-       pont = +pontuacao.innerHTML;
-       pontuacao.innerHTML = pont += 5;
-
-        
         checkEndGame();
 
     }

@@ -13,11 +13,11 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/gameAnimals/bgGatinhos.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/game/bgGame.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    /* background-size: 100%; */
     min-height: 100vh;
     align-items: center;
     justify-content: center;
