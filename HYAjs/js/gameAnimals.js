@@ -1,6 +1,9 @@
 const grid = document.querySelector('.grid'); /*SELECIONA TODOS SEUS FILHOS*/ 
 
-const timer = document.querySelector('.timer');  // TIMER 
+const timer = document.querySelector('.timer');  // 
+
+const pontuacao = document.querySelector('.pontuacao');
+let pont = 0;
 
 /*ARRAY PARA ARMAZENAR AS IMAGENS*/ 
 const animals = [
@@ -28,11 +31,17 @@ const checkEndGame = () => {
 
     if(disableCards.length == 12){
         clearInterval(this.loop);
+
+        setTimeout(() => { /*DELAY PARA DESVIRAR AS CARTAS */
+
         alert(`Seu tempo foi: ${timer.innerHTML}`);
 
+        }, 200);
+       
         // PARABÉNS MEU REI, VOCÊ É MUITO ESPERTO!!!'+ '\n' + 'VOCÊ ESTÁ DANDO UMA SURRA NO ALZHEIMER' + '\n' + 'おめでとうございます' + '\n' +
     }
 }
+
 
 /*VERIFICAÇÃO DE PARES */
 const checkCards = () => {
@@ -46,6 +55,11 @@ const checkCards = () => {
 
         firstCard = '';
         secondCard = '';
+
+
+       pont = +pontuacao.innerHTML;
+       pontuacao.innerHTML = pont += 5;
+
         
         checkEndGame();
 
@@ -151,6 +165,9 @@ window.onload = () => {
     startTimer();
     loadGame();
 }
+
+
+
 
 
 

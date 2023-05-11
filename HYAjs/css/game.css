@@ -41,6 +41,10 @@ header {
     font-size: 3vh;
 }
 
+header span{
+    text-align: center;
+}
+
 #back {
     position: absolute;
     width: 7%;
@@ -76,9 +80,9 @@ header {
     /*FICA DO MESMO TAMANHO INDEPENDENTE DA TELA*/
     width: 100%;
     background-color: rgb(75, 78, 78);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     position: relative;
-    transition: all 400ms ease;
+    transition: all 300ms ease;
     transform-style: preserve-3d;
     border-radius: 16px;
 }
