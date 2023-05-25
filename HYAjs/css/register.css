@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Gluten';
+    src: url(../fonts/Gluten.ttf) format('truetype');;
+
+ }
+
+body{
+    background-color: #A3C3EA;
+    /* background-color: black; */
+}
+
+.logoTB{
+    position: absolute;
+    width: 10%;
+    left: 90%;
+    top: 1%;
+}
+
+.logoHYA{
+    position: absolute;
+    width: 40%;
+    top: 4%;
+    left: 30%;
+}
+
+.square{
+    position: absolute;
+    left: 36%;
+    top: 7%;
+    width: 28%;
+    height: 85%;
+    background-color: #C5DFFF;
+    border-radius: 15px;
+    -webkit-box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
+    box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
+}
+
+form{
+    /* background-color: aqua; */
+    position: relative;
+    left: 19%;
+    top: 35%;
+    width: 70%;
+    height: 50%;
+    
+}
+
+label{
+    font-family: 'Open Sans';
+    font-size: 3vh;
+}
+
+input{
+    width: 87%;
+    height: 15%;
+    margin-bottom: 8%;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 3px 8px 60px -53px rgba(33,27,33,0.25);
+    -moz-box-shadow: inset 3px 8px 60px -53px rgba(33,27,33,0.25);
+    box-shadow: inset 3px 8px 60px -53px rgba(33,27,33,0.25);
+}
+
+.register{
+    position: relative;
+    left: 15.5%;
+    top: 4%;
+    width: 55%;
+    height: 20%;
+    background-color: #A7B7FA;
+font-size: 3vh;
+border-radius: 8px;
+font-family: 'Gluten';
+
+    -webkit-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.25);
+    box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: inset 3px 8px 30px -11px rgba(33,27,33,0.39);
+    -moz-box-shadow: inset 3px 8px 30px -11px rgba(33,27,33,0.39);
+    box-shadow: inset 3px 8px 30px -11px rgba(33,27,33,0.39);
+}
+
+.register:hover{
+
+    background-color: #8d9fe4;
+
+    -webkit-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.25);
+    box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: inset 3px 8px 30px -11px rgba(33,27,33,0.39);
+    -moz-box-shadow: inset 3px 8px 30px -11px rgba(33,27,33,0.39);
+    box-shadow: inset 3px 8px 30px -11px rgba(33,27,33,0.39);
+    cursor: pointer;
+}
+
+#back {
+    position: absolute;
+    width: 7%;
+    left: 2%;
+    top: 2%;
+}
+
+
