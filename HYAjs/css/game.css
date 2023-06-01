@@ -31,7 +31,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: aqua;
     width: 100%;
     max-width: 8%;
     padding: 9px;
@@ -71,6 +70,7 @@ header span{
     gap: 20px;
     /* TIPO UM PADDING */
     margin: 0, auto;
+    margin-right: 10%;
     /* margin: 70px auto; */
 }
 
@@ -135,4 +135,26 @@ header span{
     transform: scale(1.1);
     transition: 250ms linear;
     cursor: pointer;
+}
+
+#alzhyT{
+    position: absolute;
+    left: 73%;
+    top: 42%;
+    width: 27%;
+}
+
+
+#alzhyH{
+    position: absolute;
+    left: 73%;
+    top: 42%;
+    width: 27%;
+}
+
+#alzhyS{
+    position: absolute;
+    left: 73%;
+    top: 42%;
+    width: 27%;
 }

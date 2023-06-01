@@ -7,12 +7,12 @@ let pont = 0;
 
 /*ARRAY PARA ARMAZENAR AS IMAGENS*/ 
 const animals = [
-    'gato1',
-    'gato2',
-    'gato3',
-    'gato4',
-    'gato5',
-    'gato6',
+    'elefanteCarta',
+    'galinhaCarta',
+    'girafaCarta',
+    'pandaCarta',
+    'raposaCarta',
+    'vacaCarta',
 ];
 
 /*FUNÇÃO PARA CRIAR OS ELEMENTOS AUTOMATICAMENTE*/
@@ -49,6 +49,8 @@ const checkCards = () => {
     const secondAnimal = secondCard.getAttribute('data-animal');
 
     if(firstAnimal == secondAnimal){
+        
+        animation();
 
         firstCard.firstChild.classList.add('disable-card');   /*DEIXA A CARTA DESABILITADA (escura)*/ 
         secondCard.firstChild.classList.add('disable-card');
@@ -60,6 +62,7 @@ const checkCards = () => {
         pontuacao.innerHTML = pont += 5;
 
         checkEndGame();
+
 
     }
     else{
@@ -120,7 +123,7 @@ const createCard = (animal) =>{
     const front = createElement('div', 'face front'); 
     const back = createElement('div', 'face back'); 
 
-    front.style.backgroundImage = `url('../images/gameAnimals/${animal}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
+    front.style.backgroundImage = `url('../images/gameAnimals/${animal}.png')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
 
     card.appendChild(front);  /* DAR UM FILHO PARA A DIV (colocar uma div dentro da outra / no caso front está dentro do card)*/
     card.appendChild(back);
@@ -157,6 +160,37 @@ const startTimer = () => {
 
     }, 1000); // 1000 = 1 seg
 }
+
+// ANIMAÇÃO DO ALZHY
+
+const animation = () => {
+
+    document.getElementById("alzhyT").hidden = true;
+    document.getElementById("alzhyS").hidden = false; 
+
+    setTimeout(() => {  
+        document.getElementById("alzhyH").hidden = false;
+        document.getElementById("alzhyS").hidden = true;
+
+            setTimeout(() => { 
+                document.getElementById("alzhyH").hidden = true;
+                document.getElementById("alzhyS").hidden = false;
+
+                setTimeout(() => { 
+                    document.getElementById("alzhyH").hidden = false;
+                    document.getElementById("alzhyS").hidden = true;
+
+                    setTimeout(() => { 
+                        document.getElementById("alzhyT").hidden = false;
+                        document.getElementById("alzhyH").hidden = true;
+                        
+                }, 500);
+                    
+            }, 500);
+        }, 500);
+    }, 500);
+}
+
 
 // Quando carregar todos os elementos, inicia o jogo
 window.onload = () => {
