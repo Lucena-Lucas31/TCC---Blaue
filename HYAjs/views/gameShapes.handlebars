@@ -1,0 +1,22 @@
+<body>
+
+<link rel="stylesheet" href="/css/game.css">
+    <script defer src="/js/gameShapes.js"></script>
+
+    <a href="/classicThemes"><img src="/images/gameMode/backArrow.png" id="back" alt="voltar"></a>
+    
+    <main>
+        <header>
+            <span><span class="timer" hidden></span></span>
+            <span><span class="pontuacao" hidden></span></span>
+        </header>
+        <div class="grid"></div>
+
+        <form id="Form" action="/add" method="POST">
+             <input type= "text" id= "setText" name= "pontuacao">
+             <input type= "text" id= "modo" name= "modo">
+             <input type="submit" value="Submit" id="enviar"></button>
+        </form>
+
+    </main>
+</body>
