@@ -39,7 +39,8 @@ const checkEndGame = () => {
 
         setTimeout(() => { /*DELAY PARA DESVIRAR AS CARTAS */
 
-        alert(`Dados enviados para o banco`);
+        // alert(`Dados enviados para o banco`);
+        alert(`Seu tempo foi: ${timer.innerHTML}`);
 
         }, 200);
        
@@ -165,6 +166,18 @@ const loadGame = () => {
     });  
 }
 
+// TIMER
+const startTimer = () => {
+    
+    // LOOPING
+    this.loop = setInterval(() => {
+        // innerHTML: retorna o conteúdo de um elemento HTML
+        const currentTime = +timer.innerHTML; // +: converte a string em int para poder fazer cálculos
+        timer.innerHTML = currentTime + 1;
+
+    }, 1000); // 1000 = 1 seg
+}
+
 
 // ANIMAÇÃO DO ALZHY
 
@@ -199,6 +212,7 @@ const animation = () => {
 
 // Quando carregar todos os elementos, inicia o jogo
 window.onload = () => {
+    startTimer();
     loadGame();
 }
 

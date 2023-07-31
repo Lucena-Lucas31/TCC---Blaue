@@ -17,8 +17,8 @@ var path = require('path')
 
 // Rotas
 
-    app.get('/animals', function(req, res){
-        res.render('animals')
+    app.get('/gameAnimals', function(req, res){
+        res.render('gameAnimals')
     })
 
     app.get('/register', function(req, res){

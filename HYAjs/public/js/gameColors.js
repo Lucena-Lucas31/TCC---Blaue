@@ -60,6 +60,8 @@ const checkCards = () => {
 
     if(firstColor == secondColor){
 
+        animation();
+
         firstCard.firstChild.classList.add('disable-card');   /*DEIXA A CARTA DESABILITADA (escura)*/ 
         secondCard.firstChild.classList.add('disable-card');
 
@@ -148,6 +150,35 @@ const startTimer = () => {
 
     }, 1000); // 1000 = 1 seg
 }
+
+const animation = () => {
+
+    document.getElementById("alzhyT").hidden = true;
+    document.getElementById("alzhyS").hidden = false; 
+
+    setTimeout(() => {  
+        document.getElementById("alzhyH").hidden = false;
+        document.getElementById("alzhyS").hidden = true;
+
+            setTimeout(() => { 
+                document.getElementById("alzhyH").hidden = true;
+                document.getElementById("alzhyS").hidden = false;
+
+                setTimeout(() => { 
+                    document.getElementById("alzhyH").hidden = false;
+                    document.getElementById("alzhyS").hidden = true;
+
+                    setTimeout(() => { 
+                        document.getElementById("alzhyT").hidden = false;
+                        document.getElementById("alzhyH").hidden = true;
+                        
+                }, 500);
+                    
+            }, 500);
+        }, 500);
+    }, 500);
+}
+
 
 // Quando carregar todos os elementos, inicia o jogo
 window.onload = () => {

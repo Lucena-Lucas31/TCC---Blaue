@@ -32,7 +32,7 @@ const checkEndGame = () => {
     if(disableCards.length == 12){
        clearInterval(this.loop);
 
-       getAndSetText(); /*Define o valor da pontuacao para o formulario */
+       getAndSetText(); /*Define o valor da pontuacao para o formulario NN APAGA FOI O LU Q FEZ*/
 
        Click(); /* Envia o formulario com os dados para o banco */
 
