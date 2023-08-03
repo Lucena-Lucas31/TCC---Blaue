@@ -82,7 +82,7 @@ const checkCards = () => {
             firstCard = '';
             secondCard = '';
 
-        }, 1500);
+        }, 700);
     }
 }
 
