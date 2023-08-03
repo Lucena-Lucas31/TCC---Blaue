@@ -1,6 +1,10 @@
-.pictureInput{
+#pictureInput{
     display: none;
 }
+
+#pictureInput1 {
+    display: none;
+  }
 
 .picture{
     width: 15%;
@@ -43,9 +47,9 @@
     max-width: 100%;
 }
 
-.pictureImg2{
+.pictureImg1 {
     max-width: 100%;
-}
+  }
 
 
 
