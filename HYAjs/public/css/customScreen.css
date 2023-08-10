@@ -17,6 +17,21 @@
    
 }
   
+
+#back{
+    position: absolute;
+    width: 7%;
+    left: 2%;
+    top: 2%;
+}
+
+
+#back:hover{
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear;
+}
   
   #picture__input {
     display: none;
@@ -81,19 +96,19 @@
 
   #pic3{
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 15%;
   }
 
   #pic4{
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 43%;
   }
 
   #pic5{
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 70%;
   }
   
@@ -139,6 +154,36 @@
   }
 
 
+ #wr1{
+    top: 35%;
+    left: 14.5%;
+ }
+
+ #wr2{
+    top: 35%;
+    left: 42.5%;
+ }
+
+ #wr3{
+    top: 35%;
+    left: 69.5%;
+ }
+
+ #wr4{
+    top: 82%;
+    left: 14.5%;
+ }
+
+ #wr5{
+    top: 82%;
+    left: 42.5%;
+ }
+
+ #wr6{
+    top: 82%;
+    left: 69.5%;
+ }
+
   .wrapper{
     width: 15%;
     padding-top: 3px;
@@ -148,8 +193,6 @@
     border-radius: 25px;
     position: absolute;
     background-color: white;
-    top: 35%;
-    left: 14.5%;
 
   }
 
