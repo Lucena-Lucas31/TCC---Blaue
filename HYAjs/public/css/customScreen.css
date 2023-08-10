@@ -140,11 +140,16 @@
 
 
   .wrapper{
-    width: 19%;
-    padding: 30px;
+    width: 15%;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 25px;
     position: absolute;
-    top: 30%;
-    left: 12.5%;
+    background-color: white;
+    top: 35%;
+    left: 14.5%;
 
   }
 
