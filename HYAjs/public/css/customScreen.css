@@ -1,55 +1,218 @@
-#pictureInput{
-    display: none;
+*{
+
+    outline: none;
+    box-sizing: border-box;
 }
 
-#pictureInput1 {
+@font-face {
+    font-family: 'BestSchool';
+    src: url(../fonts/BestSchool.otf) format('truetype');;
+
+ }
+ 
+
+ body{
+    /*Responsividade*/
+    background-image: url("../images/classicThemes/bgThemes.png");
+   
+}
+  
+  
+  #picture__input {
+    display: none;
+    
+  }
+
+  #picture__input1 {
     display: none;
   }
 
-.picture{
-    width: 15%;
-    aspect-ratio:1/1;
-    background-color: #ddd;
+  #picture__input2 {
+    display: none;
+  }
+
+  #picture__input3 {
+    display: none;
+  }
+
+  #picture__input4 {
+    display: none;
+  }
+
+  #picture__input5 {
+    display: none;
+  }
+  
+  .picture {
+    text-align: center;
+    width: 14%;
+    aspect-ratio: 1/1;
+    background: #FFD68F;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
-    border: 2px dashed #aaa;
+    color: #8A7042;
+    border: 2px dashed currentcolor;
     cursor: pointer;
-    font-family: sans-serif;
+    font-family: 'BestSchool';
+    font-size: 2vw;
     transition: color 300ms ease-in-out, background 300ms ease-in-out;
     outline: none;
     overflow: hidden;
+  }
 
-   
-    
-}
+  #pic{
+    position: absolute;
+    top: 3%;
+    left: 15%;
+  }
 
-.picture:hover{
-    color: #999;
-    background-color: #ccc;
-}
+  #pic1{
+    position: absolute;
+    top: 3%;
+    left: 43%;
+  }
 
-/* Quando clica e segura */
-.picture:active{  
-    border-color: red;
-    background-color: #ddd;
-    color: #aaa;
-}
+  #pic2{
+    position: absolute;
+    top: 3%;
+    left: 70%;
+  }
 
-.picture:focus{  
-    color: #999;
-    background-color: #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-}
+  #pic3{
+    position: absolute;
+    top: 60%;
+    left: 15%;
+  }
 
-.pictureImg{
+  #pic4{
+    position: absolute;
+    top: 60%;
+    left: 43%;
+  }
+
+  #pic5{
+    position: absolute;
+    top: 60%;
+    left: 70%;
+  }
+  
+  .picture:hover {
+    color: #777;
+    background: #ccc;
+  }
+  
+  .picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+  }
+  
+  .picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .picture__img {
     max-width: 100%;
-}
+  }
 
-.pictureImg1 {
+  .picture__img1 {
+    max-width: 100%;
+  }
+
+  .picture__img2 {
+    max-width: 100%;
+  }
+
+  .picture__img3 {
+    max-width: 100%;
+  }
+
+  .picture__img4 {
+    max-width: 100%;
+  }
+
+  .picture__img5 {
     max-width: 100%;
   }
 
 
+  .wrapper{
+    width: 19%;
+    padding: 30px;
+    position: absolute;
+    top: 30%;
+    left: 12.5%;
 
+  }
+
+  .wrapper .input-data{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    
+  }
+
+  .wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    
+    
+  }
+
+  .input-data input:focus ~ label,
+  .input-data input:valid ~ label {
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #4158d0;
+  }
+
+  .wrapper .input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: gray;
+    pointer-events: none;
+    transition: all 0.3 ease;
+  }
+
+  .wrapper .input-data .underline{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+    
+  }
+
+  .input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #4158d0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .input-data input:focus ~ .underline:before,
+  .input-data input:valid ~ .underline:before {
+    transform: scaleX(1);
+  }
+
+  /* input:focus::-webkit-input-placeholder {
+    color: transparent;
+ }
+ input:focus:-moz-placeholder { 
+    color: transparent;  
+ }
+ input:focus::-moz-placeholder {  
+    color: transparent;  
+ }
+ input:focus:-ms-input-placeholder {  
+    color: transparent;  
+ } */
