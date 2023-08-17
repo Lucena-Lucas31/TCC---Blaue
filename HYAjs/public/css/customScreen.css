@@ -60,7 +60,7 @@
   
   .picture {
     text-align: center;
-    width: 14%;
+    width: 13%;
     aspect-ratio: 1/1;
     background: #FFD68F;
     display: flex;
@@ -78,19 +78,19 @@
 
   #pic{
     position: absolute;
-    top: 3%;
+    top: 2%;
     left: 15%;
   }
 
   #pic1{
     position: absolute;
-    top: 3%;
+    top: 2%;
     left: 43%;
   }
 
   #pic2{
     position: absolute;
-    top: 3%;
+    top: 2%;
     left: 70%;
   }
 
@@ -155,41 +155,41 @@
 
 
  #wr1{
-    top: 35%;
+    top: 31%;
     left: 14.5%;
  }
 
  #wr2{
-    top: 35%;
+    top: 31%;
     left: 42.5%;
  }
 
  #wr3{
-    top: 35%;
+    top: 31%;
     left: 69.5%;
  }
 
  #wr4{
-    top: 82%;
+    top: 79%;
     left: 14.5%;
  }
 
  #wr5{
-    top: 82%;
+    top: 79%;
     left: 42.5%;
  }
 
  #wr6{
-    top: 82%;
+    top: 79%;
     left: 69.5%;
  }
 
   .wrapper{
-    width: 15%;
-    padding-top: 3px;
-    padding-bottom: 5px;
-    padding-left: 2%;
-    padding-right: 2%;
+    width: 14%;
+    padding-top: 0.2%;
+    padding-bottom: 0.3%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
     border-radius: 25px;
     position: absolute;
     background-color: white;
@@ -217,7 +217,7 @@
   .input-data input:valid ~ label {
     transform: translateY(-20px);
     font-size: 15px;
-    color: #4158d0;
+    color: #8A7042;
   }
 
   .wrapper .input-data label{
@@ -242,7 +242,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    background: #4158d0;
+    background: #8A7042;
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
@@ -264,3 +264,66 @@
  input:focus:-ms-input-placeholder {  
     color: transparent;  
  } */
+
+ .selectParent{
+  position: absolute;
+  padding: 0.5%;
+  width: 12%;
+  border-radius: 12px;
+  color: grey;
+ }
+
+ #s1{
+  top: 40%;
+  left: 15.3%;
+ }
+
+ #s2{
+  top: 40%;
+  left: 43.5%;
+ }
+
+ #s3{
+  top: 40%;
+  left: 70.5%;
+ }
+
+ #s4{
+  top: 88%;
+  left: 15.3%;
+ }
+
+ #s5{
+  top: 88%;
+  left: 43.5%;
+ }
+
+ #s6{
+  top: 88%;
+  left: 70.5%;
+ }
+
+
+#bt{
+  position: absolute;
+  top: 88%;
+  left: 87%;
+  background-color: #B4C2FF;
+  width: 10%;
+  padding-top: 0.7%;
+  padding-bottom: 0.7%;
+  font-size: 1.5vw;
+  border-radius: 10px;
+  box-shadow: inset 0 0 9px #0000007e;
+
+}
+
+#bt:hover{
+  -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear; 
+    background-color: #c4d0ff;
+    box-shadow: inset 0 0 15px #0000007e;
+    cursor: pointer;
+}
