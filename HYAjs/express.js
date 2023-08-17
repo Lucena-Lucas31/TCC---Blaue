@@ -66,12 +66,16 @@ app.get("/customScreen", function(req, res){
    app.post('/add', function(req, res){
         Game.create({
             pontuacao: req.body.pontuacao,
-            modo_jogo: req.body.modo
-        }).then(function(){
+            modo_jogo: req.body.modo,
+            timer: req.body.timer
+        })
+        
+        /*.then(function(){
             res.redirect('/classicThemes')
         }).catch(function(erro){
             res.send("Houve um erro: "+ erro)
         })
+        */
     })
 
 

@@ -1,9 +1,12 @@
 const grid = document.querySelector('.grid'); /*SELECIONA TODOS SEUS FILHOS*/ 
 
-const timer = document.querySelector('.timer');  // 
+const timer = document.querySelector('.timer');  //
+ 
 
 const pontuacao = document.querySelector('.pontuacao');
 let pont = 0;
+
+let timerend = 0;
 
 
 /*ARRAY PARA ARMAZENAR AS IMAGENS*/ 
@@ -32,6 +35,10 @@ const checkEndGame = () => {
 
     if(disableCards.length == 12){
 
+        timerend = `${timer.innerHTML}`;
+
+        console.log (timerend);
+        
 
         getAndSetText(); /*Define o valor da pontuacao para o formulario */
 
@@ -41,6 +48,7 @@ const checkEndGame = () => {
 
         // alert(`Dados enviados para o banco`);
         alert(`Seu tempo foi: ${timer.innerHTML}`);
+        
 
         }, 200);
        
@@ -51,6 +59,8 @@ const checkEndGame = () => {
 function getAndSetText(){
         document.getElementById('setText').value= pont;
         document.getElementById('modo').value= "Animais";
+        document.getElementById('timer').value= timerend;
+
         }
 
 function Click() {

@@ -28,7 +28,11 @@ const Game = db.sequelize.define('tb_game', {
     },
     pontuacao: {
         type: db.Sequelize.INTEGER
+    }, 
+    timer: {
+        type: db.Sequelize.INTEGER
     }
+
 })
 
 Game.sync({force: true})
