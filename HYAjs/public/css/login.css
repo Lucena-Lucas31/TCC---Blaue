@@ -27,7 +27,7 @@ body{
     top: 7%;
     width: 33%;
     height: 80%;
-    background-color: #c5dfff70;
+    background-color: rgba(255, 255, 255, 0.895);
     border-radius: 15px;
     -webkit-box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
 -moz-box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
@@ -41,3 +41,113 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
     top: 2%;
 }
 
+.form{
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    text-align: center;
+}
+
+.form_title{
+    font-size: 7vh;
+    margin-bottom: .5em;
+    color: #4C6D93;
+}
+
+.form_container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form_group{
+    position: relative;
+    --color: #4C6D93;
+}
+
+.form_input{
+    width: 100%;
+    background: none;
+    color: #4C6D93;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid var(--color);
+
+}
+
+.form_input:not(:placeholder-shown){
+    color: gray;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label{
+    font-size: 0.8rem;
+    transform-origin: left top;
+    color: #3f73ae;
+    transform: translateY(-12px) scale(.7);
+
+}
+
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+.form_submit{
+    background: #B4C2FF;
+    color: black;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+
+.form_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #4C6D93;
+
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown) + .form_label{
+
+    transform: scale(1);
+}
+
+.form_paragraph{
+    font-weight: 300;
+    margin-top: 8%;
+
+}
+
+.form_link{
+    font-weight: 400;
+    color: black;
+}
+
+.form_link:hover{
+    color: #3f73ae;
+}
+
+@media(max-width: 425px){
+    .form_title{
+        font-size: 1.8rem;
+    }
+
+}
