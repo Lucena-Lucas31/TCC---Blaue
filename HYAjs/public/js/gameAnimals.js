@@ -47,7 +47,7 @@ const checkEndGame = () => {
         setTimeout(() => { /*DELAY PARA DESVIRAR AS CARTAS */
 
         // alert(`Dados enviados para o banco`);
-        alert(`Seu tempo foi: ${timer.innerHTML}`);
+            openForm();
         
 
         }, 200);
@@ -217,6 +217,15 @@ const animation = () => {
             }, 500);
         }, 500);
     }, 500);
+}
+
+//LÓGICA DO OVERLAY
+function openForm(){
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeForm(){
+    document.getElementById("myOverlay").style.display = "none";
 }
 
 

@@ -38,7 +38,7 @@ const checkEndGame = () => {
 
         setTimeout(() => { /*DELAY PARA DESVIRAR AS CARTAS */
 
-        alert(`Seu tempo foi: ${timer.innerHTML}`);
+        openForm();
 
         }, 200);
     }
@@ -168,6 +168,17 @@ const startTimer = () => {
 
     }, 1000); // 1000 = 1 seg
 }
+
+//LÓGICA DO OVERLAY
+function openForm(){
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeForm(){
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+
 
 // Quando carregar todos os elementos, inicia o jogo
 window.onload = () => {

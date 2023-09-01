@@ -49,15 +49,23 @@ header span{
     text-align: center;
 }
 
-#back {
+.backBtn {
+    background-color: #A5C1EC;
+    padding: 15px;
+    color: white;
+    border-radius: 20px;
+    width: 8%;
     position: absolute;
-    width: 7%;
     left: 2%;
-    top: 2%;
+    top: 4%;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 2px 2px 3px black;
 }
 
 
-#back:hover {
+.backBtn:hover {
     -xpedu-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
@@ -162,4 +170,44 @@ header span{
     left: 73%;
     top: 42%;
     width: 27%;
+}
+
+.wrap{
+    max-width: 350px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.closebtn{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+.closebtn:hover{
+    color: #ccc;
 }

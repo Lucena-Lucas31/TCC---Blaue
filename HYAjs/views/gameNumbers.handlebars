@@ -3,7 +3,6 @@
 <link rel="stylesheet" href="/css/game.css">
     <script defer src="/js/gameNumbers.js"></script>
 
-    <a href="/classicThemes"><img src="/images/gameMode/backArrow.png" id="back" alt="voltar"></a>
     
     <main>
         <header>
@@ -11,6 +10,8 @@
             <span><span class="pontuacao" hidden></span></span>
         </header>
         <div class="grid"></div>
+
+        <a href="http://localhost:8081/classicThemes"><button class="backBtn">VOLTAR</button></a>
 
         <form id="Form" action="/add" method="POST">
              <input type= "text" id= "setText" name= "pontuacao">
@@ -23,4 +24,13 @@
         <img src="/images/game/alzhyShine.png" alt="" id="alzhyS" hidden>
         <img src="/images/game/alzhyHappy.png" alt="" id="alzhyH" hidden>
     </main>
+
+    <div id="myOverlay" class="overlay">
+        <div class="wrap">
+            <h1>PARABÉNS</h1>
+            <button class="back"><a href="http://localhost:8081/firstScreen">VOLTAR PARA O MENU</a></button>
+            <button class="back"><a href="http://localhost:8081/classicThemes">JOGAR NOVAMENTE</a></button>
+        </div>
+    </div>
+
 </body>
