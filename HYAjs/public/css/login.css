@@ -21,12 +21,19 @@ body{
     /* background-color: black; */
 }
 
+.alzhy{
+    position: absolute;
+    top: 0%;
+    left: 6%;
+    width: 90%;
+}
+
 .box{
     position: absolute;
     left: 32%;
-    top: 8%;
+    top: 13%;
     width: 33%;
-    height: 80%;
+    height: 75%;
     background-color: #c5dfffdd;
     border-radius: 15px;
     -webkit-box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
@@ -45,7 +52,7 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
     margin: auto;
     width: 90%;
     max-width: 400px;
-    padding: 4.5em 3em;
+    padding: 3em 3em;
     text-align: center;
 }
 
