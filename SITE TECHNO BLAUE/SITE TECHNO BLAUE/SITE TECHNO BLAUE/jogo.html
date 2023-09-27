@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno Blaue</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <!--ESSA DIV "container" É COMO SE FOSSE O MAIN, ENGLOBA TUDO QUE ESTÁ NA TELA -->
+    <div class="container">
+        <!-- BARRA DE MENU (LOGO, MENU E O BUTTON)-->
+        <div class="navbar">
+            <a href="index.html"><img src="../SITE TECHNO BLAUE/images/logo.png" alt="logo" class="logo"></a>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="sobre.html">SOBRE</a></li>
+                        <li><a href="equipe.html">EQUIPE</a></li>
+                        <li><a href="jogo.html">JOGO</a></li>
+                        <li><a href="relatorio.html">RELATÓRIO</a></li>
+                    </ul>
+                </nav>
+
+        </div>
+
+    <div class="container-principal">
+     
+                
+    </div>
+
+            <!--OVERLAY-->
+<div id="signinOverlay" class="sgOverlay">
+    <!--BOTÃO PARA FECHAR O OVERLAY, CHAMA A FUNÇÃO QUE FAZ ISSO NO JS = closeForm()-->
+    <span class="closebtn" onclick="closeForm()" title="Close Overlay"> &#215 </span>
+
+
+    <!--Engloba todo o conteúdo do overlay-->
+    <div class="wrap">
+
+        <!--Engloba o conteúdo do lado esquerdo do overlay-->
+        <div class="left">
+            <img src="images/logo.png" alt="logo" class="logoOverlay">
+
+            <h3>AINDA NÃO TEM</h3>
+            <h3>CADASTRO?</h3>
+
+            <a href=""><button class="registerOverlaybtn">CADASTRE-SE</button></a>
+        </div>
+
+        <!--Engloba o conteúdo do lado direito do overlay-->
+        <div class="right">
+                
+                    <h2>BEM VINDO</h2>
+                    <h2>DE VOLTA!</h2>
+
+        <form action="">
+
+            <label for="Email">EMAIL</label>
+            <input type="text" name="Email" id="email">
+
+            <label for="Senha">SENHA</label>
+            <input type="password" name="Senha" id="password">
+
+            <input type="submit" name="submit" id="submit">
+        </form>
+        </div>
+    </div>
+</div>
+    <button class="openbtn" onclick="openForm()"> ENTRAR </button>
+
+
+</body>
+</html>
