@@ -22,11 +22,35 @@ body{
    
 }
 
+.backBtn {
+    background-color: #A5C1EC;
+    padding: 1vw;
+    color: white;
+    border-radius: 20px;
+    width: 8%;
+    position: absolute;
+    left: 2%;
+    top: 4%;
+    font-size: 1.5vw;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 2px 2px 3px black;
+    transition: width 2s, height 2s, background-color 2s, opacity 2s, transform 1s;
+}
+
+
+.backBtn:hover {
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear;
+
+}
+
 #imgGM img{
     border-radius: 10px;
-    -webkit-box-shadow: -4px 4px 28px 5px rgba(0,0,0,0.34);
-    -moz-box-shadow: -4px 4px 28px 5px rgba(0,0,0,0.34);
-    box-shadow: -4px 4px 28px 5px rgba(0,0,0,0.34);
+    transition: width 2s, height 2s, background-color 2s, opacity 2s, transform 1s;
+   
 }
 
 #imgGM img:hover{
@@ -35,6 +59,7 @@ body{
     transform: scale(1.1);
     transition: 250ms linear;
 }
+
 
 #classic{
     position: absolute;
@@ -46,7 +71,7 @@ body{
 
 #custom{
     position: absolute;
-    width: 22%;
+    width: 23.75%;
     left: 56%;
     top: 30%;
 }
@@ -63,22 +88,6 @@ h1{
 
 h2{
     margin-top: 2%;
-}
-
-#h2Classic{
-    position: absolute;
-    top: 75%;
-    left: 27.5%;
-    font-size: 3vw;
-    font-family: 'BestSchool';
-}
-
-#h2Custom{
-    position: absolute;
-    top: 75%;
-    left: 58%;
-    font-size: 3vw;
-    font-family: 'BestSchool';
 }
 
 #back{

@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'Gluten';
+    src: url(../fonts/Gluten.ttf) format('truetype');;
+
+ }
+
 html {
     /*Responsividade*/
     height: 100%;
 }
 
-
+ 
 body {
     /*width: 100%;
     height: 100%;*/
@@ -51,17 +57,18 @@ header span{
 
 .backBtn {
     background-color: #A5C1EC;
-    padding: 15px;
+    padding: 1vw;
     color: white;
     border-radius: 20px;
     width: 8%;
     position: absolute;
     left: 2%;
     top: 4%;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     font-weight: bold;
     cursor: pointer;
     text-shadow: 2px 2px 3px black;
+    transition: width 2s, height 2s, background-color 2s, opacity 2s, transform 1s;
 }
 
 
@@ -173,12 +180,14 @@ header span{
 }
 
 .wrap{
-    max-width: 350px;
+    width: 40vw;
+    height: 36vw;
     margin: auto;
     padding: 20px;
-    background: white;
-    margin-top: 100px;
+    background: #AFD4FF;
+    margin-top: 5vw;
     border-radius: 20px;
+    font-family: 'Gluten';
 }
 
 h1{
@@ -210,4 +219,41 @@ h1{
 
 .closebtn:hover{
     color: #ccc;
+}
+
+
+.playAgain{
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    cursor: pointer;
+    background-color: #A7B7FA;
+    width: 20vw;
+    height: 5vw;
+    font-family: 'Gluten';
+    font-size: 1.8vw;
+    
+}
+
+.mode{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    cursor: pointer;
+    background-color: #A7B7FA;
+    width: 20vw;
+    height: 5vw;
+    font-family: 'Gluten';
+    font-size: 1.8vw;
+}
+
+.overTitle{
+    margin-top: 1vw;
+    font-size: 4vw;
+    font-weight: 400;
+}
+
+.subTitle{
+    font-weight: 300;
+    font-size: 1.5vw;
 }

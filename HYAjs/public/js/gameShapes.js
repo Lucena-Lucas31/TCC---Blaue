@@ -7,12 +7,12 @@ let pont = 0;
 
 /*ARRAY PARA ARMAZENAR AS IMAGENS*/ 
 const shapes = [
-    'dog1',
-    'dog2',
-    'dog3',
-    'dog4',
-    'dog5',
-    'dog6',
+    'cartaCirculo',
+    'cartaEstrela',
+    'cartaPentagono',
+    'cartaQuadrado1',
+    'cartaQuadrado2',
+    'cartaTriangulo',
 ];
 
 /*FUNÇÃO PARA CRIAR OS ELEMENTOS AUTOMATICAMENTE*/
@@ -131,7 +131,7 @@ const createCard = (shape) =>{
     const front = createElement('div', 'face front'); 
     const back = createElement('div', 'face back'); 
 
-    front.style.backgroundImage = `url('../images/gameShapes/${shape}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
+    front.style.backgroundImage = `url('../images/gameShapes/${shape}.png')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
 
     card.appendChild(front);  /* DAR UM FILHO PARA A DIV (colocar uma div dentro da outra / no caso front está dentro do card)*/
     card.appendChild(back);
