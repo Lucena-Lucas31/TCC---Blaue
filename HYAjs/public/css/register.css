@@ -9,7 +9,7 @@
     /*Responsividade*/
    height: 100%;
 }
-
+ 
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.078), rgba(0, 0, 0, 0.096)), url("../images/login/bgLogin.png");
     width: 100%;
@@ -19,11 +19,29 @@ body{
    background-size:100%;
 }
 
-#back {
+.backBtn {
+    background-color: #A5C1EC;
+    padding: 1vw;
+    color: white;
+    border-radius: 20px;
+    width: 8%;
     position: absolute;
-    width: 7%;
     left: 2%;
-    top: 2%;
+    top: 4%;
+    font-size: 1.5vw;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 2px 2px 3px black;
+    transition: width 2s, height 2s, background-color 2s, opacity 2s, transform 1s;
+}
+
+
+.backBtn:hover {
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear;
+
 }
 
 .box{

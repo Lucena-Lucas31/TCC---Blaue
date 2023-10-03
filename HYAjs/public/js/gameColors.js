@@ -1,18 +1,22 @@
 const grid = document.querySelector('.grid'); /*SELECIONA TODOS SEUS FILHOS*/ 
 
-const timer = document.querySelector('.timer');  // 
+const timer = document.querySelector('.timer');  //
+ 
 
 const pontuacao = document.querySelector('.pontuacao');
 let pont = 0;
 
+let timerend = 0;
+
+
 /*ARRAY PARA ARMAZENAR AS IMAGENS*/ 
 const colors = [
-    'gato1',
-    'gato2',
-    'gato3',
-    'gato4',
-    'gato5',
-    'gato6',
+    'amarelo',
+    'azulEscuro',
+    'ciano',
+    'roxo',
+    'verde',
+    'vermelho',
 ];
 
 /*FUNÇÃO PARA CRIAR OS ELEMENTOS AUTOMATICAMENTE*/
@@ -30,28 +34,43 @@ const checkEndGame = () => {
     const disableCards = document.querySelectorAll('.disable-card'); /*PROCURA TODAS AS CARTAS QUE TEM '.disable-card' ATIVADO, SALVA TODOS OS ELEMENTOS QUE TEM 'disable-card' NO ARRAY 'disableCards'*/
 
     if(disableCards.length == 12){
-       clearInterval(this.loop);
-
-       getAndSetText(); /*Define o valor da pontuacao para o formulario */
-
-       Click(); /* Envia o formulario com os dados para o banco */
-
-        setTimeout(() => { /*DELAY PARA DESVIRAR AS CARTAS */
 
         openForm();
 
+        timerend = `${timer.innerHTML}`;
+
+        console.log (timerend);
+        
+
+        getAndSetText(); /*Define o valor da pontuacao para o formulario */
+
+        Click(); /* Envia o formulario com os dados para o banco */
+
+        setTimeout(() => { /*DELAY PARA DESVIRAR AS CARTAS */
+
+        // alert(`Dados enviados para o banco`);
+            
+        
+
         }, 200);
+       
+        // PARABÉNS MEU REI, VOCÊ É MUITO ESPERTO!!!'+ '\n' + 'VOCÊ ESTÁ DANDO UMA SURRA NO ALZHEIMER' + '\n' + 'おめでとうございます' + '\n' +
     }
 }
 
 function getAndSetText(){
         document.getElementById('setText').value= pont;
-        document.getElementById('modo').value= "Cores";
+        document.getElementById('modo').value= "Colors";
+        document.getElementById('timer').value= timerend;
+
         }
 
 function Click() {
          document.getElementById("enviar").click();
         }
+
+
+
 
 /*VERIFICAÇÃO DE PARES */
 const checkCards = () => {
@@ -59,7 +78,7 @@ const checkCards = () => {
     const secondColor = secondCard.getAttribute('data-color');
 
     if(firstColor == secondColor){
-
+        
         animation();
 
         firstCard.firstChild.classList.add('disable-card');   /*DEIXA A CARTA DESABILITADA (escura)*/ 
@@ -70,8 +89,9 @@ const checkCards = () => {
 
         pont = +pontuacao.innerHTML;
         pontuacao.innerHTML = pont += 5;
-        
+
         checkEndGame();
+
 
     }
     else{
@@ -106,6 +126,25 @@ const revealCard = ({target}) =>{
     }
 }
 
+// const revealCard = ({target}) => { /*target: diz o alvo em que você clicou*/
+
+//     if(target.parentNode.className.includes('reveal-card')){ /*Se o card que você clicou já foi atribuido o reavel-card (se vc clicou em uma carta não pode clicar de novo)*/
+//         return;
+//     }  
+
+//     /*RESTRIÇÃO DE QUANTAS CARTAS POSSO CLICAR E SALVAMENTO DAS CARTAS NAS VARIÁVEIS */
+//     if(firstCard == ''){
+//         target.parentNode.classList.add('reveal-card'); /*parentNode: chamar o pai da tag, adiciona uma classList(acessa a lista de classes do css), 'reavel-card': nome da classe*/ 
+//         firstCard = target.parentNode;
+//     } 
+//     else if(secondCard == '') {
+//         target.parentNode.classList.add('reveal-card');
+//         secondCard = target.parentNode;
+
+//         checkCards();
+//     }
+// }
+
 
 /*FUNÇÃO PARA CRIAR AS CARTAS AUTOMATICAMENTE*/ 
 const createCard = (color) =>{
@@ -113,13 +152,13 @@ const createCard = (color) =>{
     const front = createElement('div', 'face front'); 
     const back = createElement('div', 'face back'); 
 
-    front.style.backgroundImage = `url('../images/gameColors${color}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
+    front.style.backgroundImage = `url('../images/gameColors/${color}.png')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
 
     card.appendChild(front);  /* DAR UM FILHO PARA A DIV (colocar uma div dentro da outra / no caso front está dentro do card)*/
     card.appendChild(back);
 
     card.addEventListener('click', revealCard);  /*EVENTO DO CARD, parâmetro de click e o que vai acontecer*/
-    card.setAttribute('data-color', color) /*CONFIGURA UM ATRIBUTO DE ACORDO COM CADA CARTA (no caso é o nome dela que nós demos no array)*/ 
+    card.setAttribute('data-color', color) /*CONFIGURA UM ATRIBUTO DE ACORDO COM CADA CARTA (no caso é o nome dela que nós demos no array)*/  
 
     return card;
 }
@@ -151,6 +190,9 @@ const startTimer = () => {
     }, 1000); // 1000 = 1 seg
 }
 
+
+// ANIMAÇÃO DO ALZHY
+
 const animation = () => {
 
     document.getElementById("alzhyT").hidden = true;
@@ -179,6 +221,12 @@ const animation = () => {
     }, 500);
 }
 
+// Quando carregar todos os elementos, inicia o jogo
+window.onload = () => {
+    startTimer(); 
+    loadGame();
+}
+
 //LÓGICA DO OVERLAY
 function openForm(){
     document.getElementById("myOverlay").style.display = "block";
@@ -186,11 +234,4 @@ function openForm(){
 
 function closeForm(){
     document.getElementById("myOverlay").style.display = "none";
-}
-
-
-// Quando carregar todos os elementos, inicia o jogo
-window.onload = () => {
-    startTimer();
-    loadGame();
 }
