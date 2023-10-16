@@ -39,3 +39,26 @@ function closePsiForm(){
     document.getElementById("psi").style.display="none";
     
 }
+
+//ele muda de cor quando seleciona alguma coisa
+document.getElementById("stage").addEventListener("change", function() {
+    let allOptions= document.querySelectorAll(".estagioscadastro");
+    var select = document.getElementById("stage");
+
+    //Esse ele muda a cor de todas as opções pq quando vc altera uma ele altera todas
+    for (let index = 0; index < allOptions.length; index++) {
+    allOptions[index].style.color = "grey";
+    }
+    //aqui ele coloca a cor que vc quer e o x é igual ao value da opção selecionada no meu caso o 'Selecione um estado' retorna selecione
+    x = this.value
+    if(x == 'sel'){
+      select.style.color = 'grey'
+    }
+    else{
+      select.style.color = 'black'
+    }
+
+    
+
+
+});

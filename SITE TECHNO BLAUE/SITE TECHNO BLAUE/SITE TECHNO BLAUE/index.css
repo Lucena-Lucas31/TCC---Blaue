@@ -68,10 +68,10 @@ body{
 }
 
 .brain{
-    width: 40%;
-    height: 33.5vw;
+    width: 38vw;
+    height: 34.5vw;
     position: absolute;
-    top: -5%;
+    top: -1vw;
     left: 62%;
 }
 
@@ -200,13 +200,16 @@ nav ul li a:hover{
     width: 52vw;
     height: 30vw;
     margin: auto;
-    background: rgba(0, 0, 0, 0.103);
+    background: #5f5c5c;
     margin-top: 10vw;
-    border-radius: 20px;
-    border: 2.5px solid #000693;
     font-family: 'Libre Franklin', sans-serif;
     visibility: hidden;
     opacity: 0;
+    border: double 3.5px transparent;
+    border-radius: 0.85vw;
+    background-image: linear-gradient( #5f5c5c, #5f5c5c), radial-gradient(circle at top left, #232F87, #7384FF, #232F87);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
     
 }
 
@@ -320,17 +323,20 @@ input[type=submit]{
     cursor: pointer;
     width: 12vw;
     height: 11%;
-    border-radius: 1vw;
+    border-radius: 1.5vw;
     top: 30vw;
     left: 10vw;
     position: absolute;
     padding: 0.8%;
     border: none;
     margin-top: 1%;
+    box-shadow: 0.1vw 0.1vw 1vw #0000004b;
+    text-align: center;
 }
 
 input[type=submit]:hover{
     background: #17216d;
+    
 }
 
 .openbtn{
@@ -397,7 +403,7 @@ input[type=submit]:hover{
     background-color: #CFE5FF;
     height: 30vw;
     max-width: 22vw;
-    border-radius: 20px;
+    border-radius: 0.75vw 0vw 0vw 0.75vw;
     display: block;
 }
 
@@ -407,7 +413,7 @@ input[type=submit]:hover{
     left: 45vw;
     top: 5vw;
     position: absolute;
-    border-radius: 20px;
+    border-radius: 0.85vw;
     color: white;
 }
 
@@ -437,16 +443,12 @@ h3{
     cursor: pointer;
     border: none;
     background: #232F87;
-    border-radius: 1.6vw;
+    border-radius: 1.8vw;
     color: white;
-    font-size: 1.5vw;
+    font-size: 1.9vw;
     padding: 0.8%;
     width: 72%;
 }
-
-
-
-
 
 
 /*OVERLAY DE CADASTRO*/
@@ -463,32 +465,110 @@ h3{
 }
 
 .wrapRegister{
-    width: 80vw;
-    height: 35vw;
+    width: 70vw;
+    height: 30vw;
     margin: auto;
-    padding: 20px;
-    margin-top: 100px;
-    border-radius: 20px;
-    margin-top: 5vw;
-    border: 2.5px solid #000693;
+    margin-top: 10vw;
     font-family: 'Libre Franklin', sans-serif;
+    border: double 3.5px transparent;
+    border-radius: 1vw;
+    background-image: linear-gradient( #5f5c5c, #5f5c5c), radial-gradient(circle at top left, #232F87, #7384FF, #232F87);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+ 
 }
 
 form{
     margin-top: 50px;
 }
 
-input{
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
+.registerOverlaybtn2{
+    top: 3.5vw;
+    left: 3.5vw;
+    height: 4vw;
+    width: 14vw;
+    position: relative;
+    cursor: pointer;
     border: none;
-    outline: none;
-    border: 1px solid blue;
-    border-radius: 5px;
+    background: #232F87;
+    border-radius: 1.6vw;
+    color: white;
+    font-size: 1.8vw;
+    padding: 0.8%;
 }
 
+.labelregister{
+    font-size: 1.2vw;
+    margin-left: 1vw;
+    margin-bottom: 1.7vw;
+}
+
+.textregister{
+    width: 21vw;
+    height: 3.5vw;
+    padding-left: 1vw;
+    font-size: 1.15vw;
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: 1vw;
+    border: none;
+    outline: none;
+    border-radius: 4vw;
+    box-shadow: 0.1vw 0.1vw 1vw #0000004b;
+}
+
+.textregister2{
+    width: 21vw;
+    height: 3.5vw;
+    padding-left: 1vw;
+    padding-right: 5vw;
+    font-size: 1.15vw;
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: 1vw;
+    border: none;
+    outline: none;
+    border-radius: 4vw;
+    box-shadow: 0.1vw 0.1vw 1vw #0000004b;
+    color: gray;
+}
+
+.leftinputflex{
+    position: absolute;
+    top: 11vw;
+    left: 4vw;
+}
+
+.rightinputflex{
+    position: absolute;
+    top: 11vw;
+    left: 27vw;
+}
+
+.h2register{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2.5vw;
+    letter-spacing: 0.15vw;
+    top: 6.5vw;
+    left: 5.5vw;
+    position: absolute;
+    width: 40vw;
+}
+
+.h3register{
+    top: 3vw;
+}
+
+.ul1{
+    z-index: 3;
+    position: absolute;
+    top: 35vw;
+    left: 17vw;
+    font-size: 1.1vw;
+    color: #000465;
+}
 
 
 #wrapRg.active{
@@ -498,23 +578,46 @@ input{
 
 .leftRg{
     background-color: #CFE5FF;
-    height: 35vw;
-    max-width: 25vw;
-    border-radius: 20px;
+    height: 30vw;
+    max-width: 22vw;
+    border-radius: 0.9vw 0vw 0vw 0.9vw;
     display: block;
 }
 
 .rightRg{
-    height: 38.3vw;
+    height: 30vw;
     max-width: 56.5vw;
     display: block;
     left: 35vw;
     top: 5vw;
     position: absolute;
-    border-radius: 20px;
+    border-radius: 1vw;
     color: rgb(255, 255, 255);
 }
 
+.overlaycadastrarbtn input{
+    
+    font-size: 1.5vw;
+    color: #fff;
+    font-weight: lighter;
+    background: #232F87;
+    cursor: pointer;
+    width: 12vw;
+    height: 3.6vw;
+    border-radius: 2vw;
+    top: 30vw;
+    left: 20vw;
+    position: absolute;
+    padding: 0.8%;
+    border: none;
+    margin-top: 1%;
+    box-shadow: 0.1vw 0.1vw 1vw #0000004b;
+    text-align: center;
+}
+
+.estagioscadastro{
+    color: grey;
+}
 
 
 /*OVERLAY DE PSI*/
@@ -537,7 +640,7 @@ input{
     margin: auto;
     padding: 20px;
     margin-top: 100px;
-    border-radius: 20px;
+    border-radius: 2vw;
     margin-top: 5vw;
     font-family: 'Libre Franklin', sans-serif;
     background-color: #CFE5FF;
@@ -546,10 +649,10 @@ input{
 .wrapPsi2{
     width: 36vw;
     height: 32vw;
-    padding: 20px;
+    padding: 1.5vw;
     margin-top: -0.10vw;
     margin-left: 0.5vw;
-    border-radius: 20px;
+    border-radius: 1vw;
     font-family: 'Libre Franklin', sans-serif;
     background-color: #F1F8FF;
 }
@@ -561,23 +664,30 @@ input{
 
 .openPsi{
     cursor: pointer;
+    text-decoration: underline;
+    color: #000465;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    position: absolute;
+    width: 50vw;
+    bottom: -14vw;
+    left: -34vw;
 }
 
 .plTitulo{
-    margin-left: -1.5vw;
-    margin-top: -2.5vw;
+    margin-left: 25vw;
+    top: 5.9vw;
     background-color: #000465;
-    padding: 10px;
-    border-radius: 10px;
+    border-radius: 1vw 1vw 0vw 0vw;
     font-size: 2.5vw;
-    width: 37.6vw;
+    width: 39vw;
 }
 
 .list{
     color: black;
-    margin-top: 2vw;
+    margin-top: 4vw;
     font-size: 1.8vw;
-    padding: 15px;
+    padding: 1vw;
     text-align: justify;
 }
 
@@ -588,10 +698,10 @@ input{
     width: 21vw;
     height: 4vw;
     font-size: 2vw;
-    border-radius: 10px;
+    border-radius: 1vw;
     font-weight: 500;
     margin-top: 1vw;
-    margin-left: 7vw;
+    margin-left: 7.1vw;
     cursor: pointer;
 }
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techno Blaue</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
 </head>
 <body>
 
@@ -102,6 +102,7 @@
             <label for="Senha" class="label2">SENHA</label>
             <input type="password" name="Senha" id="password" class="textbox2" placeholder="Insira sua senha">
  
+            
             <input type="submit" name="Submit" id="submit" value="ENTRAR">
         </form>
         </div>
@@ -122,47 +123,65 @@
         <div class="leftRg">
             <img src="images/logoOverlay.png" alt="logo" class="logoOverlay">
 
-            <h3>JÁ TEM CADASTRO?</h3>
+            <h3 class="h3register">JÁ TEM CADASTRO?</h3>
 
-            <a href=""><button class="registerOverlaybtn">ENTRAR</button></a>
-        </div>
+            <a href=""><button class="registerOverlaybtn2">ENTRAR</button></a>
 
-            <ul>Sua senha deve conter:
+            <ul class="ul1">Sua senha deve conter:
                 <li>Seis dígitos no mínimo</li>
                 <li>Uma letra maiúscula e minúscula</li>
             </ul>
+        </div>
 
         <!--Engloba o conteúdo do lado direito do overlay-->
         <div class="rightRg">
                 
-                    <h2>SEJA BEM VINDO!</h2>
+                    <h2 class="h2register">SEJA BEM VINDO!</h2>
 
         <form action="">
 
-            <label for="Email">EMAIL</label>
-            <input type="text" name="Email" id="email">
+            <!--Coluna esquerda dos campos de cadastro-->
+            <div class="leftinputflex">
 
-            <label for="NameP">NOME DO PACIENTE</label>
-            <input type="text" name="NameP" id="NameP">
+                <label for="Email" class="labelregister">EMAIL</label>
+                <input type="text" name="Email" id="email" placeholder="exemplo@exemplo.com" class="textregister">
 
-            <label for="NameR">NOME DO RESPONSÁVEL</label>
-            <input type="text" name="NameR" id="NameR">
+                <label for="NameR" class="labelregister">NOME DO RESPONSÁVEL</label>
+                <input type="text" name="NameR" id="NameR" placeholder="Insira o nome" class="textregister">
 
-            <label for="stage">ESTÁGIO DO ALZHEIMER</label>
-            <select id="stage" name="alzheimerStageList" form="stageForm">
-                <option value="volvo">Leve</option>
-                <option value="saab">Moderado</option>
-            </select>
+                <label for="Tel" class="labelregister">TELEFONE DO RESPONSÁVEL</label>
+                <input type="text" name="Tel" id="tel" placeholder="(xx)xxxxx-xxxx" class="textregister">
 
-            <label for="Tel">TELEFONE DO RESPONSÁVEL</label>
-            <input type="text" name="Tel" id="tel">
+            </div>
 
-            <label for="Senha">SENHA</label>
-            <input type="password" name="Senha" id="password" class="textbox2">
- 
+            <!--Coluna direita dos campos de cadastro-->
+            <div class="rightinputflex">
+
+                <label for="NameP" class="labelregister">NOME DO PACIENTE</label>
+                <input type="text" name="NameP" id="NameP" placeholder="Insira o nome" class="textregister">
+
+                <label for="stage" class="labelregister">ESTÁGIO DO ALZHEIMER</label>
+                <select id="stage" name="alzheimerStageList" form="stageForm" class="textregister2">
+                    <option value="sel" class="estagioscadastro">Selecione o estágio</option>
+                    <option value="1" class="estagioscadastro">Estágio 1</option>
+                    <option value="2" class="estagioscadastro">Estágio 2</option>
+                </select>
+
+                <label for="Senha" class="labelregister">SENHA</label>
+                <input type="password" name="Senha" id="password" placeholder="Insira sua senha" class="textregister">
+
+            </div>
+           
+
+            
+        <div class="overlaycadastrarbtn">
             <input type="submit" name="submit" id="submit" value="CADASTRAR">
+        </div>
+
         </form>
+
         <span class="openPsi" onclick="openPsiForm();" title="Políticas de Segurança"> ACESSE NOSSA POLÍTICA DE SEGURANÇA </span>
+        
         </div>
     </div>
 </div>
