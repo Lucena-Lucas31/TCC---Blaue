@@ -36,6 +36,28 @@ body{
     filter: blur(20px);
 }
 
+/*SCROLL BAR*/
+
+/*ignora as coisas que tão aqui dentro, eu deixei elas brancas para ficarem invisíveis com o fundo*/
+/*vou deixar o código caso precise alterar alguma coisa*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.01vw;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+
 /*PARTE EM BRANCO Q ENGLOBA OS TEXTOS E BOTÕES DA TELA*/
 .container-principal{
     position: relative;
@@ -46,6 +68,8 @@ body{
     margin-top: 5vw;
     border: 2.5px solid #000693;
     border-radius: 20px 0px 20px 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /*BARRA DE MENU (LOGO, MENU E O BUTTON)*/
@@ -67,12 +91,20 @@ body{
     object-fit: cover;
 }
 
-.brain{
-    width: 38vw;
-    height: 34.5vw;
+.veia{
+    width: 35vw;
+    height: 30vw;
     position: absolute;
-    top: -1vw;
-    left: 62%;
+    top: -7vw;
+    left: 58vw;
+}
+
+.imgpapel{
+    width: 22vw;
+    height: 25vw;
+    position: absolute;
+    top: 29vw;
+    left: 1vw;
 }
 
 
@@ -106,23 +138,64 @@ nav ul li a:hover{
     text-decoration-color: rgba(0, 0, 0, 1);
 }
 
-.saibamaisbtn{
+.btnunifesp{
     cursor: pointer;
     border: none;
-    background: #232F87;
-    border-radius: 15px;
-    color: white;
-    font-size: 2vw;
-    font-weight: 500;
+    background: #CFE5FF;
+    border-radius: 1vw;
     padding: 0.8%;
-    width: 23%;
+    width: 16vw;
+    height: 7.5vw;
     position: absolute;
-    top: 82%;
-    left: 7%;
+    top: 45.5vw;
+    left: 36vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw #0000004b;
+    transition: 100ms ease-in-out;
+    text-align: left;
 }
 
-.saibamaisbtn:hover{
-    background: #000693;
+.btnunifesp p{
+    font-size: 2vw;
+    font-weight: 700;
+    color: #000693;
+    text-align: right;
+    position: absolute;
+    top: 2.5vw;
+    right: 1vw;
+}
+
+.btnunifesp p:hover{
+    color: #000465;
+}
+
+.btndoutor{
+    cursor: pointer;
+    border: none;
+    background: #CFE5FF;
+    border-radius: 1vw;
+    text-align: left;
+    padding: 0.8%;
+    width: 16vw;
+    height: 7.5vw;
+    position: absolute;
+    top: 45.5vw;
+    left: 75.5vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw #0000004b;
+    transition: 100ms ease-in-out;
+}
+
+.btndoutor p{
+    font-size: 2vw;
+    font-weight: 700;
+    color: #000693;
+    text-align: left;
+    position: absolute;
+    top: 1.5vw;
+    left: 6vw;
+}
+
+.btndoutor p:hover{
+    color: #000465;
 }
 
 /*DIV QUE ABRIGA OS TEXTOS DO MEIO DA TELA E O PARÁGRAFO*/
@@ -133,11 +206,11 @@ nav ul li a:hover{
 
 .text-1{
     flex-basis: 40%;
-    font-size: 3.4vw;
+    font-size: 2.3vw;
     position: absolute;
-    top:6%;
-    left: 3vw;
-    letter-spacing: 0.75vw;
+    top: 1.2vw;
+    left: 2vw;
+    letter-spacing: 0.15vw;
    
 }
 
@@ -147,23 +220,45 @@ nav ul li a:hover{
 
 .text-2{
     flex-basis: 40%;
-    font-size: 3.4vw;
+    font-size: 2.3vw;
     word-spacing: 1vw;
-    letter-spacing: 0.75vw;
+    letter-spacing: 0.2vw;
     position: absolute;
-    top: 27%;
-    left: 3vw;
+    top: 7vw;
+    left: 2vw;
     width: 70%;
 }
 
 .text-3{
     flex-basis: 40%;
-    font-size: 2.3vw;
-    width: 64%;
+    font-size: 1.65vw;
+    width: 50vw;
     text-align: justify;
     position: absolute;
-    top: 49%;
-    left: 4vw;
+    top: 13vw;
+    left: 2vw;
+    font-weight: 400;
+}
+
+.text-4{
+    flex-basis: 40%;
+    font-size: 2.2vw;
+    word-spacing: 1vw;
+    letter-spacing: 0.25vw;
+    position: absolute;
+    top: 27vw;
+    left: 38vw;
+    width: 70%;
+}
+
+.text-5{
+    flex-basis: 40%;
+    font-size: 1.65vw;
+    width: 55vw;
+    text-align: justify;
+    position: absolute;
+    top: 32vw;
+    left: 36vw;
     font-weight: 400;
 }
 
@@ -173,23 +268,36 @@ nav ul li a:hover{
 
 .insta{
     position: absolute;
-    top: 90%;
+    top: 58vw;
     left: 85%;
     width: 2.5vw;
 }
 
 .whats{
     position: absolute;
-    top: 90%;
+    top: 58vw;
     left: 89.5%;
     width: 2.5vw;
 }
 
 .email{
     position: absolute;
-    top: 91%;
+    top: 58vw;
     left: 94%;
     width: 2.5vw;
+}
+
+.openPsiSobre{
+    position: absolute;
+    top: 59vw;
+    left: 1vw;
+    width: 32.5vw;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000465;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    padding-bottom: 0.5vw;
 }
 
 
@@ -358,7 +466,7 @@ input[type=submit]:hover{
 .divopenbtn{
     width: 13.65vw;
     height: 4.45vw;
-    top: 5%;
+    top: 0.15vw;
     left: 71.25vw;
     margin: -0.4vw;
     background-color: white;
@@ -368,6 +476,7 @@ input[type=submit]:hover{
     border-bottom: none;
     z-index: 1;
     vertical-align: bottom;
+    background-image: ;
 }
 
 .openbtn:hover{
@@ -450,6 +559,9 @@ h3{
     width: 72%;
 }
 
+.registerOverlaybtn:hover{
+    background: #17216d;
+}
 
 /*OVERLAY DE CADASTRO*/
 
@@ -495,6 +607,10 @@ form{
     color: white;
     font-size: 1.8vw;
     padding: 0.8%;
+}
+
+.registerOverlaybtn2:hover{
+    background: #17216d;
 }
 
 .labelregister{
@@ -703,49 +819,4 @@ form{
     margin-top: 1vw;
     margin-left: 7.1vw;
     cursor: pointer;
-}
-
-
-/*PÁGINA SOBRE*/
-
-.box1{
-    width: 58%;
-    color: #000465;
-}
-
-.box1 h1{
-    font-size: 5.34vw;
-    font-weight: 200;
-    text-transform: uppercase;
-}
-
-.box1 p{
-    font-size: 2.25vw;
-    text-align: justify;
-}
-
-.imgveia1{
-    width: 38%;
-    top: -10%;
-    position: absolute;
-    left: 60%;
-}
-
-.box2{
-    width: 68%;
-    color: #000465;
-    left: 32%;
-    position: absolute;
-    text-align: center;
-}
-
-.box2 h1{
-    font-size: 5.34vw;
-    font-weight: 200;
-    text-transform: uppercase;
-}
-
-.box2 p{
-    font-size: 2.25vw;
-    text-align: justify;
 }
