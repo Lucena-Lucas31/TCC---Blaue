@@ -26,11 +26,11 @@ var path = require('path')
     })
 
 app.get("/", function(req, res){
-    res.render('home')
+    res.render('login')
 });
 
-app.get("/login", function(req, res){
-    res.render('login')
+app.get("/home", function(req, res){
+    res.render('home')
 });
 
 app.get("/firstScreen", function(req, res){
@@ -47,6 +47,10 @@ app.get("/classicThemes", function(req, res){
 
 app.get("/gameNumbers", function(req, res){
     res.render('gameNumbers')
+});
+
+app.get("/sobre", function(req, res){
+    res.render('sobre')
 });
 
 app.get("/gameShapes", function(req, res){
