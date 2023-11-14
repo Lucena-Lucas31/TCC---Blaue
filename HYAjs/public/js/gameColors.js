@@ -235,3 +235,51 @@ function openForm(){
 function closeForm(){
     document.getElementById("myOverlay").style.display = "none";
 }
+
+
+const btsaveg = document.getElementById(id= "savegame");
+
+btsaveg.onclick = function(){
+    const pontuacao = document.getElementById("setText").value;
+    const modo_jogo = "animais";
+    const timer = document.getElementById("timer").value;
+  
+    fetch('http://localhost:8081/add', {
+      headers: {
+        'Content-type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+    })
+    .then(response => response.json())
+    .then(data => insertRowIntoTable(data['data']));
+  }
+  
+  function insertRowIntoTable(data){
+    
+  }
+
+
+
+
+const btsaveg2 = document.getElementById(id= "savegame2");
+
+btsaveg2.onclick = function(){
+  const pontuacao = document.getElementById("setText").value;
+  const modo_jogo = "animais";
+  const timer = document.getElementById("timer").value;
+
+  fetch('http://localhost:8081/add', {
+    headers: {
+      'Content-type': 'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+  })
+  .then(response => response.json())
+  .then(data => insertRowIntoTable(data['data']));
+}
+
+function insertRowIntoTable(data){
+  
+}

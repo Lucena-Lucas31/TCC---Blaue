@@ -1,6 +1,7 @@
 const inputFile = document.querySelector("#picture__input");
 
 
+
 const pictureImage = document.querySelector(".picture__image");
 const pictureImageTxt = "Selecionar<br>Imagem";
 pictureImage.innerHTML = pictureImageTxt;
@@ -194,3 +195,40 @@ inputFile5.addEventListener("change", function (e) {
       pictureImage5.innerHTML = pictureImageTxt5;
     }
   });
+
+  //========================================================
+
+  
+const bt = document.getElementById("bt");
+
+bt.onclick = function(){
+  const parente1 = document.getElementById("s1").value;
+  const parente2 = document.getElementById("s2").value;
+  const parente3 = document.getElementById("s3").value;
+  const parente4 = document.getElementById("s4").value;
+  const parente5 = document.getElementById("s5").value;
+  const parente6 = document.getElementById("s6").value;
+
+  const nome1 = document.getElementById("NomeP1").value;
+  const nome2 = document.getElementById("NomeP2").value;
+  const nome3 = document.getElementById("NomeP3").value;
+  const nome4 = document.getElementById("NomeP4").value;
+  const nome5 = document.getElementById("NomeP5").value;
+  const nome6 = document.getElementById("NomeP6").value;
+
+  fetch('http://localhost:8081/insert', {
+    headers: {
+      'Content-type': 'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify({ parente1 : parente1, parente2 : parente2, parente3 : parente3,  parente4 : parente4,  parente5 : parente5,  parente6 : parente6, nome1 : nome1, nome2 : nome2, nome3 : nome3, nome4 : nome4, nome5 : nome5, nome6 : nome6,})
+  })
+  .then(response => response.json())
+  .then(data => insertRowIntoTable(data['data']));
+}
+
+function insertRowIntoTable(data){
+  
+}
+
+

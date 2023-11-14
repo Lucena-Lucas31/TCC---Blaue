@@ -1,0 +1,61 @@
+<body>
+    
+    <link rel="stylesheet" href="/css/game.css">
+    <script  defer src="/js/gameCustom.js"></script> <!--defer: carregar o html primeiro que o js-->   
+    
+    <main>
+        <header>
+            <span><span class="timer" hidden></span></span>
+            <span><span class="pontuacao" hidden></span></span>
+        </header>
+        <div class="grid"></div>
+
+        <a href="http://localhost:8081/classicThemes"><button class="backBtn">VOLTAR</button></a>
+
+        <form id="Form" action="/add" method="POST">
+             <input type= "text" id= "setText" name= "pontuacao">
+             <input type= "text" id= "timer" name= "timer">
+             <input type= "text" id= "modo" name= "modo">
+             <input type="submit" value="Submit" id="enviar"></button>
+        </form>
+
+
+        <img src="/images/game/alzhyThinker.png" alt="" id="alzhyT">
+        <img src="/images/game/alzhyShine.png" alt="" id="alzhyS" hidden>
+        <img src="/images/game/alzhyHappy.png" alt="" id="alzhyH" hidden>
+
+
+        <form id="DADOS">
+
+
+            <input type= "text" id= "Parentesco1" name= "Parentesco1" placeholder={{parente1}}>
+            <input type= "text" id= "Parentesco2" name= "Parentesco2" placeholder={{parente2}}>
+            <input type= "text" id= "Parentesco3" name= "Parentesco3" placeholder={{parente3}}>
+            <input type= "text" id= "Parentesco4" name= "Parentesco4" placeholder={{parente4}}>
+            <input type= "text" id= "Parentesco5" name= "Parentesco5" placeholder={{parente5}}>
+            <input type= "text" id= "Parentesco6" name= "Parentesco6" placeholder={{parente6}}>
+
+
+            <input type= "text" id= "NomeParente1" name= "NomeParente1">
+            <input type= "text" id= "NomeParente2" name= "NomeParente2">
+            <input type= "text" id= "NomeParente3" name= "NomeParente3">
+            <input type= "text" id= "NomeParente4" name= "NomeParente4">
+            <input type= "text" id= "NomeParente5" name= "NomeParente5">
+            <input type= "text" id= "NomeParente6" name= "NomeParente6">
+        </form>
+
+
+    </main>
+
+    <div id="myOverlay" class="overlay">
+        <div class="wrap">
+            <h1 class="overTitle">PARABÉNS!</h1>
+            <center><h3 class="subTitle">VOCÊ CONCLUIU ESTA FASE</h3></center>
+            <a href="/gameAnimals"><button class= "playAgain">JOGAR NOVAMENTE</button></a>
+            <a href="/gameMode"><button class="mode">NOVO MODO DE JOGO</button></a>
+        </div>
+    </div>
+
+</body>
+
+ 

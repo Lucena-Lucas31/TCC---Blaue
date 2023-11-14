@@ -42,7 +42,7 @@ const checkEndGame = () => {
 
         getAndSetText(); /*Define o valor da pontuacao para o formulario */
 
-        Click(); /* Envia o formulario com os dados para o banco */
+        
 
         setTimeout(() => { /*DELAY PARA DESVIRAR AS CARTAS */
 
@@ -63,9 +63,7 @@ function getAndSetText(){
 
         }
 
-function Click() {
-         document.getElementById("enviar").click();
-        }
+
 
 
 
@@ -237,6 +235,52 @@ window.onload = () => {
 
 
 
+const btsaveg = document.getElementById(id= "savegame");
+
+btsaveg.onclick = function(){
+    const pontuacao = document.getElementById("setText").value;
+    const modo_jogo = "animais";
+    const timer = document.getElementById("timer").value;
+  
+    fetch('http://localhost:8081/add', {
+      headers: {
+        'Content-type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+    })
+    .then(response => response.json())
+    .then(data => insertRowIntoTable(data['data']));
+  }
+  
+  function insertRowIntoTable(data){
+    
+  }
+
+
+
+
+const btsaveg2 = document.getElementById(id= "savegame2");
+
+btsaveg2.onclick = function(){
+  const pontuacao = document.getElementById("setText").value;
+  const modo_jogo = "animais";
+  const timer = document.getElementById("timer").value;
+
+  fetch('http://localhost:8081/add', {
+    headers: {
+      'Content-type': 'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+  })
+  .then(response => response.json())
+  .then(data => insertRowIntoTable(data['data']));
+}
+
+function insertRowIntoTable(data){
+  
+}
 
 
 

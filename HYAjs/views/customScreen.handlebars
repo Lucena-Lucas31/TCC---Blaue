@@ -3,15 +3,37 @@
     <script defer src="/js/customScreen.js"></script>
 
     <a href="http://localhost:8081/gameMode"><button class="backBtn">VOLTAR</button></a>
-<form>
-    <label class="picture" for="picture__input" tabIndex="0" id="pic">
-        <span class="picture__image"></span>
-    </label>  
-    <input type="file" name="picture__input" id="picture__input">
+
+    <script>
+
+        function setParentesco(){
+        document.getElementById('Parentesco1').value= document.getElementById('s1').value;
+        document.getElementById('Parentesco2').value= document.getElementById('s2').value;
+        document.getElementById('Parentesco3').value= document.getElementById('s3').value;
+        document.getElementById('Parentesco4').value= document.getElementById('s4').value;
+        document.getElementById('Parentesco5').value= document.getElementById('s5').value;
+        document.getElementById('Parentesco6').value= document.getElementById('s6').value;
+        }
+
+        function setNameP(){
+        document.getElementById('NomeParente1').value= document.getElementById('NomeP1').value;
+        document.getElementById('NomeParente2').value= document.getElementById('NomeP2').value;
+        document.getElementById('NomeParente3').value= document.getElementById('NomeP3').value;
+        document.getElementById('NomeParente4').value= document.getElementById('NomeP4').value;
+        document.getElementById('NomeParente5').value= document.getElementById('NomeP5').value;
+        document.getElementById('NomeParente6').value= document.getElementById('NomeP6').value;
+        }
+
+        
+    </script>
+
      
+    <form action="">  
+     
+
      <div class="wrapper" id="wr1">
         <div class="input-data">
-            <input type="text" required>
+            <input type="text" id="NomeP1" name="NomeP1" required>
             <div class="underline"></div>
             <label>Insira o nome</label>
         </div>
@@ -19,7 +41,7 @@
 
       <div class="wrapper" id="wr2">
         <div class="input-data">
-            <input type="text" required>
+            <input type="text" id="NomeP2" name="NomeP2" required>
             <div class="underline"></div>
             <label>Insira o nome</label>
         </div>
@@ -27,7 +49,7 @@
 
       <div class="wrapper" id="wr3">
         <div class="input-data">
-            <input type="text" required>
+            <input type="text" id="NomeP3" name="NomeP3" required>
             <div class="underline"></div>
             <label>Insira o nome</label>
         </div>
@@ -35,7 +57,7 @@
 
       <div class="wrapper" id="wr4">
         <div class="input-data">
-            <input type="text" required>
+            <input type="text" id="NomeP4" name="NomeP4" required>
             <div class="underline"></div>
             <label>Insira o nome</label>
         </div>
@@ -43,7 +65,7 @@
 
       <div class="wrapper" id="wr5">
         <div class="input-data">
-            <input type="text" required>
+            <input type="text" id="NomeP5" name="NomeP5" required>
             <div class="underline"></div>
             <label>Insira o nome</label>
         </div>
@@ -51,177 +73,198 @@
 
       <div class="wrapper" id="wr6">
         <div class="input-data">
-            <input type="text" required>
+            <input type="text" id="NomeP6" name="NomeP6" required>
             <div class="underline"></div>
             <label>Insira o nome</label>
         </div>
      </div>
 
+    </form>
+
+
+
+    <select name="Parent1" required="required" class="selectParent" id="s1">
+        <option value="">Selecione o Parente</option>
+        <option value="father">Pai</option>
+        <option value="mother">Mãe</option>
+        <option value="son">Filho</option>
+        <option value="daughter">Filha</option>
+        <option value="brother">Irmão</option>
+        <option value="sister">Irmã</option>
+        <option value="grandson">Neto</option>
+        <option value="granddaughter">Neta</option>
+        <option value="grandfather">Avô</option>
+        <option value="grandmother">Avó</option>
+        <option value="cousinM">Primo</option>
+        <option value="cousinF">Prima</option>
+        <option value="uncle">Tio</option>
+        <option value="aunt">Tia</option>
+        <option value="nephew">Sobrinho</option>
+        <option value="niece">Sobrinha</option>
+        <option value="friendM">Amigo</option>
+        <option value="friendF">Amiga</option>
+    </select>
+
+    
+
+
+
+    <select name="Parent2" required="required" class="selectParent" id="s2">
+        <option value="">Selecione o Parente</option>
+        <option value="father">Pai</option>
+        <option value="mother">Mãe</option>
+        <option value="son">Filho</option>
+        <option value="daughter">Filha</option>
+        <option value="brother">Irmão</option>
+        <option value="sister">Irmã</option>
+        <option value="grandson">Neto</option>
+        <option value="granddaughter">Neta</option>
+        <option value="grandfather">Avô</option>
+        <option value="grandmother">Avó</option>
+        <option value="cousinM">Primo</option>
+        <option value="cousinF">Prima</option>
+        <option value="uncle">Tio</option>
+        <option value="aunt">Tia</option>
+        <option value="nephew">Sobrinho</option>
+        <option value="niece">Sobrinha</option>
+        <option value="friendM">Amigo</option>
+        <option value="friendF">Amiga</option>
+    </select>
+
+    <select name="Parent3" required="required" class="selectParent" id="s3">
+        <option value="">Selecione o Parente</option>
+        <option value="father">Pai</option>
+        <option value="mother">Mãe</option>
+        <option value="son">Filho</option>
+        <option value="daughter">Filha</option>
+        <option value="brother">Irmão</option>
+        <option value="sister">Irmã</option>
+        <option value="grandson">Neto</option>
+        <option value="granddaughter">Neta</option>
+        <option value="grandfather">Avô</option>
+        <option value="grandmother">Avó</option>
+        <option value="cousinM">Primo</option>
+        <option value="cousinF">Prima</option>
+        <option value="uncle">Tio</option>
+        <option value="aunt">Tia</option>
+        <option value="nephew">Sobrinho</option>
+        <option value="niece">Sobrinha</option>
+        <option value="friendM">Amigo</option>
+        <option value="friendF">Amiga</option>
+    </select>
+
+    <select name="Parent4" required="required" class="selectParent" id="s4">
+        <option value="">Selecione o Parente</option>
+        <option value="father">Pai</option>
+        <option value="mother">Mãe</option>
+        <option value="son">Filho</option>
+        <option value="daughter">Filha</option>
+        <option value="brother">Irmão</option>
+        <option value="sister">Irmã</option>
+        <option value="grandson">Neto</option>
+        <option value="granddaughter">Neta</option>
+        <option value="grandfather">Avô</option>
+        <option value="grandmother">Avó</option>
+        <option value="cousinM">Primo</option>
+        <option value="cousinF">Prima</option>
+        <option value="uncle">Tio</option>
+        <option value="aunt">Tia</option>
+        <option value="nephew">Sobrinho</option>
+        <option value="niece">Sobrinha</option>
+        <option value="friendM">Amigo</option>
+        <option value="friendF">Amiga</option>
+    </select>
+
+    <select name="Parent5" required="required" class="selectParent" id="s5">
+        <option value="">Selecione o Parente</option>
+        <option value="father">Pai</option>
+        <option value="mother">Mãe</option>
+        <option value="son">Filho</option>
+        <option value="daughter">Filha</option>
+        <option value="brother">Irmão</option>
+        <option value="sister">Irmã</option>
+        <option value="grandson">Neto</option>
+        <option value="granddaughter">Neta</option>
+        <option value="grandfather">Avô</option>
+        <option value="grandmother">Avó</option>
+        <option value="cousinM">Primo</option>
+        <option value="cousinF">Prima</option>
+        <option value="uncle">Tio</option>
+        <option value="aunt">Tia</option>
+        <option value="nephew">Sobrinho</option>
+        <option value="niece">Sobrinha</option>
+        <option value="friendM">Amigo</option>
+        <option value="friendF">Amiga</option>
+    </select>
+
+    <select name="Parent6" required="required" class="selectParent" id="s6">
+        <option value="">Selecione o Parente</option>
+        <option value="father">Pai</option>
+        <option value="mother">Mãe</option>
+        <option value="son">Filho</option>
+        <option value="daughter">Filha</option>
+        <option value="brother">Irmão</option>
+        <option value="sister">Irmã</option>
+        <option value="grandson">Neto</option>
+        <option value="granddaughter">Neta</option>
+        <option value="grandfather">Avô</option>
+        <option value="grandmother">Avó</option>
+        <option value="cousinM">Primo</option>
+        <option value="cousinF">Prima</option>
+        <option value="uncle">Tio</option>
+        <option value="aunt">Tia</option>
+        <option value="nephew">Sobrinho</option>
+        <option value="niece">Sobrinha</option>
+        <option value="friendM">Amigo</option>
+        <option value="friendF">Amiga</option>
+    </select>
+
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+
+    <label class="picture" for="picture__input" tabIndex="0" id="pic">
+        <span class="picture__image"></span>
+    </label>  
+
+    <input type="file" name="files[]" id="picture__input"> 
+
 
     <label class="picture" for="picture__input1" tabIndex="0" id="pic1">
         <span class="picture__image1"></span>
     </label>
-    <input type="file" name="picture__input1" id="picture__input1">
+    <input type="file" name="files[]" id="picture__input1">
 
 
     <label class="picture" for="picture__input2" tabIndex="0" id="pic2">
         <span class="picture__image2"></span>
     </label>
-    <input type="file" name="picture__input2" id="picture__input2">
+    <input type="file" name="files[]" id="picture__input2">
 
     
     <label class="picture" for="picture__input3" tabIndex="0" id="pic3">
         <span class="picture__image3"></span>
     </label>
-    <input type="file" name="picture__input3" id="picture__input3">
+    <input type="file" name="files[]" id="picture__input3">
 
     
     <label class="picture" for="picture__input4" tabIndex="0" id="pic4">
         <span class="picture__image4"></span>
     </label>
-    <input type="file" name="picture__input4" id="picture__input4">
+    <input type="file" name="files[]" id="picture__input4">
 
     
     <label class="picture" for="picture__input5" tabIndex="0" id="pic5">
         <span class="picture__image5"></span>
     </label>
-    <input type="file" name="picture__input5" id="picture__input5">
+    <input type="file" name="files[]" id="picture__input5">
+
+    <button type="submit" id="bt">INICIAR</button>
 
 
-    
-    <select name="linguagem" required="required" class="selectParent" id="s1">
-        <option value="">Selecione o Parente</option>
-        <option value="father">Pai</option>
-        <option value="mother">Mãe</option>
-        <option value="son">Filho</option>
-        <option value="daughter">Filha</option>
-        <option value="brother">Irmão</option>
-        <option value="sister">Irmã</option>
-        <option value="grandson">Neto</option>
-        <option value="granddaughter">Neta</option>
-        <option value="grandfather">Avô</option>
-        <option value="grandmother">Avó</option>
-        <option value="cousinM">Primo</option>
-        <option value="cousinF">Prima</option>
-        <option value="uncle">Tio</option>
-        <option value="aunt">Tia</option>
-        <option value="nephew">Sobrinho</option>
-        <option value="niece">Sobrinha</option>
-        <option value="friendM">Amigo</option>
-        <option value="friendF">Amiga</option>
-    </select>
-
-
-    <select name="linguagem" required="required" class="selectParent" id="s2">
-        <option value="">Selecione o Parente</option>
-        <option value="father">Pai</option>
-        <option value="mother">Mãe</option>
-        <option value="son">Filho</option>
-        <option value="daughter">Filha</option>
-        <option value="brother">Irmão</option>
-        <option value="sister">Irmã</option>
-        <option value="grandson">Neto</option>
-        <option value="granddaughter">Neta</option>
-        <option value="grandfather">Avô</option>
-        <option value="grandmother">Avó</option>
-        <option value="cousinM">Primo</option>
-        <option value="cousinF">Prima</option>
-        <option value="uncle">Tio</option>
-        <option value="aunt">Tia</option>
-        <option value="nephew">Sobrinho</option>
-        <option value="niece">Sobrinha</option>
-        <option value="friendM">Amigo</option>
-        <option value="friendF">Amiga</option>
-    </select>
-
-    <select name="linguagem" required="required" class="selectParent" id="s3">
-        <option value="">Selecione o Parente</option>
-        <option value="father">Pai</option>
-        <option value="mother">Mãe</option>
-        <option value="son">Filho</option>
-        <option value="daughter">Filha</option>
-        <option value="brother">Irmão</option>
-        <option value="sister">Irmã</option>
-        <option value="grandson">Neto</option>
-        <option value="granddaughter">Neta</option>
-        <option value="grandfather">Avô</option>
-        <option value="grandmother">Avó</option>
-        <option value="cousinM">Primo</option>
-        <option value="cousinF">Prima</option>
-        <option value="uncle">Tio</option>
-        <option value="aunt">Tia</option>
-        <option value="nephew">Sobrinho</option>
-        <option value="niece">Sobrinha</option>
-        <option value="friendM">Amigo</option>
-        <option value="friendF">Amiga</option>
-    </select>
-
-    <select name="linguagem" required="required" class="selectParent" id="s4">
-        <option value="">Selecione o Parente</option>
-        <option value="father">Pai</option>
-        <option value="mother">Mãe</option>
-        <option value="son">Filho</option>
-        <option value="daughter">Filha</option>
-        <option value="brother">Irmão</option>
-        <option value="sister">Irmã</option>
-        <option value="grandson">Neto</option>
-        <option value="granddaughter">Neta</option>
-        <option value="grandfather">Avô</option>
-        <option value="grandmother">Avó</option>
-        <option value="cousinM">Primo</option>
-        <option value="cousinF">Prima</option>
-        <option value="uncle">Tio</option>
-        <option value="aunt">Tia</option>
-        <option value="nephew">Sobrinho</option>
-        <option value="niece">Sobrinha</option>
-        <option value="friendM">Amigo</option>
-        <option value="friendF">Amiga</option>
-    </select>
-
-    <select name="linguagem" required="required" class="selectParent" id="s5">
-        <option value="">Selecione o Parente</option>
-        <option value="father">Pai</option>
-        <option value="mother">Mãe</option>
-        <option value="son">Filho</option>
-        <option value="daughter">Filha</option>
-        <option value="brother">Irmão</option>
-        <option value="sister">Irmã</option>
-        <option value="grandson">Neto</option>
-        <option value="granddaughter">Neta</option>
-        <option value="grandfather">Avô</option>
-        <option value="grandmother">Avó</option>
-        <option value="cousinM">Primo</option>
-        <option value="cousinF">Prima</option>
-        <option value="uncle">Tio</option>
-        <option value="aunt">Tia</option>
-        <option value="nephew">Sobrinho</option>
-        <option value="niece">Sobrinha</option>
-        <option value="friendM">Amigo</option>
-        <option value="friendF">Amiga</option>
-    </select>
-
-    <select name="linguagem" required="required" class="selectParent" id="s6">
-        <option value="">Selecione o Parente</option>
-        <option value="father">Pai</option>
-        <option value="mother">Mãe</option>
-        <option value="son">Filho</option>
-        <option value="daughter">Filha</option>
-        <option value="brother">Irmão</option>
-        <option value="sister">Irmã</option>
-        <option value="grandson">Neto</option>
-        <option value="granddaughter">Neta</option>
-        <option value="grandfather">Avô</option>
-        <option value="grandmother">Avó</option>
-        <option value="cousinM">Primo</option>
-        <option value="cousinF">Prima</option>
-        <option value="uncle">Tio</option>
-        <option value="aunt">Tia</option>
-        <option value="nephew">Sobrinho</option>
-        <option value="niece">Sobrinha</option>
-        <option value="friendM">Amigo</option>
-        <option value="friendF">Amiga</option>
-    </select>
-  <button type="submit" id="bt">INICIAR</button>
 </form>
+
+
+
   
 </body>
