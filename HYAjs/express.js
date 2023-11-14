@@ -33,7 +33,7 @@ const dbService = require("./models/dbService");
     })
 
 app.get("/", function(req, res){
-    res.render('gameCustom')
+    res.render('register')
 });
 
 app.get("/home", function(req, res){
@@ -72,38 +72,42 @@ app.get("/customScreen", function(req, res){
     res.render('customScreen')
 });
 
-app.get('/gameCustom', function(req, res){
+app.get("/login", function(req, res){
+    res.render('login')
+});
+
+app.get('/gameCustom', function(req, res){ 
       
     const Fs = require('fs')  
   const Path = require('path')
   
   const oldPath0 = Path.join(__dirname, "/uploads/0")  
-  const newPath0 = Path.join(__dirname, "/uploads/0.jpg")
+  const newPath0 = Path.join(__dirname, "/public/images/teste/0.jpg")
   
   Fs.renameSync(oldPath0, newPath0)
   
   const oldPath1 = Path.join(__dirname, "/uploads/1")  
-  const newPath1 = Path.join(__dirname, "/uploads/1.jpg")
+  const newPath1 = Path.join(__dirname, "/public/images/teste/1.jpg")
   
   Fs.renameSync(oldPath1, newPath1)
 
   const oldPath2 = Path.join(__dirname, "/uploads/2")  
-  const newPath2 = Path.join(__dirname, "/uploads/2.jpg")
+  const newPath2 = Path.join(__dirname, "/public/images/teste/2.jpg")
   
   Fs.renameSync(oldPath2, newPath2)
 
   const oldPath3 = Path.join(__dirname, "/uploads/3")  
-  const newPath3 = Path.join(__dirname, "/uploads/3.jpg")
+  const newPath3 = Path.join(__dirname, "/public/images/teste/3.jpg")
   
   Fs.renameSync(oldPath3, newPath3)
 
   const oldPath4 = Path.join(__dirname, "/uploads/4")  
-  const newPath4 = Path.join(__dirname, "/uploads/4.jpg")
+  const newPath4 = Path.join(__dirname, "/public/images/teste/4.jpg")
   
   Fs.renameSync(oldPath4, newPath4)
 
   const oldPath5 = Path.join(__dirname, "/uploads/5")  
-  const newPath5 = Path.join(__dirname, "/uploads/5.jpg")
+  const newPath5 = Path.join(__dirname, "/public/images/teste/5.jpg")
   
   Fs.renameSync(oldPath5, newPath5)
 
