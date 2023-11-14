@@ -36,28 +36,6 @@ body{
     filter: blur(20px);
 }
 
-/*SCROLL BAR*/
-
-/*ignora as coisas que tão aqui dentro, eu deixei elas brancas para ficarem invisíveis com o fundo*/
-/*vou deixar o código caso precise alterar alguma coisa*/
-
-/* width */
-::-webkit-scrollbar {
-    width: 0.01vw;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgb(255, 255, 255);
-    border-radius: 10px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-  }
-
 /*PARTE EM BRANCO Q ENGLOBA OS TEXTOS E BOTÕES DA TELA*/
 .container-principal{
     position: relative;
@@ -68,8 +46,6 @@ body{
     margin-top: 5vw;
     border: 2.5px solid #000693;
     border-radius: 20px 0px 20px 20px;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 /*BARRA DE MENU (LOGO, MENU E O BUTTON)*/
@@ -91,20 +67,12 @@ body{
     object-fit: cover;
 }
 
-.veia{
-    width: 35vw;
-    height: 30vw;
+.brain{
+    width: 38vw;
+    height: 34.5vw;
     position: absolute;
-    top: -7vw;
-    left: 58vw;
-}
-
-.imgpapel{
-    width: 22vw;
-    height: 25vw;
-    position: absolute;
-    top: 29vw;
-    left: 1vw;
+    top: -1vw;
+    left: 62%;
 }
 
 
@@ -133,77 +101,52 @@ nav ul li a{
     font-size: 1.9vw;
 }
 
+/*SCROLL BAR*/
+
+/*ignora as coisas que tão aqui dentro, eu deixei elas brancas para ficarem invisíveis com o fundo*/
+/*vou deixar o código caso precise alterar alguma coisa*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.8vw;
+    direction: rtl;
+    
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1vw rgb(177, 162, 162);
+    border-radius: 2vw;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(80, 74, 74);
+    border-radius: 2vw;
+}
+
 /*DESIGN QUANDO PASSA O MOUSE EM CIMA DE CADA ITEM DA LISTA*/
 nav ul li a:hover{
     text-decoration-color: rgba(0, 0, 0, 1);
 }
 
-.btnunifesp{
+.saibamaisbtn{
     cursor: pointer;
     border: none;
-    background: #CFE5FF;
-    border-radius: 1vw;
-    padding: 0.8%;
-    width: 16vw;
-    height: 7.5vw;
-    position: absolute;
-    top: 45.5vw;
-    left: 36vw;
-    box-shadow: 0.1vw 0.1vw 0.5vw #0000004b;
-    transition: 100ms ease-in-out;
-    text-align: left;
-}
-
-.btnunifesp p{
+    background: #232F87;
+    border-radius: 15px;
+    color: white;
     font-size: 2vw;
-    font-weight: 700;
-    color: #000693;
-    text-align: right;
-    position: absolute;
-    top: 2.5vw;
-    right: 1vw;
-}
-
-.btnunifesp p:hover{
-    color: #000465;
-}
-
-.papelunifesp{
-    width: 5vw;
-}
-
-.btndoutor{
-    cursor: pointer;
-    border: none;
-    background: #CFE5FF;
-    border-radius: 1vw;
-    text-align: left;
+    font-weight: 500;
     padding: 0.8%;
-    width: 16vw;
-    height: 7.5vw;
+    width: 23%;
     position: absolute;
-    top: 45.5vw;
-    left: 75.5vw;
-    box-shadow: 0.1vw 0.1vw 0.5vw #0000004b;
-    transition: 100ms ease-in-out;
+    top: 82%;
+    left: 7%;
 }
 
-.btndoutor p{
-    font-size: 2vw;
-    font-weight: 700;
-    color: #000693;
-    text-align: left;
-    position: absolute;
-    top: 1.5vw;
-    left: 6vw;
-}
-
-.btndoutor p:hover{
-    color: #000465;
-}
-
-.imgdr{
-    width: 5vw;
+.saibamaisbtn:hover{
+    background: #000693;
 }
 
 /*DIV QUE ABRIGA OS TEXTOS DO MEIO DA TELA E O PARÁGRAFO*/
@@ -214,60 +157,165 @@ nav ul li a:hover{
 
 .text-1{
     flex-basis: 40%;
-    font-size: 2.3vw;
-    position: absolute;
-    top: 1.2vw;
-    left: 2vw;
-    letter-spacing: 0.15vw;
-   
-}
-
-.text-1 h1{
-    font-weight: 100;
-}
-
-.text-2{
-    flex-basis: 40%;
-    font-size: 2.3vw;
-    word-spacing: 1vw;
-    letter-spacing: 0.2vw;
-    position: absolute;
-    top: 7vw;
-    left: 2vw;
-    width: 70%;
-}
-
-.text-3{
-    flex-basis: 40%;
-    font-size: 1.65vw;
-    width: 50vw;
-    text-align: justify;
-    position: absolute;
-    top: 13vw;
-    left: 2vw;
-    font-weight: 400;
-}
-
-.text-4{
-    flex-basis: 40%;
     font-size: 2.2vw;
-    word-spacing: 1vw;
-    letter-spacing: 0.25vw;
     position: absolute;
-    top: 27vw;
-    left: 38vw;
-    width: 70%;
+    top: 2.2vw;
+    left: 15vw;
+    letter-spacing: 0.1vw;
+    font-weight: 700;
+    color: black;
 }
 
-.text-5{
-    flex-basis: 40%;
-    font-size: 1.65vw;
-    width: 55vw;
-    text-align: justify;
+.retanguloAzul{
     position: absolute;
-    top: 32vw;
-    left: 36vw;
-    font-weight: 400;
+    top: 5vw;
+    left: 15vw;
+    height: 35vw;
+    width: 45vw;
+    padding: 0.5vw;
+    padding-bottom: 0vw;
+    padding-top: 0vw;
+    border-radius: 1vw 1vw 0vw 0vw;
+    background-color: #2D398E;
+    overflow-y: hidden;
+    direction: rtl;
+    text-align: justify;
+}
+
+.divdata{
+    position: absolute;
+    background-color: #ECECEC;
+    width: 10.6vw;
+    height: 2.2vw;
+    left: 0.3vw;
+    top: 0.3vw;
+    border-radius: 0.8vw;
+    padding-left: 0.5vw;
+    padding-top: 0.35vw;
+    text-align: left;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: black;
+}
+
+.divtempo{
+    position: absolute;
+    background-color: #ECECEC;
+    width: 10.6vw;
+    height: 2.2vw;
+    left: 11.8vw;
+    top: 0.3vw;
+    border-radius: 0.8vw;
+    padding-left: 0.5vw;
+    padding-top: 0.35vw;
+    text-align: left;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: black;
+}
+
+.divmodo{
+    position: absolute;
+    background-color: #ECECEC;
+    width: 10.6vw;
+    height: 2.2vw;
+    left: 23.3vw;
+    top: 0.3vw;
+    border-radius: 0.8vw;
+    padding-left: 0.5vw;
+    padding-top: 0.35vw;
+    text-align: center;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: black;
+}
+
+.divpontuacao{
+    position: absolute;
+    background-color: #ECECEC;
+    width: 10.4vw;
+    height: 2.2vw;
+    left: 34.8vw;
+    top: 0.3vw;
+    border-radius: 0.8vw;
+    padding-left: 0.5vw;
+    padding-top: 0.35vw;
+    text-align: left;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: black;
+}
+
+.listaconsulta{
+    font-size: 1.2vw;
+    font-weight: 900;
+}
+
+.labelrelatorio1{
+    position: absolute;
+    left: 69vw;
+    top: 10vw;
+    width: 7vw;
+}
+
+.labelrelatorio2{
+    position: absolute;
+    left: 69vw;
+    top: 14vw;
+    width: 9vw;
+}
+
+.labelrelatorio3{
+    position: absolute;
+    left: 69vw;
+    top: 18vw;
+    width: 9vw;
+}
+
+.labelrelatorio4{
+    position: absolute;
+    left: 69vw;
+    top: 22vw;
+    width: 9vw;
+}
+
+.listarelatorio1{
+    position: absolute;
+    left: 20vw;
+    top: 10.2vw;
+}
+
+.listarelatorio2{
+    position: absolute;
+    left: 20vw;
+    top: 14.2vw;
+}
+
+.listarelatorio3{
+    position: absolute;
+    left: 20vw;
+    top: 18.2vw;
+}
+
+.listarelatorio4{
+    position: absolute;
+    left: 20vw;
+    top: 22.2vw;
+}
+
+.baixarbtn{
+    cursor: pointer;
+    border: none;
+    background: #232F87;
+    border-radius: 2vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 600;
+    height: 3.5vw;
+    width: 16vw;
+    position: absolute;
+    top: 26vw;
+    left: 67.5vw;
 }
 
 .social-links img{
@@ -276,36 +324,23 @@ nav ul li a:hover{
 
 .insta{
     position: absolute;
-    top: 58vw;
+    top: 90%;
     left: 85%;
     width: 2.5vw;
 }
 
 .whats{
     position: absolute;
-    top: 58vw;
+    top: 90%;
     left: 89.5%;
     width: 2.5vw;
 }
 
 .email{
     position: absolute;
-    top: 58.3vw;
+    top: 91%;
     left: 94%;
     width: 2.5vw;
-}
-
-.openPsiSobre{
-    position: absolute;
-    top: 59vw;
-    left: 1vw;
-    width: 32.5vw;
-    cursor: pointer;
-    text-decoration: underline;
-    color: #000465;
-    font-size: 1.3vw;
-    font-weight: bolder;
-    padding-bottom: 0.5vw;
 }
 
 
@@ -754,3 +789,4 @@ form{
     bottom: -14vw;
     left: -34vw;
 }
+

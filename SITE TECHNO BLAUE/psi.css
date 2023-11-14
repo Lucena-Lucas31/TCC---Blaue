@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,200;0,400;1,200&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+     /*Responsividade*/
+     height: 100%;
+}
+
+body{
+    background: #CFE5FF;
+     /*Responsividade*/
+     width: 100%;
+     height: 100%;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-size: 100%;
+     overflow: hidden;
+}
+
+/*COMO SE FOSSE O MAIN, ENGLOBA TUDO QUE ESTÁ NA TELA*/
+.container{
+    width: 100%;
+    position: absolute;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.container#blur.active{
+    filter: blur(20px);
+}
+
+/*SCROLL BAR*/
+
+/* width */
+.retanguloAzul::-webkit-scrollbar {
+    width: 0.01vw;
+}
+  
+/* Track */
+.retanguloAzul::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(117, 16, 16);
+    border-radius: 10px;
+}
+  
+/* Handle */
+.retanguloAzul::-webkit-scrollbar-thumb {
+    background: rgb(49, 19, 19);
+    border-radius: 10px;
+}
+
+/*PARTE EM BRANCO Q ENGLOBA OS TEXTOS E BOTÕES DA TELA*/
+.container-principal{
+    position: relative;
+    left: -5.5vw;
+    width: 95vw;
+    height: 43vw;
+    background-color: white;
+    margin-top: 2vw;
+    border: 2.5px solid #000693;
+    border-radius: 1vw;
+}
+
+.logo{
+    width: 5.5vw;
+    cursor: pointer;
+    position: absolute;
+    top: 2.5vw;
+    left: 4vw;
+    object-fit: cover;
+    z-index: 3;
+}
+
+/*CONFIGURAÇÃO DA ANCOR EM CADA LI*/
+nav ul li a{
+    text-decoration: underline 0.10em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 700ms;
+    color: #000465;
+    font-size: 1.9vw;
+}
+
+/*DESIGN QUANDO PASSA O MOUSE EM CIMA DE CADA ITEM DA LISTA*/
+nav ul li a:hover{
+    text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+.retanguloAzul{
+    position: absolute;
+    left: 8vw;
+    top: 6vw;
+    height: 30vw;
+    width: 47vw;
+    padding: 0.5vw;
+    padding-right: 30vw;
+    padding-bottom: 0.5vw;
+    padding-top: 0vw;
+    border-radius: 1vw;
+    background-color: #2D398E;
+    overflow: auto;
+    text-align: justify;
+    box-shadow: 0.2vw 0.2vw 0.6vw #0000009f;
+}
+
+/*DIV QUE ABRIGA OS TEXTOS DO MEIO DA TELA E O PARÁGRAFO*/
+.texts{
+    align-items: center;
+    color: #ffffff;
+}
+
+.text-1{
+    flex-basis: 40%;
+    font-size: 1.4vw;
+    position: absolute;
+    top: 1.3vw;
+    left: 28vw;
+    letter-spacing: 0.15vw;
+    color: #000465;
+    
+}
+
+.text-1 h1{
+    font-weight: 700;
+}
+
+.text-2{
+    flex-basis: 40%;
+    width: 71vw;
+    position: absolute;
+    top: 1vw;
+    left: 2vw;
+}
+
+.subtitle{
+    font-weight: 500;
+    font-size: 1.9vw;
+    padding-top: 1.5vw;
+    text-align: justify;
+}
+
+.normalText{
+    font-size: 1.8vw;
+    font-weight: 300;
+    padding-top: 0.9vw;
+    margin-left: 1.5vw;
+    text-align: justify;
+    letter-spacing: 0.13vw;
+    word-spacing: 0.30vw;
+}
+
+.euConcordo{
+    position: absolute;
+    left: 33vw;
+    top: 37.8vw;
+    height: 4vw;
+    width: 25vw;
+    border-radius: 0.7vw;
+    background-color: #000465;
+    color: #fff;
+    font-size: 2.2vw;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.euConcordo:hover{
+    box-shadow: 0.2vw 0.2vw 0.9vw #0000004f;
+}
+
+.openPsiSobre{
+    position: absolute;
+    top: 59vw;
+    left: 1vw;
+    width: 32.5vw;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000465;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    padding-bottom: 0.5vw;
+}
+
+
