@@ -54,7 +54,22 @@ const animals = [
     '3',
     '4',
     '5',
+    'card0',
+    'card1',
+    'card2',
+    'card3',
+    'card4',
+    'card5',
 ];
+
+// const parente = [
+//     'card',
+//     'card',
+//     'card',
+//     'card',
+//     'card',
+//     'card',
+// ];
 
 /*FUNÇÃO PARA CRIAR OS ELEMENTOS AUTOMATICAMENTE*/
 const createElement = (tag, className) => {
@@ -110,11 +125,11 @@ const checkCards = () => {
     const firstAnimal = firstCard.getAttribute('data-animal'); /*FUNÇÃO PARA PEGAR O ATRIBUTO DA PRIMEIRA CARTA*/ 
     const secondAnimal = secondCard.getAttribute('data-animal');
 
-    if(firstAnimal == secondAnimal){
-        
+    if (firstAnimal == '0' && secondAnimal == 'card0'){
+
         animation();
 
-        firstCard.firstChild.classList.add('disable-card');   /*DEIXA A CARTA DESABILITADA (escura)*/ 
+        firstCard.firstChild.classList.add('disable-card');
         secondCard.firstChild.classList.add('disable-card');
 
         firstCard = '';
@@ -125,8 +140,180 @@ const checkCards = () => {
 
         checkEndGame();
 
-
     }
+    else if(firstAnimal == 'card0' && secondAnimal == '0'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == '1' && secondAnimal == 'card1'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == 'card1' && secondAnimal == '1'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == '2' && secondAnimal == 'card2'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == 'card2' && secondAnimal == '2'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == '3' && secondAnimal == 'card3'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == 'card3' && secondAnimal == '3'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == '4' && secondAnimal == 'card4'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == 'card4' && secondAnimal == '4'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == '5' && secondAnimal == 'card5'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+    else if(firstAnimal == 'card5' && secondAnimal == '5'){
+        animation();
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        pont = +pontuacao.innerHTML;
+        pontuacao.innerHTML = pont += 5;
+
+        checkEndGame();
+    }
+
+
+    // if(firstAnimal == secondAnimal){
+        
+    //     animation();
+
+    //     firstCard.firstChild.classList.add('disable-card');   /*DEIXA A CARTA DESABILITADA (escura)*/ 
+    //     secondCard.firstChild.classList.add('disable-card');
+
+    //     firstCard = '';
+    //     secondCard = '';
+
+    //     pont = +pontuacao.innerHTML;
+    //     pontuacao.innerHTML = pont += 5;
+
+    //     checkEndGame();
+
+
+    // }
     else{
         setTimeout(() => { /*DELAY PARA DESVIRAR AS CARTAS */
 
@@ -185,21 +372,86 @@ const createCard = (animal) =>{
     const front = createElement('div', 'face front'); 
     const back = createElement('div', 'face back'); 
 
+    // TENTATIVA DE COLOCAR O TEXTO
+    const parente = createElement('p', 'txtparente');
+    front.appendChild(parente)
+    // parente.innerHTML = "<p> aaaaaaa </p>";
+
     front.style.backgroundImage = `url('../images/teste/${animal}.jpg')`; /*PARA NÃO REPETIR IMAGENS IGUAIS, ` e ${}: PARA CONSEGUIR PASSSAR VARIÁVEIS DENTRO DE STRING */ 
 
     card.appendChild(front);  /* DAR UM FILHO PARA A DIV (colocar uma div dentro da outra / no caso front está dentro do card)*/
     card.appendChild(back);
 
+    
     card.addEventListener('click', revealCard);  /*EVENTO DO CARD, parâmetro de click e o que vai acontecer*/
     card.setAttribute('data-animal', animal) /*CONFIGURA UM ATRIBUTO DE ACORDO COM CADA CARTA (no caso é o nome dela que nós demos no array)*/  
+
+    const p1 = card.getAttribute('data-animal');
+
+    if(p1 == 'card0'){
+        const parente = createElement('p', 'txtparente');
+        front.appendChild(parente)
+        parente.innerHTML = `<p> g1 </p>`;
+
+
+    }
+    else if(p1 == 'card1'){
+        const parente = createElement('p', 'txtparente');
+        front.appendChild(parente)
+        parente.innerHTML = "<p> g2 </p>";
+    }
+    else if(p1 == 'card2'){
+        const parente = createElement('p', 'txtparente');
+        front.appendChild(parente)
+        parente.innerHTML = "<p> g3 </p>";
+    }
+    else if(p1 == 'card3'){
+        const parente = createElement('p', 'txtparente');
+        front.appendChild(parente)
+        parente.innerHTML = "<p> g4 </p>";
+    }
+    else if(p1 == 'card4'){
+        const parente = createElement('p', 'txtparente');
+        front.appendChild(parente)
+        parente.innerHTML = "<p> g5 </p>";
+    }
+    else if(p1 == 'card5'){
+        const parente = createElement('p', 'txtparente');
+        front.appendChild(parente)
+        parente.innerHTML = "<p> g6 </p>";
+    }
+    else{
+        const parente = createElement('p', 'txtparente');
+        front.appendChild(parente)
+        parente.innerHTML = "<p> g7 </p>";
+
+    }
 
     return card;
 }
 
+// const setParent = () =>{
+
+//     const p1 = card.getAttribute('data-animal');
+
+//     if(p1 == 'card0'){
+//         const parente = createElement('p', 'txtparente');
+//         front.appendChild(parente)
+//         parente.innerHTML = "<p> aaaaaaa </p>";
+
+//     }
+//     else{
+//         const parente = createElement('p', 'txtparente');
+//         front.appendChild(parente)
+//         parente.innerHTML = "<p> </p>";
+
+//     }
+// }
+
 /*FUNÇÃO PARA CARREGAR O JOGO*/ 
 const loadGame = () => {
 
-    const duplicateAnimals = [...animals, ...animals];  /*COLOCAR UMA LISTA DENTRO DA OUTRA E DUPLICAR*/ 
+    const duplicateAnimals = [...animals];  /*COLOCAR UMA LISTA DENTRO DA OUTRA E DUPLICAR*/ 
 
     const shuffledArray = duplicateAnimals.sort(() => Math.random() - 0.5); /*RANDOMIZAR AS CARTAS, sort: precisa de números positivos ou negativos para randomizar, Math.random(): gera somente números entre 0 e 1 (mas não chega a ser 1), -0.5: para conseguir gerar números negativos */
 
