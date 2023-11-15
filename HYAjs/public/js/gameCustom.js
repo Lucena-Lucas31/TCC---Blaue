@@ -393,7 +393,6 @@ const createCard = (animal) =>{
         front.appendChild(parente)
         parente.innerHTML = `<p> g1 </p>`;
 
-
     }
     else if(p1 == 'card1'){
         const parente = createElement('p', 'txtparente');
@@ -423,7 +422,7 @@ const createCard = (animal) =>{
     else{
         const parente = createElement('p', 'txtparente');
         front.appendChild(parente)
-        parente.innerHTML = "<p> g7 </p>";
+        parente.innerHTML = "<p> </p>";
 
     }
 
