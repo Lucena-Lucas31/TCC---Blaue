@@ -76,7 +76,11 @@ app.get("/login", function(req, res){
     res.render('login')
 });
 
-app.get('/gameCustom', function(req, res){ 
+app.get("/gameCustom", function(req, res){
+    res.render('gameCustom')
+});
+
+app.get('/meio', function(req, res){ 
       
     const Fs = require('fs')  
   const Path = require('path')
@@ -171,7 +175,7 @@ app.get('/db', function(req, res){
     });
   })
   
-  res.redirect('/gameCustom')
+  res.redirect('/meio')
 
 });
 

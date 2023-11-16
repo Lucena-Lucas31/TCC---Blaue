@@ -31,6 +31,23 @@ var np6 = data[0].nome6; //nome parente carta 6
 
     console.log(pr1, pr2, pr3, pr4, pr5, pr6, np1, np2, np3, np4, np5, np6)
 
+    document.getElementById('pr1').value = pr1;
+    document.getElementById('pr2').value = pr2;
+    document.getElementById('pr3').value = pr3;
+    document.getElementById('pr4').value = pr4;
+    document.getElementById('pr5').value = pr5;
+    document.getElementById('pr6').value = pr6;
+
+    document.getElementById('txtparente1').innerHTML = document.getElementById("pr1").value;
+    document.getElementById('txtparente2').innerHTML = document.getElementById("pr2").value;
+    document.getElementById('txtparente3').innerHTML = document.getElementById("pr3").value;
+    document.getElementById('txtparente4').innerHTML = document.getElementById("pr4").value;
+    document.getElementById('txtparente5').innerHTML = document.getElementById("pr5").value;
+    document.getElementById('txtparente6').innerHTML = document.getElementById("pr6").value;
+    
+    
+    
+
 }
 
 // ===================================================================================================================================================================
@@ -373,7 +390,7 @@ const createCard = (animal) =>{
     const back = createElement('div', 'face back'); 
 
     // TENTATIVA DE COLOCAR O TEXTO
-    const parente = createElement('p', 'txtparente');
+    const parente = createElement('label', 'txtparente');
     front.appendChild(parente)
     // parente.innerHTML = "<p> aaaaaaa </p>";
 
@@ -389,38 +406,45 @@ const createCard = (animal) =>{
     const p1 = card.getAttribute('data-animal');
 
     if(p1 == 'card0'){
-        const parente = createElement('p', 'txtparente');
-        front.appendChild(parente)
-        parente.innerHTML = `<p> g1 </p>`;
+        const parente1 = createElement('label', 'txtparente');
+        parente1.setAttribute("id", "txtparente1");
+        front.appendChild(parente1);
+        document.getElementById('txtparente1').innerHTML = document.getElementById("pr1").value;
+        
 
     }
     else if(p1 == 'card1'){
-        const parente = createElement('p', 'txtparente');
-        front.appendChild(parente)
-        parente.innerHTML = "<p> g2 </p>";
+        const parente2 = createElement('label', 'txtparente');
+        parente2.setAttribute("id", "txtparente2");
+        front.appendChild(parente2)
+        document.getElementById('txtparente2').innerHTML = document.getElementById("pr2").value;
     }
     else if(p1 == 'card2'){
-        const parente = createElement('p', 'txtparente');
-        front.appendChild(parente)
-        parente.innerHTML = "<p> g3 </p>";
+        const parente3 = createElement('label', 'txtparente');
+        parente3.setAttribute("id", "txtparente3");
+        front.appendChild(parente3)
+        document.getElementById('txtparente3').innerHTML = document.getElementById("pr3").value;
     }
     else if(p1 == 'card3'){
-        const parente = createElement('p', 'txtparente');
-        front.appendChild(parente)
-        parente.innerHTML = "<p> g4 </p>";
+        const parente4 = createElement('label', 'txtparente');
+        parente4.setAttribute("id", "txtparente4");
+        front.appendChild(parente4)
+        document.getElementById('txtparente4').innerHTML = document.getElementById("pr4").value;
     }
     else if(p1 == 'card4'){
-        const parente = createElement('p', 'txtparente');
-        front.appendChild(parente)
-        parente.innerHTML = "<p> g5 </p>";
+        const parente5 = createElement('label', 'txtparente');
+        parente5.setAttribute("id", "txtparente5");
+        front.appendChild(parente5)
+        document.getElementById('txtparente5').innerHTML = document.getElementById("pr5").value;
     }
     else if(p1 == 'card5'){
-        const parente = createElement('p', 'txtparente');
-        front.appendChild(parente)
-        parente.innerHTML = "<p> g6 </p>";
+        const parente6 = createElement('label', 'txtparente');
+        parente6.setAttribute("id", "txtparente6");
+        front.appendChild(parente6)
+        document.getElementById('txtparente6').innerHTML = document.getElementById("pr6").value;
     }
     else{
-        const parente = createElement('p', 'txtparente');
+        const parente = createElement('label', 'txtparente');
         front.appendChild(parente)
         parente.innerHTML = "<p> </p>";
 
