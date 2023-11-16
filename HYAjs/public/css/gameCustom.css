@@ -1,19 +1,16 @@
 .txtparente{
     /* margin: 10%; */
+    /* position: relative; */
+    /* word-break: break-all; */
     position: relative;
-    word-break: break-all;
-    margin: auto;
-    text-align: center;
-    align-items: center;
+    top: 40%;  
     /* left: 30%; */
     
 }
 
 .txtnome{
-    word-break: break-all;
-    text-align: center;
     position: relative;
-    top: 40%; 
+    top: 40%;  
     /* left: 10%; */
     /* margin: auto; */
 }

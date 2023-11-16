@@ -105,6 +105,7 @@ header span{
     transition: all 300ms ease;
     transform-style: preserve-3d;
     border-radius: 16px;
+    text-align: center;
 }
 
 /*FACE GERAL DAS CARTAS*/
@@ -129,6 +130,8 @@ header span{
 .front {
     transform: rotateY(180deg);
     /* GIRA A CARTA 180 GRAUS*/
+    text-align: center;
+    
 
 }
 
