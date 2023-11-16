@@ -417,12 +417,15 @@ const createCard = (animal) =>{
     card.setAttribute('data-animal', animal) /*CONFIGURA UM ATRIBUTO DE ACORDO COM CADA CARTA (no caso é o nome dela que nós demos no array)*/  
 
     const p1 = card.getAttribute('data-animal');
+    const br = document.createElement("br");
 
     if(p1 == 'card0'){
         const parente1 = createElement('label', 'txtparente');
         parente1.setAttribute("id", "txtparente1");
         front.appendChild(parente1);
+        front.appendChild(br);
         document.getElementById('txtparente1').innerHTML = document.getElementById("pr1").value;
+        
 
         const nome1 = createElement('label', 'txtnome');
         nome1.setAttribute("id", "txtnp1");
@@ -435,6 +438,7 @@ const createCard = (animal) =>{
         const parente2 = createElement('label', 'txtparente');
         parente2.setAttribute("id", "txtparente2");
         front.appendChild(parente2)
+        front.appendChild(br);
         document.getElementById('txtparente2').innerHTML = document.getElementById("pr2").value;
 
         const nome2 = createElement('label', 'txtnome');
@@ -446,6 +450,7 @@ const createCard = (animal) =>{
         const parente3 = createElement('label', 'txtparente');
         parente3.setAttribute("id", "txtparente3");
         front.appendChild(parente3)
+        front.appendChild(br);
         document.getElementById('txtparente3').innerHTML = document.getElementById("pr3").value;
 
         const nome3 = createElement('label', 'txtnome');
@@ -457,6 +462,7 @@ const createCard = (animal) =>{
         const parente4 = createElement('label', 'txtparente');
         parente4.setAttribute("id", "txtparente4");
         front.appendChild(parente4)
+        front.appendChild(br);
         document.getElementById('txtparente4').innerHTML = document.getElementById("pr4").value;
 
         const nome4 = createElement('label', 'txtnome');
@@ -468,6 +474,7 @@ const createCard = (animal) =>{
         const parente5 = createElement('label', 'txtparente');
         parente5.setAttribute("id", "txtparente5");
         front.appendChild(parente5)
+        front.appendChild(br);
         document.getElementById('txtparente5').innerHTML = document.getElementById("pr5").value;
 
         const nome5 = createElement('label', 'txtnome');
@@ -479,6 +486,7 @@ const createCard = (animal) =>{
         const parente6 = createElement('label', 'txtparente');
         parente6.setAttribute("id", "txtparente6");
         front.appendChild(parente6)
+        front.appendChild(br);
         document.getElementById('txtparente6').innerHTML = document.getElementById("pr6").value;
 
         const nome6 = createElement('label', 'txtnome');
