@@ -1,19 +1,39 @@
+@font-face {
+    font-family: 'Gluten';
+    src: url(../fonts/Gluten.ttf) format('truetype');;
+
+ }
+
 .txtparente{
+    background-color: rgba(255, 255, 255, 0.767);
+    padding-top: 2%;
+    padding-bottom: 2%;
+   padding-right: 5%;
+   padding-left: 5%;
+   border-radius: 5px;
     /* margin: 10%; */
     position: relative;
     /* word-break: break-all; */
-    top: 20%;
+    top: 82%;
     /* left: 30%; */
-   font-size: 3em;
+   font-size: 3vh;
+   font-family: 'Gluten';
 
     
 }
 
 .txtnome{
-    /* word-break: break-all; */
+    word-break: break-all;
+    font-family: 'Gluten';
     position: relative;
-    top: 20%;  
-    font-size: 2.5em;
+    top: 82%;  
+    font-size: 2vh;
+    background-color: rgba(255, 255, 255, 0.767);
+    padding-top: 2%;
+    padding-bottom: 2%;
+   padding-right: 5%;
+   padding-left: 5%;
+   border-radius: 5px;
     /* left: 10%; */
     /* margin: auto; */
    
