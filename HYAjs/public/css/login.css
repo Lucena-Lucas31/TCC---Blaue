@@ -51,9 +51,14 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
 .form{
     margin: auto;
     width: 90%;
-    max-width: 400px;
-    padding: 3em 3em;
+    max-width: 100%;
+    padding: 0% 3%;
     text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .form_title{
@@ -77,8 +82,8 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
     width: 100%;
     background: none;
     color: #4C6D93;
-    font-size: 1rem;
-    padding: .6em .3em;
+    font-size: 100%;
+    padding: 3% 3%;
     border: none;
     outline: none;
     border-bottom: 1.5px solid var(--color);
@@ -92,7 +97,7 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
 
 .form_input:focus + .form_label,
 .form_input:not(:placeholder-shown) + .form_label{
-    font-size: 0.8rem;
+    font-size: 90%;
     transform-origin: left top;
     color: #3f73ae;
     transform: translateY(-12px) scale(.7);
@@ -113,7 +118,7 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
     background: #B4C2FF;
     color: black;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 2vh;
     padding: .8em 0;
     border: none;
     border-radius: .5em;
@@ -125,7 +130,7 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
     background: #c1ccfe;
     color: black;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 2vh;
     padding: .8em 0;
     border: none;
     border-radius: .5em;
@@ -153,6 +158,7 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
 }
 
 .form_paragraph{
+    font-size: 2vh;
     font-weight: 300;
     margin-top: 8%;
 

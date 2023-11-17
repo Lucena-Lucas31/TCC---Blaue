@@ -58,54 +58,56 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
 }
 
 
-.form{
-    margin: auto;
-    width: 90%;
-    max-width: 400px;
-    padding: 3em 3em;
-    text-align: center;
-}
 
-.form_title{
+
+/* .form_title{
     font-size: 7vh;
-    margin-bottom: .5em;
+    margin-bottom: .5%;
     color: #4C6D93;
-}
+} */
 
 
 
 .form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: auto;
     width: 90%;
-    max-width: 400px;
-    padding: 0em 3em;
+
+    max-width: 100%;
+    padding: 0% 3%;
     text-align: center;
 }
 
 .form_title{
-    margin-top: 0.5em;
+    margin-top: 5%;
     font-size: 6vh;
-    margin-bottom: .5em;
+    margin-bottom: 5%;
     color: #4C6D93;
 }
 
 .form_container{
+    vertical-align: middle;
     margin-top: 1.5em;
     display: grid;
-    gap: 2.5em;
+    gap: 2.5%;
+    width: 100%;
 }
 
 .form_group{
     position: relative;
     --color: #4C6D93;
+    width: 100%;
 }
 
 .form_input{
     width: 100%;
     background: none;
     color: #4C6D93;
-    font-size: 1rem;
-    padding: .6em .3em;
+    font-size: 100%;
+    padding: 3% 3%;
     border: none;
     outline: none;
     border-bottom: 1.5px solid var(--color);
@@ -119,7 +121,7 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
 
 .form_input:focus + .form_label,
 .form_input:not(:placeholder-shown) + .form_label{
-    font-size: 0.8rem;
+    font-size: 90%;
     transform-origin: left top;
     color: #3f73ae;
     transform: translateY(-12px) scale(.7);
@@ -140,9 +142,10 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
     margin-top: 6%;
     background: #B4C2FF;
     width: 100%;
+    height: 100%;
     color: black;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 2vh;
     padding: .7em 0;
     border: none;
     border-radius: .5em;
@@ -154,7 +157,7 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
     background: #c1ccfe;
     color: black;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 2vh;
     padding: .7em 0;
     border: none;
     border-radius: .5em;
@@ -183,6 +186,7 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
 
 .form_paragraph{
     font-weight: 300;
+    font-size: 2vh;
     margin-top: 5%;
 
 }
@@ -196,7 +200,7 @@ box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.4);
     color: #3f73ae;
 }
 
-@media(max-width: 425px){
+@media(max-width: 100%){
     .form_title{
         font-size: 1.8rem;
     }
@@ -213,7 +217,7 @@ select {
     cursor: pointer;
     outline: none;
     font-family:  Georgia, 'Times New Roman', Times, serif;
-    width: 19.5em;
+    width: 100%;
     margin-bottom: 0;
   }
 
