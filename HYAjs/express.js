@@ -33,7 +33,7 @@ const dbService = require("./models/dbService");
     })
 
 app.get("/", function(req, res){
-    res.render('register')
+    res.render('firstScreen')
 });
 
 app.get("/home", function(req, res){
@@ -135,6 +135,18 @@ app.get('/getAll', (request, response) => {
 })
 
 
+app.get('/getUserId', (request, response) => {
+
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.getUserId();
+
+    result
+    .then(data => response.json({data : data}))
+    .catch(err => console.log(err));
+})
+
+
 
 app.get('/db', function(req, res){
     res.sendFile('index.html');
@@ -144,14 +156,29 @@ app.get('/db', function(req, res){
 //resultados jogo
    app.post('/add', function(req, res){
 
-    const {timer , modo_jogo, pontuacao} = req.body;
+    const {timer , modo_jogo, pontuacao, id_jogador} = req.body;
     const db = dbService.getDbServiceInstance();
 
-    const result = db.insertGame(timer , modo_jogo, pontuacao);
+    const result = db.insertGame(timer , modo_jogo, pontuacao, id_jogador);
 
     result
     .then(data => res.json({ sucess: true}))
     .catch(err => console.log(err));
+});
+
+app.post('/logar', function(req, res){
+
+    const {email , senha} = req.body;
+    const db = dbService.getDbServiceInstance();
+
+    let result = db.checkLogin(email , senha);
+
+    
+    result
+    .then(data => response.json({data : data}))
+    .catch(err => console.log(err));
+
+    res.redirect('/firstScreen')
 });
 
 

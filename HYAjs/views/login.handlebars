@@ -1,24 +1,25 @@
 <body>
     <link rel="stylesheet" href="/css/login.css">
 
+
  
 
     <div class="box">
 
-        <form action="/firstScreen" class="form">
+        <form action="/logar" class="form" method="POST">
 
             <h2 class="form_title">Login</h2>
             <div class="form_container">
                 <div class="form_group">
-                    <input type="text" id="user" class="form_input" placeholder=" ">
-                    <label for="name" class="form_label">Nome ou Email: </label>
+                    <input type="text" id="userLg" name="userLg" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Email: </label>
                     <span class="form_line"></span>
                 </div>
             </div>
 
             <div class="form_container">
                 <div class="form_group">
-                    <input type="password" id="password" class="form_input" placeholder=" ">
+                    <input type="password" id="senhaLg" name="senhaLg" class="form_input" placeholder=" ">
                     <label for="name" class="form_label">Senha: </label>
                     <span class="form_line"></span>
                 </div>
@@ -29,6 +30,8 @@
             <p class="form_paragraph">Ainda não possui conta? <a href="/register" class="form_link">Cadastre-se aqui</a></p>
             
         </form>
+
+        <button id="btnLg"><a href="/firstScreen" ></a></button>
        
     </div>
 
