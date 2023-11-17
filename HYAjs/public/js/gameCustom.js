@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
            secondCard = '';
    
            pont = +pontuacao.innerHTML;
-           pontuacao.innerHTML = pont += 5;
+           pontuacao.innerHTML = pont += 3;
    
            checkEndGame();
    
@@ -187,6 +187,13 @@ document.addEventListener('DOMContentLoaded', function() {
    
                firstCard = '';
                secondCard = '';
+
+               if(pont > 0){
+                pontuacao.innerHTML = pont += -1;
+            }
+            else{
+                pontuacao.innerHTML = pont = pont;
+            }
    
            }, 700);
        }
