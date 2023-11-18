@@ -80,6 +80,10 @@ app.get("/gameCustom", function(req, res){
     res.render('gameCustom')
 });
 
+app.get("/rules", function(req, res){
+    res.render('rules')
+});
+
 app.get('/meio', function(req, res){ 
       
     const Fs = require('fs')  
