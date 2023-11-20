@@ -5,13 +5,43 @@
     padding: 0;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
+:root{
+    --background-color: #CFE5FF;
+    --container-color: rgb(255, 255, 255);
+    --text-color: #000465;
+    --textbtn-color: #000693;
+    --button-color: #000b61;
+    --nav-color: #000465;
+    --border-color: #000693;
+    --selpage-color: #000000;
+    --btnsobre-color: #CFE5FF;
+    --logo: url('images/logo.png');
+}
+
+.dark-theme{
+    --background-color: #000446f6;
+    --container-color: #B0C7E2;
+    --text-color: #00034E;
+    --textbtn-color: #000465;
+    --button-color: #171F5F;
+    --nav-color: white;
+    --border-color: white;
+    --selpage-color: white;
+    --btnsobre-color: #5594CA;
+    --logo: url('images/logoborboleta\ maiclara.png');
+}
+
 html{
      /*Responsividade*/
      height: 100%;
 }
 
 body{
-    background: #CFE5FF;
+    background: var(--background-color);
      /*Responsividade*/
      width: 100%;
      height: 100%;
@@ -19,6 +49,7 @@ body{
      background-repeat: no-repeat;
      background-size: 100%;
      overflow: hidden;
+     transition: background 0.8s, color 0.8s;
 }
 
 /*COMO SE FOSSE O MAIN, ENGLOBA TUDO QUE ESTÁ NA TELA*/
@@ -32,9 +63,38 @@ body{
     font-family: 'Libre Franklin', sans-serif;
 }
 
+.btnRt {
+
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
 .container#blur.active{
     filter: blur(20px);
 }
+
+/*SCROLL BAR*/
+
+/*ignora as coisas que tão aqui dentro, eu deixei elas brancas para ficarem invisíveis com o fundo*/
+/*vou deixar o código caso precise alterar alguma coisa*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.01vw;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
 
 /*PARTE EM BRANCO Q ENGLOBA OS TEXTOS E BOTÕES DA TELA*/
 .container-principal{
@@ -42,10 +102,12 @@ body{
     left: -5.5vw;
     width: 95vw;
     height: 40vw;
-    background-color: white;
+    background-color: var(--container-color);
     margin-top: 5vw;
-    border: 2.5px solid #000693;
+    border: 2.5px solid var(--border-color);
     border-radius: 20px 0px 20px 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /*BARRA DE MENU (LOGO, MENU E O BUTTON)*/
@@ -54,25 +116,107 @@ body{
     display: flex;
     align-items: center; 
     position: absolute;
-    margin-top: 0.8vw;
+    margin-top: 0.8%;
     
 }
 
 .logo{
-    width: 9%;
+    width: 4.5vw;
     cursor: pointer;
     position: absolute;
-    top: -15%;
-    left: -22.5%;
+    top: -0.5vw;
+    left: -10.7vw;
     object-fit: cover;
 }
 
-.brain{
-    width: 38vw;
-    height: 34.5vw;
+/*BOTAO THEME*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 7vw;
+    height: 2.5vw;
+    left: 40vw;
+    top: -2.7vw;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
     position: absolute;
-    top: -1vw;
-    left: 62%;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1e8ce6;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.25vw;
+    width: 2.25vw;
+    left: 0.2vw;
+    bottom: 0.1vw;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 0.1vw #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(3.5vw);
+    -ms-transform: translateX(3.5vw);
+    transform: translateX(4.35vw);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 3vw;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.imgsol{
+    position: absolute;
+    z-index: 2;
+    width: 2.5vw;
+    left: 0.5vw;
+    top: 0.2vw;
+    transition: 0.4s;
+}
+
+
+
+.veia{
+    width: 35vw;
+    height: 30vw;
+    position: absolute;
+    top: -7vw;
+    left: 58vw;
+}
+
+.imgpapel{
+    width: 22vw;
+    height: 25vw;
+    position: absolute;
+    top: 29vw;
+    left: 1vw;
 }
 
 
@@ -81,8 +225,8 @@ nav{
     flex: 1;
     text-align: center; 
     position: absolute;
-    top: 0.01vw;
-    left: 5vw;
+    top: 5.5%;
+    left: 5%;
     transition: background-size 800ms;
 }
 
@@ -96,48 +240,96 @@ nav ul li{
 /*CONFIGURAÇÃO DA ANCOR EM CADA LI*/
 nav ul li a{
     text-decoration: underline 0.10em rgba(0, 0, 0, 0);
-    transition: text-decoration-color 700ms;
-    color: #000465;
+    color: var(--nav-color);
     font-size: 1.9vw;
 }
 
 /*DESIGN QUANDO PASSA O MOUSE EM CIMA DE CADA ITEM DA LISTA*/
 nav ul li a:hover{
-    text-decoration-color: rgba(0, 0, 0, 1);
+    text-decoration-color: var(--selpage-color);
 }
 
-.saibamaisbtn{
+.btnunifesp{
     cursor: pointer;
     border: none;
-    background: #000b61;
-    border-radius: 15px;
-    color: white;
-    font-size: 2vw;
-    font-weight: 500;
+    background: var(--btnsobre-color);
+    border-radius: 1vw;
     padding: 0.8%;
-    width: 23%;
+    width: 16vw;
+    height: 7.5vw;
     position: absolute;
-    top: 82%;
-    left: 7%;
+    top: 45.5vw;
+    left: 36vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw #0000004b;
+    transition: 100ms ease-in-out;
+    text-align: left;
 }
 
-.saibamaisbtn:hover{
-    background: #000693;
+.btnunifesp p{
+    font-size: 2vw;
+    font-weight: 700;
+    color: var(--textbtn-color);
+    text-align: right;
+    position: absolute;
+    top: 2.5vw;
+    right: 1vw;
+}
+
+.btnunifesp p:hover{
+    color: var(--text-color);
+}
+
+.papelunifesp{
+    width: 5vw;
+}
+
+.btndoutor{
+    cursor: pointer;
+    border: none;
+    background: var(--btnsobre-color);
+    border-radius: 1vw;
+    text-align: left;
+    padding: 0.8%;
+    width: 16vw;
+    height: 7.5vw;
+    position: absolute;
+    top: 45.5vw;
+    left: 75.5vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw #0000004b;
+    transition: 100ms ease-in-out;
+}
+
+.btndoutor p{
+    font-size: 2vw;
+    font-weight: 700;
+    color: var(--textbtn-color);
+    text-align: left;
+    position: absolute;
+    top: 1.5vw;
+    left: 6vw;
+}
+
+.btndoutor p:hover{
+    color: var(--text-color);
+}
+
+.imgdr{
+    width: 5vw;
 }
 
 /*DIV QUE ABRIGA OS TEXTOS DO MEIO DA TELA E O PARÁGRAFO*/
 .texts{
     align-items: center;
-    color: #000465;
+    color: var(--text-color);
 }
 
 .text-1{
     flex-basis: 40%;
-    font-size: 3.4vw;
+    font-size: 2.3vw;
     position: absolute;
-    top:6%;
-    left: 3vw;
-    letter-spacing: 0.75vw;
+    top: 1.2vw;
+    left: 2vw;
+    letter-spacing: 0.15vw;
    
 }
 
@@ -147,23 +339,45 @@ nav ul li a:hover{
 
 .text-2{
     flex-basis: 40%;
-    font-size: 3.4vw;
+    font-size: 2.3vw;
     word-spacing: 1vw;
-    letter-spacing: 0.75vw;
+    letter-spacing: 0.2vw;
     position: absolute;
-    top: 27%;
-    left: 3vw;
+    top: 7vw;
+    left: 2vw;
     width: 70%;
 }
 
 .text-3{
     flex-basis: 40%;
-    font-size: 2.3vw;
-    width: 64%;
+    font-size: 1.65vw;
+    width: 50vw;
     text-align: justify;
     position: absolute;
-    top: 49%;
-    left: 4vw;
+    top: 13vw;
+    left: 2vw;
+    font-weight: 400;
+}
+
+.text-4{
+    flex-basis: 40%;
+    font-size: 2.2vw;
+    word-spacing: 1vw;
+    letter-spacing: 0.25vw;
+    position: absolute;
+    top: 27vw;
+    left: 38vw;
+    width: 70%;
+}
+
+.text-5{
+    flex-basis: 40%;
+    font-size: 1.65vw;
+    width: 55vw;
+    text-align: justify;
+    position: absolute;
+    top: 32vw;
+    left: 36vw;
     font-weight: 400;
 }
 
@@ -173,23 +387,36 @@ nav ul li a:hover{
 
 .insta{
     position: absolute;
-    top: 90%;
+    top: 58vw;
     left: 85%;
     width: 2.5vw;
 }
 
 .whats{
     position: absolute;
-    top: 90%;
+    top: 58vw;
     left: 89.5%;
     width: 2.5vw;
 }
 
 .email{
     position: absolute;
-    top: 91%;
+    top: 58.3vw;
     left: 94%;
     width: 2.5vw;
+}
+
+.openPsiSobre{
+    position: absolute;
+    top: 59vw;
+    left: 1vw;
+    width: 32.5vw;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000465;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    padding-bottom: 0.5vw;
 }
 
 
@@ -342,29 +569,34 @@ input[type=submit]:hover{
 .openbtn{
     cursor: pointer;
     border: none;
-    background: #000b61;
+    background: var(--button-color);
     border-radius: 0.9vw;
     color: white;
     font-size: 1.5vw;
     font-weight: 500;
-    padding: 1.5%;
-    width: 25%;
+    padding: 0.5vw;
+    width: 12.2vw;
+    height: 3.2vw;
     position: absolute;
-    top: 17%;
+    top: 0.5vw;
     left: 71.65vw;
     z-index: 2;
     box-shadow: 0.2vw 0.2vw 0.3vw #0000004b;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
 }
 
 .divopenbtn{
     width: 13.65vw;
     height: 4.45vw;
-    top: 0.15vw;
+    top: 0.13vw;
     left: 71.25vw;
     margin: -0.4vw;
-    background-color: white;
+    background-color: var(--container-color);
     position: absolute;
-    border: 2.5px solid #000693;
+    border: 2.5px solid var(--border-color);
     border-radius: 0.99vw 0.99vw 0px 0px;
     border-bottom: none;
     z-index: 1;
@@ -638,4 +870,3 @@ form{
     bottom: -14vw;
     left: -34vw;
 }
-

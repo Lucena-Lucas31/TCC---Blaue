@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techno Blaue</title>
-    <link rel="stylesheet" href="relatorio.css">
+    <link rel="stylesheet" href="jogo.css">
     <script defer src="index.js"></script>
 </head>
 <body>
@@ -17,15 +17,21 @@
 
             <nav>
 
-                <a href="index.html"><img src="../SITE TECHNO BLAUE/images/logo.png" alt="logo" class="logo"></a>
+                <a href="index.php"><img src="../SITETECHNOBLAUE/images/logo.png" alt="logo" class="logo" id="logo"></a>
 
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="sobre.html">SOBRE</a></li>
-                    <li><a href="equipe.html">EQUIPE</a></li>
-                    <li><a href="jogo.html">JOGO</a></li>
-                    <li  style="border: 2.5px solid #000465; border-radius: 10px; padding: 5px;"><a href="relatorio.html" style="text-decoration: none;">RELATÓRIO</a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="sobre.php">SOBRE</a></li>
+                    <li><a href="equipe.php">EQUIPE</a></li>
+                    <li style="border: 2.5px solid var(--selpage-color); border-radius: 10px; padding: 5px;"><a href="jogo.php" style="text-decoration: none;">JOGO</a></li>
+                    <li><button class="btnRt" onclick="alertSob()"><a href="">RELATÓRIO</a></button></li>
                 </ul>
+
+                <label class="switch">
+                    <input type="checkbox" id="btnmodo" checked >
+                    <span class="slider round"></span>
+                    <img src="images/solzinho.png" alt="" class="imgsol" id="btnIcon">
+                </label>
 
                 <div class="divopenbtn"></div>
                 <button class="openbtn" id="openbtn" onclick="openForm(); toggle()"> ENTRAR </button>
@@ -40,47 +46,20 @@
                 <!-- DIV QUE ABRIGA OS TEXTOS DO MEIO DA TELA E O PARÁGRAFO -->
                 <div class="texts">
                     <div class="text-1">
-                        <p>Paciente: <!-- Parte do banco aqui (coitados kkkk) pfv nn quebra mais o site --></p>
+                        <h1>AJUDE O <strong>ALZHY</strong></h1>
                     </div>
 
-                
+                <div class="text-2">
+                    <p>O jogo “Ajude o Alzhy” é voltado a pacientes de Alzheimer do estágio 1 e 2 com o jogo de memória clássico e personalizado com parentes do paciente, exercitando as funções cognitivas, além de gerar relatórios de desempenho do jogador, diretamente enviados ao nosso banco de dados e de fácil acesso na página relatório de nosso site pelo cuidador responsável cadastrado no jogo</p>
+                </div>
+            </div>
+
+                <div >
+                    <button class="jogarbtn" onclick="alertJog()"> IR PARA O JOGO ></button>
                 </div>
 
-                <div class="retanguloAzul">
-                    <div class="divdata">DATA</div>
-                    <div class="divtempo">TEMPO</div>
-                    <div class="divmodo">MODO DE JOGO</div>
-                    <div class="divpontuacao">PONTUAÇÃO</div>
-                </div>
+                <img src="../SITETECHNOBLAUE/images/alzhy tecnológico 2.png" alt="ilustration" class="alzhy">
 
-                <div class="social-links">
-                    <img src="../SITE TECHNO BLAUE/images/instaicon.png" alt="instagram" class="insta">
-                    <img src="../SITE TECHNO BLAUE/images/wppicon.png" alt="whatsapp" class="whats">
-                    <img src="../SITE TECHNO BLAUE/images/emailicon.png" alt="email" class="email">
-                </div>
-
-                <div class="listaconsulta">
-                    <label for="i1" class="labelrelatorio1">TODAS AS PARTIDAS</label>
-                    <input type="checkbox" name="l1" id="i1" class="listarelatorio1">
-                </div>
-
-                <div class="listaconsulta">
-                    <label for="i2" class="labelrelatorio2">ÚLTIMAS 10 PARTIDAS</label>
-                    <input type="checkbox" name="l1" id="i2" class="listarelatorio2">
-                </div>
-
-                <div class="listaconsulta">
-                    <label for="i3" class="labelrelatorio3">ÚLTIMAS 15 PARTIDAS</label>
-                    <input type="checkbox" name="l1" id="i3" class="listarelatorio3">
-                </div>
-
-                <div class="listaconsulta">
-                    <label for="i4" class="labelrelatorio4">ÚLTIMAS 20 PARTIDAS</label>
-                    <input type="checkbox" name="l1" id="i4" class="listarelatorio4">
-                </div>
-
-                <a href=""><button class="baixarbtn">BAIXAR EM PDF</button></a>
-                
             </div>
     </div>
 
@@ -110,16 +89,16 @@
                     <h2>BEM VINDO</h2>
                     <h2 class="h2">DE VOLTA!</h2>
 
-        <form action="">
+        <form action="logadoindex.php" method="POST">
 
-            <label for="Email" class="label1">EMAIL</label>
-            <input type="text" name="Email" id="email" class="textbox1" placeholder="exemplo@exemplo.com">
+        <label for="Email" class="label1">EMAIL</label>
+            <input type="text" name="EmailLogin" id="EmailLogin" class="textbox1" placeholder="exemplo@exemplo.com">
 
             <label for="Senha" class="label2">SENHA</label>
-            <input type="password" name="Senha" id="password" class="textbox2" placeholder="Insira sua senha">
+            <input type="password" name="SenhaLogin" id="PasswordLogin" class="textbox2" placeholder="Insira sua senha">
  
             
-            <input type="submit" name="Submit" id="submit" value="ENTRAR">
+            <input type="submit" name="Submit" id="SubmitLogin" value="ENTRAR">
         </form>
         </div>
     </div>
@@ -154,19 +133,19 @@
                 
                     <h2 class="h2register">SEJA BEM VINDO!</h2>
 
-        <form action="">
+                    <form action="insercao.php" method="POST">
 
             <!--Coluna esquerda dos campos de cadastro-->
             <div class="leftinputflex">
 
                 <label for="Email" class="labelregister">EMAIL</label>
-                <input type="text" name="Email" id="email" placeholder="exemplo@exemplo.com" class="textregister">
+                <input type="text" name="EmailCadastro" id="EmailCad" placeholder="exemplo@exemplo.com" class="textregister">
 
                 <label for="NameR" class="labelregister">NOME DO RESPONSÁVEL</label>
-                <input type="text" name="NameR" id="NameR" placeholder="Insira o nome" class="textregister">
+                <input type="text" name="namer" id="NameR" placeholder="Insira o nome" class="textregister">
 
                 <label for="Tel" class="labelregister">TELEFONE DO RESPONSÁVEL</label>
-                <input type="text" name="Tel" id="tel" placeholder="(xx)xxxxx-xxxx" class="textregister">
+                <input type="text" name="tell" id="tel" placeholder="(xx)xxxxx-xxxx" class="textregister">
 
             </div>
 
@@ -174,33 +153,38 @@
             <div class="rightinputflex">
 
                 <label for="NameP" class="labelregister">NOME DO PACIENTE</label>
-                <input type="text" name="NameP" id="NameP" placeholder="Insira o nome" class="textregister">
+                <input type="text" name="namep" id="NameP" placeholder="Insira o nome" class="textregister">
 
                 <label for="stage" class="labelregister">ESTÁGIO DO ALZHEIMER</label>
-                <select id="stage" name="alzheimerStageList" form="stageForm" class="textregister2">
-                    <option value="sel" class="estagioscadastro">Selecione o estágio</option>
-                    <option value="1" class="estagioscadastro">Estágio 1</option>
-                    <option value="2" class="estagioscadastro">Estágio 2</option>
+                <select id="stage" name="estagio" form="stageForm" class="textregister2">
+                    <option value="" class="estagioscadastro">Selecione o estágio</option>
+                    <option value="Estagio_1" class="estagioscadastro">Estágio 1</option>
+                    <option value="Estagio_2" class="estagioscadastro">Estágio 2</option>
                 </select>
 
                 <label for="Senha" class="labelregister">SENHA</label>
-                <input type="password" name="Senha" id="password" placeholder="Insira sua senha" class="textregister">
+                <input type="password" name="SenhaCadastro" id="PasswordCad" placeholder="Insira sua senha" class="textregister">
 
             </div>
+
+            <input type= "text" id = "estagio" name= "estagio2" class = "hidden"> 
            
 
             
-        <div class="overlaycadastrarbtn">
-            <input type="submit" name="submit" id="submit" value="CADASTRAR">
+            <div class="overlaycadastrarbtn">
+            <input type="submit" name="submit" id="SubmitCad" value="CADASTRAR" onclick="getAndSetText(), getNomeLogin()" src="index.js">
+
         </div>
 
         </form>
 
-        <a href="psi.html"><span class="openPsi" title="Políticas de Segurança"> ACESSE NOSSA POLÍTICA DE SEGURANÇA </span></a>
+        <a href="psi.php"><span class="openPsi" title="Políticas de Segurança"> ACESSE NOSSA POLÍTICA DE SEGURANÇA </span></a>
         
         </div>
     </div>
 </div>
+
+
 
 </body>
 </html>

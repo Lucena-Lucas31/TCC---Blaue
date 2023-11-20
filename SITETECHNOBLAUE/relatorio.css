@@ -5,13 +5,41 @@
     padding: 0;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
+:root{
+    --background-color: #CFE5FF;
+    --container-color: rgb(255, 255, 255);
+    --text-color: #000465;
+    --button-color: #000b61;
+    --nav-color: #000465;
+    --border-color: #000693;
+    --selpage-color: #000000;
+    --retangulo-color: #2D398E;
+    --logo: url('images/logo.png');
+}
+
+.dark-theme{
+    --background-color: #000446f6;
+    --container-color: #B0C7E2;
+    --text-color: #00034E;
+    --button-color: #171F5F;
+    --nav-color: white;
+    --border-color: white;
+    --selpage-color: white;
+    --retangulo-color: #4682B4;
+    --logo: url('images/logoborboleta\ maiclara.png');
+}
+
 html{
      /*Responsividade*/
      height: 100%;
 }
 
 body{
-    background: #CFE5FF;
+    background: var(--background-color);
      /*Responsividade*/
      width: 100%;
      height: 100%;
@@ -19,6 +47,14 @@ body{
      background-repeat: no-repeat;
      background-size: 100%;
      overflow: hidden;
+     transition: background 0.8s, color 0.8s;
+}
+
+.btnRt {
+
+    background: transparent;
+    border: none !important;
+    font-size:0;
 }
 
 /*COMO SE FOSSE O MAIN, ENGLOBA TUDO QUE ESTÁ NA TELA*/
@@ -42,10 +78,10 @@ body{
     left: -5.5vw;
     width: 95vw;
     height: 40vw;
-    background-color: white;
+    background-color: var(--container-color);
     margin-top: 5vw;
-    border: 2.5px solid #000693;
-    border-radius: 1.6vw 0vw 1.6vw 1.6vw;
+    border: 2.5px solid var(--border-color);
+    border-radius: 20px 0px 20px 20px;
 }
 
 /*BARRA DE MENU (LOGO, MENU E O BUTTON)*/
@@ -59,20 +95,94 @@ body{
 }
 
 .logo{
-    width: 9%;
+    width: 4.5vw;
     cursor: pointer;
     position: absolute;
-    top: -15%;
-    left: -22.5%;
+    top: -0.5vw;
+    left: -10.7vw;
     object-fit: cover;
 }
 
-.alzhy{
-    width: 32vw;
-    height: 32vw;
+/*BOTAO THEME*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 7vw;
+    height: 2.5vw;
+    left: 40vw;
+    top: -2.7vw;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
     position: absolute;
-    top: 4.5vw;
-    left: 63vw;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1e8ce6;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.25vw;
+    width: 2.25vw;
+    left: 0.2vw;
+    bottom: 0.1vw;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 0.1vw #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(3.5vw);
+    -ms-transform: translateX(3.5vw);
+    transform: translateX(4.35vw);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 3vw;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.imgsol{
+    position: absolute;
+    z-index: 2;
+    width: 2.5vw;
+    left: 0.5vw;
+    top: 0.2vw;
+    transition: 0.4s;
+}
+
+
+
+.brain{
+    width: 38vw;
+    height: 34.5vw;
+    position: absolute;
+    top: -1vw;
+    left: 62%;
 }
 
 
@@ -96,68 +206,252 @@ nav ul li{
 /*CONFIGURAÇÃO DA ANCOR EM CADA LI*/
 nav ul li a{
     text-decoration: underline 0.10em rgba(0, 0, 0, 0);
-  transition: text-decoration-color 700ms;
-    color: #000465;
+    color: var(--nav-color);
     font-size: 1.9vw;
+}
+
+/*SCROLL BAR*/
+
+/*ignora as coisas que tão aqui dentro, eu deixei elas brancas para ficarem invisíveis com o fundo*/
+/*vou deixar o código caso precise alterar alguma coisa*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.8vw;
+    direction: rtl;
+    
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1vw rgb(177, 162, 162);
+    border-radius: 2vw;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(80, 74, 74);
+    border-radius: 2vw;
 }
 
 /*DESIGN QUANDO PASSA O MOUSE EM CIMA DE CADA ITEM DA LISTA*/
 nav ul li a:hover{
-    text-decoration-color: rgba(0, 0, 0, 1);
+    text-decoration-color: var(--selpage-color);
 }
 
-.jogarbtn{
+.saibamaisbtn{
     cursor: pointer;
     border: none;
-    background: #232F87;
-    border-radius: 1vw;
+    background: var(--button-color);
+    border-radius: 15px;
     color: white;
     font-size: 2vw;
     font-weight: 500;
     padding: 0.8%;
     width: 23%;
-    height: 4.5vw;
     position: absolute;
-    top: 31.5vw;
-    left: 5vw;
+    top: 82%;
+    left: 7%;
 }
 
-.jogarbtn:hover{
+.saibamaisbtn:hover{
     background: #000693;
 }
 
 /*DIV QUE ABRIGA OS TEXTOS DO MEIO DA TELA E O PARÁGRAFO*/
 .texts{
     align-items: center;
-    color: #000465;
+    color: var(--text-color);
 }
 
 .text-1{
     flex-basis: 40%;
-    font-size: 3.1vw;
+    font-size: 2.2vw;
     position: absolute;
-    top: 1vw;
-    left: 3vw;
-    letter-spacing: 0.8vw;
-   
+    top: 2.2vw;
+    left: 15vw;
+    letter-spacing: 0.1vw;
+    font-weight: 700;
+    color: black;
 }
 
-.text-1 h1{
-    font-weight: 100;
-}
-
-.text-2{
-    flex-basis: 40%;
-    font-size: 2vw;
-    letter-spacing: 0.17vw;
-    line-height: 2.6vw;
-    width: 57vw;
+.retanguloAzul{
+    position: absolute;
+    top: 5vw;
+    left: 15vw;
+    height: 35vw;
+    width: 45vw;
+    padding: 0.5vw;
+    padding-bottom: 0vw;
+    padding-top: 0vw;
+    border-radius: 1vw 1vw 0vw 0vw;
+    background-color: var(--retangulo-color);
+    overflow-y: hidden;
+    direction: rtl;
     text-align: justify;
-    position: absolute;
-    top: 9vw;
-    left: 3.1vw;
-    font-weight: 400;
 }
+
+.divdata{
+    position: absolute;
+    background-color: #ECECEC;
+    width: 10.6vw;
+    height: 2.2vw;
+    left: 0.3vw;
+    top: 0.3vw;
+    border-radius: 0.8vw;
+    padding-left: 0.5vw;
+    padding-top: 0.35vw;
+    text-align: left;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: black;
+}
+
+.divtempo{
+    position: absolute;
+    background-color: #ECECEC;
+    width: 10.6vw;
+    height: 2.2vw;
+    left: 11.8vw;
+    top: 0.3vw;
+    border-radius: 0.8vw;
+    padding-left: 0.5vw;
+    padding-top: 0.35vw;
+    text-align: left;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: black;
+}
+
+.divmodo{
+    position: absolute;
+    background-color: #ECECEC;
+    width: 10.6vw;
+    height: 2.2vw;
+    left: 23.3vw;
+    top: 0.3vw;
+    border-radius: 0.8vw;
+    padding-left: 0.5vw;
+    padding-top: 0.35vw;
+    text-align: center;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: black;
+}
+
+.divpontuacao{
+    position: absolute;
+    background-color: #ECECEC;
+    width: 10.4vw;
+    height: 2.2vw;
+    left: 34.8vw;
+    top: 0.3vw;
+    border-radius: 0.8vw;
+    padding-left: 0.5vw;
+    padding-top: 0.35vw;
+    text-align: left;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: black;
+}
+
+.listaconsulta{
+    font-size: 1.2vw;
+    font-weight: 900;
+}
+
+.labelrelatorio1{
+    position: absolute;
+    left: 69vw;
+    top: 10vw;
+    width: 7vw;
+}
+
+.labelrelatorio2{
+    position: absolute;
+    left: 69vw;
+    top: 14vw;
+    width: 9vw;
+}
+
+.labelrelatorio3{
+    position: absolute;
+    left: 69vw;
+    top: 18vw;
+    width: 9vw;
+}
+
+.labelrelatorio4{
+    position: absolute;
+    left: 69vw;
+    top: 22vw;
+    width: 9vw;
+}
+
+.listarelatorio1{
+    position: absolute;
+    left: 20vw;
+    top: 10.2vw;
+}
+
+.listarelatorio2{
+    position: absolute;
+    left: 20vw;
+    top: 14.2vw;
+}
+
+.listarelatorio3{
+    position: absolute;
+    left: 20vw;
+    top: 18.2vw;
+}
+
+.listarelatorio4{
+    position: absolute;
+    left: 20vw;
+    top: 22.2vw;
+}
+
+.baixarbtn{
+    cursor: pointer;
+    border: none;
+    background: var(--button-color);
+    border-radius: 2vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 600;
+    height: 3.5vw;
+    width: 16vw;
+    position: absolute;
+    top: 26vw;
+    left: 67.5vw;
+}
+
+.social-links img{
+    cursor: pointer;
+}
+
+.insta{
+    position: absolute;
+    top: 90%;
+    left: 85%;
+    width: 2.5vw;
+}
+
+.whats{
+    position: absolute;
+    top: 90%;
+    left: 89.5%;
+    width: 2.5vw;
+}
+
+.email{
+    position: absolute;
+    top: 91%;
+    left: 94%;
+    width: 2.5vw;
+}
+
 
 /*OVERLAY DE LOGIN*/
 
@@ -308,29 +602,34 @@ input[type=submit]:hover{
 .openbtn{
     cursor: pointer;
     border: none;
-    background: #000b61;
+    background: var(--button-color);
     border-radius: 0.9vw;
     color: white;
     font-size: 1.5vw;
     font-weight: 500;
-    padding: 1.5%;
-    width: 25%;
+    padding: 0.5vw;
+    width: 12.2vw;
+    height: 3.2vw;
     position: absolute;
-    top: 17%;
+    top: 0.5vw;
     left: 71.65vw;
     z-index: 2;
     box-shadow: 0.2vw 0.2vw 0.3vw #0000004b;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
 }
 
 .divopenbtn{
     width: 13.65vw;
     height: 4.45vw;
-    top: 0.15vw;
+    top: 0.13vw;
     left: 71.25vw;
     margin: -0.4vw;
-    background-color: white;
+    background-color: var(--container-color);
     position: absolute;
-    border: 2.5px solid #000693;
+    border: 2.5px solid var(--border-color);
     border-radius: 0.99vw 0.99vw 0px 0px;
     border-bottom: none;
     z-index: 1;
@@ -604,3 +903,4 @@ form{
     bottom: -14vw;
     left: -34vw;
 }
+

@@ -16,7 +16,7 @@
             
             <nav>
 
-                <a href="index.html"><img src="../SITE TECHNO BLAUE/images/logo.png" alt="logo" class="logo"></a>
+                <a href="index.html"><img src="../SITETECHNOBLAUE/images/logo.png" alt="logo" class="logo"></a>
 
         </div>
 
