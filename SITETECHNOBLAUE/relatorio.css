@@ -210,30 +210,6 @@ nav ul li a{
     font-size: 1.9vw;
 }
 
-/*SCROLL BAR*/
-
-/*ignora as coisas que tão aqui dentro, eu deixei elas brancas para ficarem invisíveis com o fundo*/
-/*vou deixar o código caso precise alterar alguma coisa*/
-
-/* width */
-::-webkit-scrollbar {
-    width: 0.8vw;
-    direction: rtl;
-    
-}
-  
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 1vw rgb(177, 162, 162);
-    border-radius: 2vw;
-}
-  
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: rgb(80, 74, 74);
-    border-radius: 2vw;
-}
-
 /*DESIGN QUANDO PASSA O MOUSE EM CIMA DE CADA ITEM DA LISTA*/
 nav ul li a:hover{
     text-decoration-color: var(--selpage-color);
@@ -275,6 +251,10 @@ nav ul li a:hover{
     color: black;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 .retanguloAzul{
     position: absolute;
     top: 5vw;
@@ -286,22 +266,20 @@ nav ul li a:hover{
     padding-top: 0vw;
     border-radius: 1vw 1vw 0vw 0vw;
     background-color: var(--retangulo-color);
-    overflow-y: hidden;
-    direction: rtl;
+    overflow-y: scroll;
     text-align: justify;
 }
 
 .divdata{
     position: absolute;
     background-color: #ECECEC;
-    width: 10.6vw;
+    width: 11.3vw;
     height: 2.2vw;
     left: 0.3vw;
     top: 0.3vw;
-    border-radius: 0.8vw;
-    padding-left: 0.5vw;
+    border-radius: 0.8vw 0vw 0vw 0.8vw;
     padding-top: 0.35vw;
-    text-align: left;
+    text-align: center;
     font-size: 1.3vw;
     font-weight: 700;
     color: black;
@@ -310,14 +288,13 @@ nav ul li a:hover{
 .divtempo{
     position: absolute;
     background-color: #ECECEC;
-    width: 10.6vw;
+    width: 11vw;
     height: 2.2vw;
-    left: 11.8vw;
+    left: 11.6vw;
     top: 0.3vw;
-    border-radius: 0.8vw;
     padding-left: 0.5vw;
     padding-top: 0.35vw;
-    text-align: left;
+    text-align: center;
     font-size: 1.3vw;
     font-weight: 700;
     color: black;
@@ -326,12 +303,11 @@ nav ul li a:hover{
 .divmodo{
     position: absolute;
     background-color: #ECECEC;
-    width: 10.6vw;
+    width: 11.3vw;
     height: 2.2vw;
-    left: 23.3vw;
+    left: 23.2vw;
     top: 0.3vw;
-    border-radius: 0.8vw;
-    padding-left: 0.5vw;
+    padding-left: 0.1vw;
     padding-top: 0.35vw;
     text-align: center;
     font-size: 1.3vw;
@@ -342,17 +318,123 @@ nav ul li a:hover{
 .divpontuacao{
     position: absolute;
     background-color: #ECECEC;
-    width: 10.4vw;
+    width: 10.6vw;
     height: 2.2vw;
-    left: 34.8vw;
+    left: 34.6vw;
     top: 0.3vw;
-    border-radius: 0.8vw;
+    border-radius: 0vw 0.8vw 0.8vw 0vw;
     padding-left: 0.5vw;
     padding-top: 0.35vw;
-    text-align: left;
+    text-align: center;
     font-size: 1.3vw;
     font-weight: 700;
     color: black;
+}
+
+.linhaT{
+    position: absolute;
+    height: 2.5vw;
+    width: 0.05vw;
+    background-color: #000000;
+    z-index: 2;
+    left: 11.3vw;
+    margin-top: -0.3vw;
+}
+
+.linhaT2{
+    position: absolute;
+    height: 2.5vw;
+    width: 0.05vw;
+    background-color: #000000;
+    z-index: 2;
+    left: 11.5vw;
+    margin-top: -0.3vw;
+}
+
+.linhaT3{
+    position: absolute;
+    height: 2.5vw;
+    width: 0.05vw;
+    background-color: #000000;
+    z-index: 2;
+    left: 11.35vw;
+    margin-top: -0.3vw;
+}
+
+.tbdados{
+    color: black;
+    background-color: #ECECEC;
+    width: 45vw;
+    height: 3vw;
+    position: relative;
+    top: 2.5vw;
+    padding: 0.5vw;
+    margin-top: 0.5vw;
+    border-radius: 0.5vw;
+    font-size: 1.8vw;
+    text-align: center;
+}
+
+.linha{
+    position: absolute;
+    height: 3vw;
+    width: 0.05vw;
+    background-color: #000000;
+    z-index: 2;
+    left: 11.6vw;
+    margin-top: 3vw;
+}
+
+.linha2{
+    position: absolute;
+    height: 3vw;
+    width: 0.05vw;
+    background-color: #000000;
+    z-index: 2;
+    left: 23.1vw;
+    margin-top: 3vw;
+}
+
+.linha3{
+    position: absolute;
+    height: 3vw;
+    width: 0.05vw;
+    background-color: #000000;
+    z-index: 2;
+    left: 34.55vw;
+    margin-top: 3vw;
+}
+
+.ddata{
+    position: absolute;
+    width: 11.1vw;
+    left: 0vw;
+    top: 0.5vw;
+    text-align: center;
+}
+
+.dtempo{
+    position: absolute;
+    left: 11.1vw;
+    top: 0.5vw;
+    width: 11.6vw;
+    text-align: center;
+}
+
+.dmodo{
+    position: absolute;
+    left: 22.7vw;
+    top: 0.5vw;
+    width: 11.4vw;
+    text-align: center;
+}
+
+.dpontuacao{
+    position: absolute;
+    left: 34.1vw;
+    top: 0.5vw;
+    width: 11vw;
+    text-align: center;
 }
 
 .listaconsulta{

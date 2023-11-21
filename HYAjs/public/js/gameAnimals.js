@@ -1,25 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
     fetch('http://localhost:8081/getUserId')
     .then(response => response.json())
-    .then(data => loadHTMLTable(data['data']));   
+    .then(data2 => loadHTMLTable(data2['data2']));   
     
    })
 
 
-   function loadHTMLTable(data){
-    const table = document.querySelector('table tbody');
+   function loadHTMLTable(data2){
 
-
-
-    if (data.lenght === 0){
-       table.innerHTML = "<tr><td class='no-data' colspan='5'>No Data</td></tr>";
-    }
-
-    var idUser = data[0].id;  
+    var idUser = data2[0].id;  
+    console.log(data2[0].id);
     document.getElementById('id_jogador').value = idUser;
 
 
+
 }
+
+const date = new Date();
+
+let day = date.getDate();
 
 
 
@@ -85,7 +84,7 @@ function getAndSetText(){
         document.getElementById('setText').value= pont;
         document.getElementById('modo').value= "Animais";
         document.getElementById('timer').value= timerend;
-
+        document.getElementById('dia').value= day + "-11";
         }
 
 
@@ -272,15 +271,18 @@ const btsaveg = document.getElementById(id= "savegame");
 
 btsaveg.onclick = function(){
     const pontuacao = document.getElementById("setText").value;
-    const modo_jogo = "animais";
+    const modo_jogo = "Animais";
     const timer = document.getElementById("timer").value;
+    const id_jogador = document.getElementById("id_jogador").value;
+    const dia = document.getElementById("dia").value;
+
   
     fetch('http://localhost:8081/add', {
       headers: {
         'Content-type': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+      body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao, id_jogador : id_jogador, dia : dia})
     })
     .then(response => response.json())
     .then(data => insertRowIntoTable(data['data']));
@@ -297,15 +299,18 @@ const btsaveg2 = document.getElementById(id= "savegame2");
 
 btsaveg2.onclick = function(){
   const pontuacao = document.getElementById("setText").value;
-  const modo_jogo = "animais";
+  const modo_jogo = "Animais";
   const timer = document.getElementById("timer").value;
+  const id_jogador = document.getElementById("id_jogador").value;
+  const dia = document.getElementById("dia").value;
+
 
   fetch('http://localhost:8081/add', {
     headers: {
       'Content-type': 'application/json'
     },
     method: 'POST',
-    body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+    body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao, id_jogador : id_jogador, dia : dia})
   })
   .then(response => response.json())
   .then(data => insertRowIntoTable(data['data']));

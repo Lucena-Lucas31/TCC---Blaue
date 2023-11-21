@@ -39,7 +39,7 @@
                 <label class="switch">
                     <input type="checkbox" id="btnmodo" checked >
                     <span class="slider round"></span>
-                    <!-- <img src="images/solzinho.png" alt="" class="imgsol" id="btnIcon"> -->
+                    <img src="images/solzinho.png" alt="" class="imgsol" id="btnIcon">
                 </label>
 
                 <div class="divopenbtn"></div>

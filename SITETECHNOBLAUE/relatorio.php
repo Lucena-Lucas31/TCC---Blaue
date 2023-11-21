@@ -44,7 +44,7 @@
                 <div class="divopenbtn"></div>
 
                 <?php 
-                 echo "<button class='openbtn' id='openbtn'>" . $_SESSION['nomeresponsavel'] . "</button>"
+                 echo "<button class='openbtn' id='openbtn'>" . $_SESSION['nomepaciente'] . "</button>"
                 ?>
 
             </nav>
@@ -78,10 +78,10 @@
 
                     <tr>
 
-                    <th> <div class="divdata">DATA</div> </th>
-                    <th> <div class="divtempo">TEMPO</div> </th>
-                    <th> <div class="divmodo">MODO DE JOGO</div> </th>
-                    <th> <div class="divpontuacao">PONTUAÇAO</div> </th>
+                    <th> <div class="divdata"><div class=linhaT></div>DATA</div> </th>
+                    <th> <div class="divtempo"><div class=linhaT2></div>TEMPO</div> </th>
+                    <th> <div class="divmodo"><div class=linhaT3></div>MODO DE JOGO</div> </th>
+                    <th> <div class="divpontuacao"><div class=linhaT4></div>PONTUAÇÃO</div> </th>
 
                     </tr>
 
@@ -92,19 +92,24 @@
 
                     
 
-                    $consulta = $pdo->prepare("SELECT * from games WHERE id_jogador = '$jogador' order by id");
+                    $consulta = $pdo->prepare("SELECT * from games WHERE id_jogador = '$jogador' order by id DESC LIMIT 20");
                     $consulta->execute();
 
                    while ($linha = $consulta->fetch(PDO::FETCH_BOTH)) {
             
-                        echo "<tr>";
-                                                  //  echo "<td>" . $linha["hora"] . "</td>";
-                                                    echo "<td>" . $linha["id"] . "</td>";      
-                                                    echo "<td>" . $linha["timer"] . "</td>";   
-                                                    echo "<td>" . $linha["modo_jogo"] . "</td>";   
-                                                    echo "<td>" . $linha["pontuacao"] . "</td>";   
-                        echo "</tr>"    ;                       
+                    echo "<table class='tbdados'>";
 
+                        echo "<tr>";
+
+                            //  echo "<td>" . $linha["hora"] . "</td>";     
+                            echo "<div class='linha'></div>" . "<td class='ddata'>" . $linha["dia"] . "</td>";
+                            echo "<div class='linha2'></div>" . "<td class='dtempo'>" . $linha["timer"] . "</td>";
+                            echo "<div class='linha3'></div>" . "<td class='dmodo'>" . $linha["modo_jogo"] . "</td>";
+                            echo "<td class='dpontuacao'>" . $linha["pontuacao"] . "</td>";    
+                                                                      
+                        echo "</tr>";  
+
+                    echo "</table>";
                 
                 }
                 ?>    

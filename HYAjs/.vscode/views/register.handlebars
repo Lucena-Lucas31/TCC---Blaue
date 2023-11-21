@@ -1,0 +1,91 @@
+<body>
+
+    <link rel="stylesheet" href="/css/register.css">
+
+
+
+    <div class="box">
+
+        <form action="/firstScreen" class="form">
+ 
+            <h2 class="form_title">Cadastro</h2>
+            
+            <div class="form_container">
+                <div class="form_group">
+                    <input type="text" id="user" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Nome do paciente: </label>
+                    <span class="form_line"></span>
+                </div>
+            </div>
+
+            <div class="form_container">
+                <div class="form_group">
+                    <input type="text" id="email" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Email do responsável: </label>
+                    <span class="form_line"></span>
+                </div>
+            </div>
+
+            <div class="form_container">
+                <div class="form_group">
+                    <input type="text" id="responsible" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Nome do responsável: </label>
+                    <span class="form_line"></span>
+                </div>
+            </div>
+
+            <div class="form_container">
+                <div class="form_group">
+                    <input type="text" id="tel" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Telefone do responsável: </label>
+                    <span class="form_line"></span>
+                </div>
+            </div>
+
+            <div class="form_container" class="custom-select" >
+            <select>
+                <option value="0">Selecione o Estágio da doença:</option>
+                <option value="1">Estágio 1</option>
+                <option value="2">Estágio 2</option>
+                
+            </select>
+            </div>
+
+            <div class="form_container">
+                <div class="form_group">
+                    <input type="password" id="password" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Senha: </label>
+                    <span class="form_line"></span>
+                </div>
+
+            </div>
+             <input type="submit" class="form_submit" value="Cadastrar">
+            <p class="form_paragraph">Já possui cadastro? <a href="/login" class="form_link">Faça o login aqui</a></p>
+            
+        </form>
+       
+    </div>
+
+
+
+    {{!-- <div class = "square">
+        
+        
+        <form action="/">
+
+            <label for="name">Nome</label><br>
+            <input type="text">
+            <br>
+            <label for="name">Email</label><br>
+            <input type="email">
+            <br>
+            <label for="password">Senha</label><br>
+            <input type="password"> 
+            
+            <button class="register" type="submit">CADASTRAR</button>
+        </form>
+
+       
+    </div> --}}
+
+</body>

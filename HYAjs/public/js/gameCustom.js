@@ -11,9 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
    
    
    
-       if (data.lenght === 0){
-          table.innerHTML = "<tr><td class='no-data' colspan='5'>No Data</td></tr>";
-       }
+       
    
    var pr1 = data[0].parente1; //Grau de parentesco carta 1
    var pr2 = data[0].parente2; //Grau de parentesco carta 2
@@ -28,8 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
    var np4 = data[0].nome4; //nome parente carta 4
    var np5 = data[0].nome5; //nome parente carta 5
    var np6 = data[0].nome6; //nome parente carta 6
+
+   var idUser = data[0].id_jogador; //nome parente carta 6
    
-       console.log(pr1, pr2, pr3, pr4, pr5, pr6, np1, np2, np3, np4, np5, np6)
+       console.log(pr1, pr2, pr3, pr4, pr5, pr6, np1, np2, np3, np4, np5, np6, idUser)
    
        document.getElementById('pr1').value = pr1;
        document.getElementById('pr2').value = pr2;
@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
        document.getElementById('pr4').value = pr4;
        document.getElementById('pr5').value = pr5;
        document.getElementById('pr6').value = pr6;
+
+       document.getElementById('id_jogador').value = idUser;
+
    
        document.getElementById('txtparente1').innerHTML = document.getElementById("pr1").value;
        document.getElementById('txtparente2').innerHTML = document.getElementById("pr2").value;
@@ -62,9 +65,15 @@ document.addEventListener('DOMContentLoaded', function() {
        
    
    }
+
+
+   
    
    // ===================================================================================================================================================================
-   
+   const date = new Date();
+
+   let day = date.getDate();
+
    const grid = document.querySelector('.grid'); /*SELECIONA TODOS SEUS FILHOS*/ 
    
    const timer = document.querySelector('.timer');  //
@@ -143,11 +152,12 @@ document.addEventListener('DOMContentLoaded', function() {
    }
    
    function getAndSetText(){
-           document.getElementById('setText').value= pont;
-           document.getElementById('modo').value= "Animais";
-           document.getElementById('timer').value= timerend;
-   
-           }
+    document.getElementById('setText').value= pont;
+    document.getElementById('modo').value= "Parentes";
+    document.getElementById('timer').value= timerend;
+    document.getElementById('dia').value= day + "-11";
+    }
+
    
    
    
@@ -455,15 +465,18 @@ document.addEventListener('DOMContentLoaded', function() {
    
    btsaveg.onclick = function(){
        const pontuacao = document.getElementById("setText").value;
-       const modo_jogo = "animais";
+       const modo_jogo = "Customizado";
        const timer = document.getElementById("timer").value;
+       const id_jogador = document.getElementById("id_jogador").value;
+       const dia = document.getElementById("dia").value;
+
      
        fetch('http://localhost:8081/add', {
          headers: {
            'Content-type': 'application/json'
          },
          method: 'POST',
-         body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+         body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao, dia : dia, id_jogador : id_jogador})
        })
        .then(response => response.json())
        .then(data => insertRowIntoTable(data['data']));
@@ -480,15 +493,18 @@ document.addEventListener('DOMContentLoaded', function() {
    
    btsaveg2.onclick = function(){
      const pontuacao = document.getElementById("setText").value;
-     const modo_jogo = "animais";
+     const modo_jogo = "Customizado";
      const timer = document.getElementById("timer").value;
+     const id_jogador = document.getElementById("id_jogador").value;
+     const dia = document.getElementById("dia").value;
+
    
      fetch('http://localhost:8081/add', {
        headers: {
          'Content-type': 'application/json'
        },
        method: 'POST',
-       body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+       body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao, dia : dia, id_jogador : id_jogador})
      })
      .then(response => response.json())
      .then(data => insertRowIntoTable(data['data']));

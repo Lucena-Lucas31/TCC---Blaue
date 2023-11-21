@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('http://localhost:8081/getUserId')
+  .then(response => response.json())
+  .then(data2 => loadHTMLTable(data2['data2']));   
+  
+ })
+
+
+ function loadHTMLTable(data2){
+
+  var idUser = data2[0].id;  
+  console.log(data2[0].id);
+  document.getElementById('id_jogador').value = idUser;
+
+
+
+}
+
+
+
 const inputFile = document.querySelector("#picture__input");
 
 
@@ -216,12 +236,14 @@ bt.onclick = function(){
   const nome5 = document.getElementById("NomeP5").value;
   const nome6 = document.getElementById("NomeP6").value;
 
+  const id_jogador = document.getElementById("id_jogador").value;
+
   fetch('http://localhost:8081/insert', {
     headers: {
       'Content-type': 'application/json'
     },
     method: 'POST',
-    body: JSON.stringify({ parente1 : parente1, parente2 : parente2, parente3 : parente3,  parente4 : parente4,  parente5 : parente5,  parente6 : parente6, nome1 : nome1, nome2 : nome2, nome3 : nome3, nome4 : nome4, nome5 : nome5, nome6 : nome6,})
+    body: JSON.stringify({ parente1 : parente1, parente2 : parente2, parente3 : parente3,  parente4 : parente4,  parente5 : parente5,  parente6 : parente6, nome1 : nome1, nome2 : nome2, nome3 : nome3, nome4 : nome4, nome5 : nome5, nome6 : nome6, id_jogador : id_jogador})
   })
   .then(response => response.json())
   .then(data => insertRowIntoTable(data['data']));

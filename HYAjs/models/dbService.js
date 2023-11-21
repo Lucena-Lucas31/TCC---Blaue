@@ -68,12 +68,12 @@ class DbService {
     }
 
 
-    async insertNewName(parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6){
+    async insertNewName(parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6, id_jogador){
         try{
             const insertId = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO parentescos (parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                const query = "INSERT INTO parentescos (parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6, id_jogador) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     
-                connection.query(query, [parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6], (err, result) => {
+                connection.query(query, [parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6, id_jogador], (err, result) => {
                     if (err) reject(new Error(err.message));
                     resolve(result.insertId);
                 })
@@ -106,12 +106,12 @@ class DbService {
         }
     }
 
-    async insertGame(timer, modo_jogo, pontuacao, id_jogador){
+    async insertGame(dia, timer, modo_jogo, pontuacao, id_jogador){
         try{
             const insertGame = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO games (timer, modo_jogo, pontuacao, id_jogador) VALUES (?, ?, ?, ?)";
+                const query = "INSERT INTO games (dia, timer, modo_jogo, pontuacao, id_jogador) VALUES (?, ?, ?, ?, ?)";
     
-                connection.query(query, [timer, modo_jogo, pontuacao, id_jogador], (err, result) => {
+                connection.query(query, [dia, timer, modo_jogo, pontuacao, id_jogador], (err, result) => {
                     if (err) reject(new Error(err.message));
                     resolve(result.insertGame);
                 })

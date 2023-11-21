@@ -60,6 +60,10 @@ app.get("/sobre", function(req, res){
     res.render('sobre')
 });
 
+app.get("/rules", function(req, res){
+    res.render('rules')
+});
+
 app.get("/gameShapes", function(req, res){
     res.render('gameShapes')
 });
@@ -78,10 +82,6 @@ app.get("/login", function(req, res){
 
 app.get("/gameCustom", function(req, res){
     res.render('gameCustom')
-});
-
-app.get("/rules", function(req, res){
-    res.render('rules')
 });
 
 app.get('/meio', function(req, res){ 
@@ -146,7 +146,7 @@ app.get('/getUserId', (request, response) => {
     const result = db.getUserId();
 
     result
-    .then(data => response.json({data : data}))
+    .then(data2 => response.json({data2 : data2}))
     .catch(err => console.log(err));
 })
 
@@ -160,10 +160,10 @@ app.get('/db', function(req, res){
 //resultados jogo
    app.post('/add', function(req, res){
 
-    const {timer , modo_jogo, pontuacao, id_jogador} = req.body;
+    const {dia, timer , modo_jogo, pontuacao, id_jogador} = req.body;
     const db = dbService.getDbServiceInstance();
 
-    const result = db.insertGame(timer , modo_jogo, pontuacao, id_jogador);
+    const result = db.insertGame(dia, timer , modo_jogo, pontuacao, id_jogador);
 
     result
     .then(data => res.json({ sucess: true}))
@@ -212,10 +212,10 @@ app.post('/logar', function(req, res){
 
 
 app.post('/insert', (request, response) => {
-    const { parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6 } = request.body;
+    const { parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6, id_jogador } = request.body;
     const db = dbService.getDbServiceInstance();
 
-    const result = db.insertNewName(parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6);
+    const result = db.insertNewName(parente1, parente2, parente3, parente4, parente5, parente6, nome1, nome2, nome3, nome4, nome5, nome6, id_jogador);
 
     result
     .then(data => response.json({ sucess: true}))

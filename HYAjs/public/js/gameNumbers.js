@@ -1,26 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     fetch('http://localhost:8081/getUserId')
     .then(response => response.json())
-    .then(data => loadHTMLTable(data['data']));   
+    .then(data2 => loadHTMLTable(data2['data2']));   
     
    })
 
 
-   function loadHTMLTable(data){
-    const table = document.querySelector('table tbody');
+   function loadHTMLTable(data2){
 
-
-
-    if (data.lenght === 0){
-       table.innerHTML = "<tr><td class='no-data' colspan='5'>No Data</td></tr>";
-    }
-
-    var idUser = data[0].id;  
+    var idUser = data2[0].id;  
+    console.log(data2[0].id);
     document.getElementById('id_jogador').value = idUser;
 
 
-}
 
+}
+const date = new Date();
+
+let day = date.getDate();
 
 const grid = document.querySelector('.grid'); /*SELECIONA TODOS SEUS FILHOS*/ 
 
@@ -28,6 +25,9 @@ const timer = document.querySelector('.timer');  //
 
 const pontuacao = document.querySelector('.pontuacao');
 let pont = 0;
+
+let timerend = 0;
+
 
 /*ARRAY PARA ARMAZENAR AS IMAGENS*/ 
 const numbers = [
@@ -54,11 +54,15 @@ const checkEndGame = () => {
     const disableCards = document.querySelectorAll('.disable-card'); /*PROCURA TODAS AS CARTAS QUE TEM '.disable-card' ATIVADO, SALVA TODOS OS ELEMENTOS QUE TEM 'disable-card' NO ARRAY 'disableCards'*/
 
     if(disableCards.length == 12){
+
+        timerend = `${timer.innerHTML}`;
+
+        console.log (timerend);
+
        clearInterval(this.loop);
 
        getAndSetText(); /*Define o valor da pontuacao para o formulario NN APAGA FOI O LU Q FEZ*/
 
-       Click(); /* Envia o formulario com os dados para o banco */
 
         setTimeout(() => { /*DELAY PARA DESVIRAR AS CARTAS */
 
@@ -69,14 +73,13 @@ const checkEndGame = () => {
 }
 
 function getAndSetText(){
-        document.getElementById('setText').value= pont;
-        document.getElementById('modo').value= "Numeros";
-        document.getElementById('timer').value= timerend;
-        }
+    document.getElementById('setText').value= pont;
+    document.getElementById('modo').value= "Numeros";
+    document.getElementById('timer').value= timerend;
+    document.getElementById('dia').value= day + "-11";
+    }
 
-function Click() {
-         document.getElementById("enviar").click();
-        }
+
 
 
 /*VERIFICAÇÃO DE PARES */
@@ -251,15 +254,18 @@ const btsaveg = document.getElementById(id= "savegame");
 
 btsaveg.onclick = function(){
     const pontuacao = document.getElementById("setText").value;
-    const modo_jogo = "animais";
+    const modo_jogo = "Numeros";
     const timer = document.getElementById("timer").value;
+    const id_jogador = document.getElementById("id_jogador").value;
+    const dia = document.getElementById("dia").value;
+
   
     fetch('http://localhost:8081/add', {
       headers: {
         'Content-type': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+      body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao, id_jogador : id_jogador, dia : dia})
     })
     .then(response => response.json())
     .then(data => insertRowIntoTable(data['data']));
@@ -276,15 +282,18 @@ const btsaveg2 = document.getElementById(id= "savegame2");
 
 btsaveg2.onclick = function(){
   const pontuacao = document.getElementById("setText").value;
-  const modo_jogo = "animais";
+  const modo_jogo = "Numeros";
   const timer = document.getElementById("timer").value;
+  const id_jogador = document.getElementById("id_jogador").value;
+  const dia = document.getElementById("dia").value;
+
 
   fetch('http://localhost:8081/add', {
     headers: {
       'Content-type': 'application/json'
     },
     method: 'POST',
-    body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao})
+    body: JSON.stringify({ timer : timer, modo_jogo : modo_jogo, pontuacao : pontuacao, id_jogador : id_jogador, dia : dia})
   })
   .then(response => response.json())
   .then(data => insertRowIntoTable(data['data']));
@@ -293,3 +302,8 @@ btsaveg2.onclick = function(){
 function insertRowIntoTable(data){
   
 }
+
+
+
+
+
