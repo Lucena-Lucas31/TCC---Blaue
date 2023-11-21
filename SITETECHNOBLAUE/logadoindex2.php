@@ -52,6 +52,9 @@
                 ?>
             </nav>
 
+            <!-- OVERLAY DE DESLOGAR-->
+        
+            
         </div>
 
             <div class="container-principal">
@@ -85,6 +88,9 @@
 
                 
             </div>
+
+            <!--BOTÃO PARA ABRIR O OVERLAY DE DESLOGAR-->
+        
     </div>
 
   

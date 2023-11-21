@@ -14,6 +14,7 @@
     <title>Techno Blaue</title>
     <link rel="stylesheet" href="equipe.css">
     <script defer src="index.js"></script>
+    <script defer src="index2.js"></script>
 </head>
 <body>
 
@@ -49,6 +50,8 @@
                                  
 
             </nav>
+
+           
 
         </div>
 
@@ -294,7 +297,11 @@
         <a href="psi.php"><span class="openPsi" title="Políticas de Segurança"> ACESSE NOSSA POLÍTICA DE SEGURANÇA </span></a>
         
         </div>
+
+        
     </div>
+    <!--BOTÃO PARA ABRIR O OVERLAY DE DESLOGAR-->
+    
 </div>
 
 

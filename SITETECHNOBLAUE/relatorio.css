@@ -986,3 +986,97 @@ form{
     left: -34vw;
 }
 
+
+/*OVERLAY PARA DESLOGAR*/
+
+.overlayDeslog{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 4vw;
+    left: -7vw;
+    background: rgba(0, 0, 0, 0.7);
+    
+   
+    }
+
+    .content{
+        width: 37vw;
+        height: 22vw;
+        margin: auto;
+        background-color: #CFE5FF;
+        margin-top: 5vw;
+        border-radius: 10px;
+        font-family: 'Libre Franklin', sans-serif;
+        border: double 3.5px transparent;
+        border-radius: 0.85vw;
+        background-image: linear-gradient( #CFE5FF, #CFE5FF), radial-gradient(circle at top left, #232F87, #7384FF, #232F87);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        
+        
+        
+    }
+
+    .overTitleDeslogOverlay{
+        margin-top: 0.2vw;
+        font-size: 3vw;
+        font-weight: 500;
+        text-align: center;
+        }
+
+        .deslogar{
+            color: #fff;
+            font-weight: lighter;
+            position: absolute;
+            left: 35vw;
+            top: 22vw;
+            cursor: pointer;
+            background: #232F87;
+            width: 13.5vw;
+            height: 4vw;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 1.5vw;
+            border-radius: 1.5vw;
+            padding: 0.8%;
+            border: none;
+            box-shadow: 0.1vw 0.1vw 1vw #0000004b;
+            text-align: center;
+            font-weight: bolder;
+            }
+
+            .deslogar:hover{
+            -xpedu-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+            transition: 250ms linear;
+            }
+
+            .cancel{
+                color: #fff;
+                font-weight: lighter;
+                position: absolute;
+                left: 51vw;
+                top: 22vw;
+                cursor: pointer;
+                background: #232F87;
+                width: 13.5vw;
+                height: 4vw;
+                font-family: 'Libre Franklin', sans-serif;
+                font-size: 1.5vw;
+                border-radius: 1.5vw;
+                padding: 0.8%;
+                border: none;
+                box-shadow: 0.1vw 0.1vw 1vw #0000004b;
+                text-align: center;
+                font-weight: bolder;
+                }
+
+                .cancel:hover{
+                -xpedu-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                transform: scale(1.1);
+                transition: 250ms linear;
+                }

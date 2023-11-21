@@ -44,10 +44,11 @@
                 <div class="divopenbtn"></div>
 
                 <?php 
-                 echo "<button class='openbtn' id='openbtn'>" . $_SESSION['nomepaciente'] . "</button>"
+                 echo "<button class='openbtn' id='openbtn'>" . $_SESSION['nomeresponsavel'] . "</button>"
                 ?>
 
             </nav>
+
 
         </div>
 
@@ -78,7 +79,7 @@
 
                     <tr>
 
-                    <th> <div class="divdata"><div class=linhaT></div>DATA</div> </th>
+                    <th> <div class="divdata"><div class=linhaT></div>DIA</div> </th>
                     <th> <div class="divtempo"><div class=linhaT2></div>TEMPO</div> </th>
                     <th> <div class="divmodo"><div class=linhaT3></div>MODO DE JOGO</div> </th>
                     <th> <div class="divpontuacao"><div class=linhaT4></div>PONTUAÇÃO</div> </th>

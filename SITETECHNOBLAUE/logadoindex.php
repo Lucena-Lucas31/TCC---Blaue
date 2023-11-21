@@ -82,18 +82,9 @@ $_SESSION['idresponsavel'] = $linha['id'];
                 ?>
             </nav>
 
+
             
             <!-- OVERLAY DE DESLOGAR-->
-            <div id="deslogOverlay" class="overlayDeslog">
-                <div class="content">
-                    <img src="images/logoOverlay.png" alt="logo" class="logoOverlayDeslog">
-                    <h1 class="overTitleDeslogOverlay">Gostaria de sair da sua conta?</h1>
-                    <a href="index.php"><button class= "deslogar">SAIR</button></a>
-                    <buttton  class= "cancel" onclick = "deslogClose();"> CANCELAR</button>
-                  
-       
-                </div>
-            </div>
 
 
         </div>
@@ -129,15 +120,11 @@ $_SESSION['idresponsavel'] = $linha['id'];
                 </div>
 
                  <!--BOTÃO PARA ABRIR O OVERLAY DE DESLOGAR-->
-            <div class= "logout" onclick="deslogOpen()"; >
-                    <img class= "imgLogout" src="images/logout.png" alt="">
-                    <h4 class = "logOutText">SAIR</h4>
-                </div>
+           
      
-                
             </div>
 
-            
+   
     </div>
 
   

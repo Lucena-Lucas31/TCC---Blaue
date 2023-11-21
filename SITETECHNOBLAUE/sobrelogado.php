@@ -48,6 +48,7 @@
 
             </nav>
 
+
         </div>
 
             <div class="container-principal">
@@ -218,6 +219,12 @@
         <a href="psi.php"><span class="openPsi" title="Políticas de Segurança"> ACESSE NOSSA POLÍTICA DE SEGURANÇA </span></a>
         
         </div>
+
+        <!--BOTÃO PARA ABRIR O OVERLAY DE DESLOGAR-->
+        <div class= "logout" onclick="deslogOpen()"; >
+                    <img class= "imgLogout" src="images/logout.png" alt="">
+                    <h4 class = "logOutText">SAIR</h4>
+                </div>
     </div>
 </div>
 

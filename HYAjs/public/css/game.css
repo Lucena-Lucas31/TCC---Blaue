@@ -183,13 +183,13 @@ header span{
 }
 
 .wrap{
-    width: 40vw;
+    border-radius: 10px;
+    width: 37vw;
     height: 36vw;
     margin: auto;
     padding: 20px;
     background: #AFD4FF;
     margin-top: 5vw;
-    border-radius: 20px;
     font-family: 'Gluten';
 }
 
@@ -227,36 +227,60 @@ h1{
 
 .playAgain{
     position: absolute;
-    left: 40%;
-    top: 35%;
+    left: 39.4vw;
+    top: 17vw;
     cursor: pointer;
     background-color: #A7B7FA;
     width: 20vw;
-    height: 5vw;
+    height: 6.2vw;
     font-family: 'Gluten';
     font-size: 1.8vw;
+    border-radius: 0.5vw;
+    box-shadow: -2px 5px 14px -1px rgba(0,0,0,0.49) inset;
+    -webkit-box-shadow: -2px 5px 14px -1px rgba(0,0,0,0.49) inset;
+    -moz-box-shadow: -2px 5px 14px -1px rgba(0,0,0,0.49) inset;
+    transition: background-color 2s, opacity 2s, transform 1s;
     
+}
+
+.playAgain:hover{
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear;
 }
 
 .mode{
     position: absolute;
-    left: 40%;
-    top: 50%;
+    left: 39.4vw;
+    top: 25.2vw;
     cursor: pointer;
     background-color: #A7B7FA;
     width: 20vw;
-    height: 5vw;
+    height: 6.2vw;
     font-family: 'Gluten';
     font-size: 1.8vw;
+    border-radius: 0.5vw;
+    box-shadow: -2px 5px 14px -1px rgba(0,0,0,0.49) inset;
+    -webkit-box-shadow: -2px 5px 14px -1px rgba(0,0,0,0.49) inset;
+    -moz-box-shadow: -2px 5px 14px -1px rgba(0,0,0,0.49) inset;
+    transition: background-color 2s, opacity 2s, transform 1s;
+}
+
+.mode:hover{
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 250ms linear;
 }
 
 .overTitle{
     margin-top: 1vw;
-    font-size: 4vw;
+    font-size: 5vw;
     font-weight: 400;
 }
 
 .subTitle{
-    font-weight: 300;
-    font-size: 1.5vw;
+    font-weight: 400;
+    font-size: 1.6vw;
 }
