@@ -58,7 +58,7 @@
                 <div class="texts">
                     <div class="text-1">
                         <?php
-                                echo "<p>Paciente: " . $_SESSION['nomepaciente'] . "</p>" 
+                                echo "<p>Paciente: " . $_SESSION['nomeresponsavel'] . "</p>" 
                         ?>
                          <!-- Parte do banco aqui (coitados kkkk) pfv nn quebra mais o site --></p>
                     </div>
@@ -89,7 +89,7 @@
                     
                 <?php
 
-                $jogador = $_SESSION['idpaciente'];
+                $jogador = $_SESSION['idresponsavel'];
 
                     
 
